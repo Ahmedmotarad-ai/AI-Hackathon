@@ -1,0 +1,1205 @@
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 1
+SECTION: Unknown
+------------------------------------------------------------
+Chronic heart failure in
+adults: diagnosis and
+management
+NICE guideline
+Published: 12 September 2018
+Last updated: 3 September 2025
+www.nice.org.uk/guidance/ng106
+conditions#notice-of-rights).
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 2
+SECTION: Unknown
+------------------------------------------------------------
+Your responsibility
+The recommendations in this guideline represent the view of NICE, arrived at after careful
+consideration of the evidence available. When exercising their judgement, professionals
+and practitioners are expected to take this guideline fully into account, alongside the
+individual needs, preferences and values of their patients or the people using their service.
+It is not mandatory to apply the recommendations, and the guideline does not override the
+responsibility to make decisions appropriate to the circumstances of the individual, in
+consultation with them and their families and carers or guardian.
+All problems (adverse events) related to a medicine or medical device used for treatment
+or in a procedure should be reported to the Medicines and Healthcare products Regulatory
+Agency using the Yellow Card Scheme.
+Local commissioners and providers of healthcare have a responsibility to enable the
+guideline to be applied when individual professionals and people using services wish to
+use it. They should do so in the context of local and national priorities for funding and
+developing services, and in light of their duties to have due regard to the need to eliminate
+unlawful discrimination, to advance equality of opportunity and to reduce health
+inequalities. Nothing in this guideline should be interpreted in a way that would be
+inconsistent with complying with those duties.
+Commissioners and providers have a responsibility to promote an environmentally
+sustainable health and care system and should assess and reduce the environmental
+impact of implementing NICE recommendations wherever possible.
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 3
+SECTION: 1.12 Palliative care ................................................................................................................................. 26
+------------------------------------------------------------
+Contents
+Overview ...................................................................................................................................... 5
+Who is it for? ..........................................................................................................................................
+5
+Recommendations ....................................................................................................................... 6
+1.1 Team working in the management of heart failure .......................................................................
+6
+1.2 Diagnosing heart failure ..................................................................................................................
+9
+1.3 Giving information to people with heart failure ............................................................................ 12
+1.4 Treating people with newly diagnosed and pre-existing heart failure with reduced ejection
+fraction ................................................................................................................................................... 13
+1.5 Treating people with newly diagnosed and pre-existing heart failure with mildly reduced or
+preserved ejection fraction .................................................................................................................. 16
+1.6 Treating heart failure in people with chronic kidney disease ...................................................... 17
+1.7 Starting and monitoring medication use ....................................................................................... 18
+1.8 Clinical review .................................................................................................................................. 21
+1.9 Other treatments and advice for all types of heart failure .......................................................... 22
+1.10 Interventional procedures ............................................................................................................. 24
+1.11 Cardiac rehabilitation ..................................................................................................................... 25
+1.12 Palliative care ................................................................................................................................. 26
+Terms used in this guideline ................................................................................................................. 26
+Recommendations for research ................................................................................................. 28
+Key recommendations for research .................................................................................................... 28
+Rationale and impact ...................................................................................................................30
+Treatment combinations for heart failure with reduced ejection fraction ....................................... 30
+Intravenous iron therapy for heart failure with reduced ejection fraction ....................................... 31
+Treatment combinations for heart failure with mildly reduced ejection fraction ............................ 32
+Treatment combinations for heart failure with preserved ejection fraction .................................... 33
+Starting and monitoring medicine use ................................................................................................ 34
+Context .........................................................................................................................................36
+Key facts and figures ............................................................................................................................ 36
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 4
+SECTION: 1.12 Palliative care ................................................................................................................................. 26
+------------------------------------------------------------
+Current practice .................................................................................................................................... 36
+Finding more information and committee details .....................................................................38
+Update information .....................................................................................................................39
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 5
+SECTION: 1.12 Palliative care ................................................................................................................................. 26
+------------------------------------------------------------
+This guideline replaces CG108.
+This guideline is the basis of QS167, QS9 and QS181.
+Overview
+This guideline covers diagnosing and managing chronic heart failure in people aged 18 and
+over. It aims to improve diagnosis and treatment to increase the length and quality of life
+for people with heart failure.
+NICE has also produced a guideline on acute heart failure.
+Who is it for?
+• Healthcare professionals
+• People with heart failure and their families and carers
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 6
+SECTION: 1.1 Team working in the management of heart
+------------------------------------------------------------
+Recommendations
+People have the right to be involved in discussions and make informed decisions about
+their care, as described in NICE's information on making decisions about your care.
+Making decisions using NICE guidelines explains how we use words to show the
+strength (or certainty) of our recommendations, and has information about prescribing
+medicines (including off-label use), professional guidelines, standards and laws
+(including on consent and mental capacity), and safeguarding.
+Healthcare professionals should follow our general guidelines for people delivering care:
+• patient experience in adult NHS services
+• shared decision making
+• medicines adherence
+• medicines optimisation
+• multimorbidity
+1.1 Team working in the management of heart
+failure
+1.1.1
+The specialist heart failure multidisciplinary team (MDT) should work in
+collaboration with the primary care team, and should include a:
+• lead physician with subspecialty training in heart failure (usually a consultant
+cardiologist) who is responsible for making the clinical diagnosis
+• specialist heart failure nurse
+• healthcare professional with expertise in specialist prescribing for heart
+failure, for example, a specialist heart failure pharmacist. [2018 amended
+2025]
+1.1.2
+The specialist heart failure MDT should:
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 7
+SECTION: 1.1 Team working in the management of heart
+------------------------------------------------------------
+• diagnose heart failure
+• give information to people with newly diagnosed heart failure (see the
+section on giving information to people with heart failure)
+• manage newly diagnosed, recently decompensated or advanced heart failure
+(New York Heart Association class III to IV)
+• optimise treatment
+• start new medicines that need specialist supervision
+• continue to manage heart failure after an interventional procedure such as
+implantation of a cardioverter defibrillator or cardiac resynchronisation device
+• manage heart failure that is not responding to treatment. [2018]
+1.1.3
+The specialist heart failure MDT should directly involve, or refer people to, other
+services, including rehabilitation, services for older people and palliative care
+services, as needed. [2018]
+1.1.4
+The primary care team should carry out the following, at all times, for people with
+heart failure, including during periods when the person is also receiving specialist
+heart failure care from the MDT:
+• ensure effective communication links between different care settings and
+clinical services involved in the person's care
+• lead a full review of the person's heart failure care, which may form part of a
+long-term conditions review
+• recall the person at least every 6 months and update the clinical record
+• ensure that changes to the clinical record are understood and agreed by the
+person with heart failure and shared with the specialist heart failure MDT
+• arrange access to specialist heart failure services if needed. [2018]
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 8
+SECTION: 1.1 Team working in the management of heart
+------------------------------------------------------------
+Care after an acute event
+For recommendations on the diagnosis and management of acute heart failure, see NICE's
+guideline on acute heart failure.
+1.1.5
+Discharge people with heart failure from hospital when their clinical condition is
+stable, and a management plan is in place. Take into account the wishes of the
+person and their family or carers, and the level of care and support that can be
+provided in the community. [2003]
+1.1.6
+The primary care team should take over routine management of heart failure as
+soon as it has been stabilised and its management optimised. [2018]
+Writing a care plan
+1.1.7
+The specialist heart failure MDT should write a summary for each person with
+heart failure that includes:
+• diagnosis and aetiology
+• medicines prescribed, monitoring of medicines, when medicines should be
+reviewed and any support the person needs to take the medicines
+• functional abilities and any social care needs
+• social circumstances, including carers' needs. [2018]
+1.1.8
+Use the summary as the basis of the person's care plan, which should include:
+• plans for managing the person's heart failure, including follow-up care,
+rehabilitation and access to social care
+• symptoms to look out for in case of deterioration
+• a process for any subsequent access to the specialist heart failure MDT if
+needed
+• contact details for
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 9
+SECTION: 1.2 Diagnosing heart failure
+------------------------------------------------------------
+－ a named healthcare coordinator (usually a specialist heart failure nurse)
+－ alternative local heart failure specialist care providers, for urgent care or
+review.
+• additional sources of information for people with heart failure. [2018]
+1.1.9
+Give a copy of the care plan to the person with heart failure, their family or carers
+if appropriate, and all health and social care professionals involved in their care.
+[2018]
+1.2 Diagnosing heart failure
+Symptoms, signs and investigations
+1.2.1
+Take a history and perform a clinical examination and tests to confirm the
+presence of heart failure. [2010]
+1.2.2
+Measure N-terminal pro-B-type natriuretic peptide (NT-proBNP) in people with
+suspected heart failure. [2018]
+1.2.3
+Because very high levels of NT-proBNP carry a poor prognosis, refer people with
+suspected heart failure and an NT-proBNP level more than 2,000 nanogram per
+litre (236 picomole per litre) urgently, to have specialist assessment and
+transthoracic echocardiography within 2 weeks. [2018]
+1.2.4
+Refer people with suspected heart failure and an NT-proBNP level between 400
+and 2,000 nanogram per litre (47 to 236 pmol per litre) to have specialist
+assessment and transthoracic echocardiography within 6 weeks. [2018]
+1.2.5
+Be aware that:
+• an NT-proBNP level of less than 400 nanogram per litre (47 pmol per litre) in
+an untreated person makes a diagnosis of heart failure less likely
+• the level of serum natriuretic peptide does not differentiate between heart
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 10
+SECTION: 1.2 Diagnosing heart failure
+------------------------------------------------------------
+failure with preserved, mildly reduced and reduced ejection fraction. [2018,
+amended 2025]
+1.2.6
+Review alternative causes for symptoms of heart failure in people with NT-
+proBNP levels of less than 400 nanogram per litre. If there is still concern that the
+symptoms might be related to heart failure, discuss with a physician with
+subspeciality training in heart failure. [2018]
+1.2.7
+Be aware that:
+• obesity, African or African–Caribbean ethnic background, or treatment with
+the following can reduce levels of serum natriuretic peptides:
+－ a diuretic
+－ an angiotensin-converting enzyme (ACE) inhibitor or angiotensin
+receptor-neprilysin inhibitor (ARNI) or angiotensin II receptor blocker
+(ARB)
+－ a beta-blocker
+－ a mineralocorticoid receptor antagonist (MRA)
+• high levels of serum natriuretic peptides can have causes other than heart
+failure (for example, pulmonary, renal, liver and systemic pathologies, sepsis,
+chronic obstructive pulmonary disease, diabetes, or cirrhosis of the liver).
+[2010, amended 2025]
+1.2.8
+Perform transthoracic echocardiography to exclude important valve disease,
+assess the systolic (and diastolic) function of the left ventricle and detect
+intracardiac shunts. See the section on referral for echocardiography and
+specialist assessment in NICE's guideline on heart valve disease. [2003,
+amended 2018]
+1.2.9
+Use high-resolution equipment operated by someone trained to the relevant
+professional standards to perform transthoracic echocardiography. Do not allow
+the need and demand for these investigations to compromise quality. [2003,
+amended 2018]
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 11
+SECTION: 1.2 Diagnosing heart failure
+------------------------------------------------------------
+1.2.10
+Ensure that those reporting echocardiography are experienced in doing so.
+[2003]
+1.2.11
+Think about alternative methods of imaging the heart (for example, radionuclide
+angiography [multigated acquisition scanning], cardiac MRI or transoesophageal
+echocardiography) if a poor image is produced by transthoracic
+echocardiography. [2003, amended 2018]
+1.2.12
+Perform an ECG and consider the following tests to evaluate possible aggravating
+factors or alternative diagnoses:
+• chest X-ray
+• blood tests:
+－ renal function profile
+－ thyroid function profile
+－ liver function profile
+－ lipid profile
+－ glycosylated haemoglobin (HbA1c)
+－ full blood count
+• urinalysis
+• peak flow or spirometry. [2010, amended 2018]
+1.2.13
+Try to exclude other disorders that may present in a similar manner. [2003]
+1.2.14
+When a diagnosis of heart failure has been made, assess severity, aetiology,
+precipitating factors, type of cardiac dysfunction and correctable causes. [2010]
+Heart failure caused by valve disease
+1.2.15
+Refer people with heart failure caused by valve disease for specialist assessment
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 12
+SECTION: 1.3 Giving information to people with heart failure
+------------------------------------------------------------
+and advice regarding follow-up. See the section on referral for echocardiography
+and specialist assessment in NICE's guideline on heart valve disease. [2003]
+Reviewing existing diagnoses
+1.2.16
+Review the basis for a historical diagnosis of heart failure and manage care in
+accordance with this guideline only if the diagnosis is confirmed with cardiac
+imaging. [2003]
+1.2.17
+If heart failure is still suspected, but an underlying cardiac abnormality has not
+been identified, then refer to the specialist heart failure team. [2003]
+1.3 Giving information to people with heart failure
+1.3.1
+Discuss the person's prognosis in a sensitive, open and honest manner. Be frank
+about the uncertainty in predicting the course of their heart failure. Revisit this
+discussion as the person's condition evolves. [2018]
+First consultations for people with newly diagnosed heart failure
+1.3.2
+The specialist heart failure multidisciplinary team (MDT) should offer people with
+newly diagnosed heart failure an extended first consultation, followed by a
+second consultation to take place within 2 weeks if possible. At each
+consultation:
+• discuss the person's diagnosis and prognosis
+• explain heart failure terminology
+• discuss treatments
+• discuss the risk of sudden death, including any misconceptions about that
+risk
+• encourage the person and their family or carers to ask any questions they
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 13
+SECTION: 1.4 Treating people with newly diagnosed and pre-
+------------------------------------------------------------
+have. [2018]
+1.4 Treating people with newly diagnosed and pre-
+existing heart failure with reduced ejection
+fraction
+See recommendations 1.7.1 and 1.7.2 for guidance on how to introduce the medicines listed
+in recommendations 1.4.1, 1.4.3 and 1.4.4. See also the section on other treatments and
+advice for all types of heart failure.
+Treatment combinations
+1.4.1
+Offer an angiotensin-converting enzyme (ACE) inhibitor, a beta-blocker, a
+mineralocorticoid receptor antagonist (MRA) and a sodium-glucose
+cotransporter-2 (SGLT2) inhibitor to people with heart failure with reduced
+ejection fraction. [2025]
+1.4.2
+For people on the maximum tolerated dose of each of the 4 medicines who
+continue to have symptoms of heart failure, consider switching the ACE inhibitor
+to an angiotensin receptor-neprilysin inhibitor (ARNI). [2025]
+Alternative treatment combinations if certain medicines are not
+tolerated
+1.4.3
+For people with heart failure with reduced ejection fraction who have symptoms
+of intolerance to ACE inhibitors (other than angioedema), offer an ARNI, beta-
+blocker, MRA and SGLT2 inhibitor. [2025]
+1.4.4
+For people with angioedema after taking an ACE inhibitor, or who have symptoms
+of intolerance to ARNIs:
+• offer a beta-blocker, MRA and SGLT2 inhibitor and
+• consider an ARB. [2025]
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 14
+SECTION: 150 g per litre if they have iron deficiency defined as:
+------------------------------------------------------------
+For a short explanation of why the committee made these recommendations and how
+they might affect practice, see the rationale and impact section on treatment
+combinations for heart failure with reduced ejection fraction.
+Full details of the evidence and the committee's discussion are in evidence review A:
+medicines for heart failure with reduced ejection fraction.
+Intravenous iron therapy
+1.4.5
+In people with heart failure with reduced ejection fraction, assess iron status and
+check for anaemia with all of the following blood tests:
+• transferrin saturation (TSAT)
+• serum ferritin
+• haemoglobin. [2025]
+1.4.6
+Consider iron sucrose, ferric carboxymaltose or ferric derisomaltose for people
+with heart failure with reduced ejection fraction and haemoglobin of less than
+150 g per litre if they have iron deficiency defined as:
+• TSAT of less than 20% or
+• serum ferritin of less than 100 nanogram per ml. [2025]
+1.4.7
+If iron deficiency anaemia is identified, do not assume that it is related to the
+person's heart failure and think about investigating for alternative causes. [2025]
+For a short explanation of why the committee made these recommendations and how
+they might affect practice, see the rationale and impact section on IV iron therapy for
+heart failure with reduced ejection fraction.
+Full details of the evidence and the committee's discussion are in evidence review C:
+IV iron therapy for heart failure.
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 15
+SECTION: 150 g per litre if they have iron deficiency defined as:
+------------------------------------------------------------
+Specialist treatment
+Ivabradine
+1.4.8
+Ivabradine is recommended as an option in NICE technology appraisal guidance
+for treating heart failure with reduced ejection fraction. For full details, see the
+guidance on ivabradine (TA267, 2012).
+Hydralazine in combination with nitrate
+1.4.9
+If ACE inhibitors, ARNIs and ARBs are not tolerated, seek specialist advice and
+consider hydralazine in combination with nitrate. [2010, amended 2025]
+1.4.10
+Seek specialist advice about whether to offer hydralazine in combination with
+nitrate (especially if the person is of African or Caribbean ethnicity and has
+moderate to severe heart failure [New York Heart Association class III/IV] with
+reduced ejection fraction). [2010]
+Digoxin
+For recommendations on digoxin for people with atrial fibrillation, see the section on rate
+and rhythm control in NICE's guideline on atrial fibrillation.
+1.4.11
+Offer digoxin to people with worsening or severe heart failure with reduced
+ejection fraction despite optimised treatment combinations as detailed in
+recommendations 1.4.1 to 1.4.4. Seek specialist advice before starting treatment.
+[2010, amended 2025]
+Calcium-channel blockers
+1.4.12
+Avoid verapamil, diltiazem and short-acting dihydropyridine agents in people with
+heart failure with reduced ejection fraction. [2003, amended 2018]
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 16
+SECTION: 1.5 Treating people with newly diagnosed and pre-
+------------------------------------------------------------
+1.5 Treating people with newly diagnosed and pre-
+existing heart failure with mildly reduced or
+preserved ejection fraction
+Mildly reduced ejection fraction
+See recommendations 1.7.1 and 1.7.2 for guidance on how to introduce the medicines listed
+in recommendations 1.5.1 to 1.5.3. See also the section on other treatments and advice for
+all types of heart failure.
+1.5.1
+Consider an angiotensin-converting enzyme (ACE) inhibitor, a beta-blocker, a
+mineralocorticoid receptor antagonist (MRA) and a sodium-glucose
+cotransporter-2 (SGLT2) inhibitor for treating heart failure with mildly reduced
+ejection fraction. See also recommendation 1.5.3. [2025]
+1.5.2
+For people who have symptoms of intolerance to ACE inhibitors, consider an
+angiotensin-receptor blocker (ARB), a beta-blocker, an MRA and an SGLT2
+inhibitor. See also recommendation 1.5.3 [2025]
+1.5.3
+For SGLT2 inhibitors recommended as options in NICE technology appraisal
+guidance for treating heart failure with mildly reduced ejection fraction, see the
+guidance on:
+• empagliflozin (TA929, 2023)
+• dapagliflozin (TA902, 2023).
+For a short explanation of why the committee made the 2025 recommendations and
+how they might affect practice, see the rationale and impact section on treatment
+combinations for heart failure with mildly reduced ejection fraction.
+Full details of the evidence and the committee's discussion are in evidence review B:
+medicines for heart failure with mildly reduced ejection fraction.
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 17
+SECTION: 2 or less, consider lower
+------------------------------------------------------------
+Preserved ejection fraction
+See recommendations 1.7.1 and 1.7.2 for guidance on how to introduce the medicines listed
+in recommendations 1.5.4 and 1.5.5. See also the section on other treatments and advice
+for all types of heart failure.
+1.5.4
+Consider an MRA and an sodium-glucose cotransporter-2 (SGLT2) inhibitor for
+treating heart failure with preserved ejection fraction. See also recommendation
+1.5.5. [2025]
+1.5.5
+For SGLT2 inhibitors recommended as options in NICE technology appraisal
+guidance for treating heart failure with preserved ejection fraction, see the
+guidance on:
+• empagliflozin (TA929, 2023)
+• dapagliflozin (TA902, 2023).
+For a short explanation of why the committee made the 2025 recommendation and
+how it might affect practice, see the rationale and impact section on treatment
+combinations for heart failure with preserved ejection fraction.
+Full details of the evidence and the committee's discussion are in evidence review D:
+MRA for heart failure with preserved ejection fraction.
+1.6 Treating heart failure in people with chronic
+kidney disease
+1.6.1
+If the person's eGFR is 45 ml per minute per 1.73 m
+2 or less, consider lower
+starting doses and smaller dose increments for the medicine combinations
+covered by recommendations 1.4.1, 1.4.3, 1.4.4, and 1.5.1 to 1.5.5. [2018, amended
+2025]
+1.6.2
+If the person's eGFR is less than 30 ml per minute per 1.73 m
+2, the specialist heart
+failure multidisciplinary team (MDT) should consider liaising with a renal
+physician. [2018, amended 2025]
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 18
+SECTION: 1.7 Starting and monitoring medication use
+------------------------------------------------------------
+1.7 Starting and monitoring medication use
+Tailoring treatment
+1.7.1
+Use the person's medical history and findings from their clinical assessment, their
+frailty status, prognosis and preferences when deciding:
+• which specific medicines and medicine combinations to use (see
+recommendations 1.4.1, 1.4.3, 1.4.4 and 1.5.1 to 1.5.5)
+• the order and timing for introducing each medicine
+• the initial dose of each medicine and any subsequent dose increments
+• when and how to optimise the dose of each medicine.
+See also NICE's guideline on shared decision making. [2025]
+1.7.2
+Primary care prescribers should consider seeking advice from a heart failure
+specialist before starting someone on an angiotensin receptor-neprilysin inhibitor
+(ARNI). [2025]
+For a short explanation of why the committee made these recommendations and how
+they might affect practice, see the rationale and impact section on starting and
+monitoring medicine use.
+Full details of the evidence and the committee's discussion are in evidence review A:
+medicines for heart failure with reduced ejection fraction.
+ACE inhibitors, ARNIs, ARBs and MRAs
+1.7.3
+Before prescribing an angiotensin-converting enzyme (ACE) inhibitor, angiotensin
+receptor-neprilysin inhibitor (ARNI), angiotensin II receptor blocker (ARB) or
+mineralocorticoid receptor antagonist (MRA), measure the person's renal function
+and electrolyte levels. [2025]
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 19
+SECTION: 1.7 Starting and monitoring medication use
+------------------------------------------------------------
+1.7.4
+If the person is taking an ACE inhibitor, ARNI, ARB or MRA, measure their renal
+function and electrolyte levels:
+• 1 to 2 weeks after starting treatment
+• 1 to 2 weeks after each dose increment
+• every 3 to 6 months once the maximum tolerated dose has been established
+• any time renal function may be compromised. [2025]
+1.7.5
+If the person's serum creatinine level increases by more than 50% or their
+potassium concentration increases to more than 5.5 mmol per litre, follow local
+guidelines. [2025]
+1.7.6
+For potassium binders recommended as options in NICE technology appraisal
+guidance for treating hyperkalaemia, see the guidance on:
+• patiromer (TA623, 2020)
+• sodium zirconium cyclosilicate (TA599, 2022).
+1.7.7
+Measure the person's blood pressure, or ask the person to measure their own
+blood pressure, before and after each dose increment. [2025]
+1.7.8
+For people with symptoms of postural hypotension, measure blood pressure
+according to recommendation 1.1.5 in NICE's guideline on hypertension in adults.
+[2025]
+For a short explanation of why the committee made the 2025 recommendations and
+how they might affect practice, see the rationale and impact section on starting and
+monitoring medicine use.
+Full details of the evidence and the committee's discussion are in the evidence
+reviews A: medicines for heart failure with reduced ejection fraction, B: medicines for
+heart failure with mildly reduced ejection fraction and D: MRA for heart failure with
+preserved ejection fraction.
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 20
+SECTION: 1.7 Starting and monitoring medication use
+------------------------------------------------------------
+Beta-blockers
+1.7.9
+Do not withhold treatment with a beta-blocker solely because of age or the
+presence of peripheral vascular disease, erectile dysfunction, diabetes, interstitial
+pulmonary disease or chronic obstructive pulmonary disease. [2010]
+1.7.10
+Assess for heart rhythm, heart rate and conduction abnormalities using a 12-lead
+ECG before deciding whether to prescribe a beta-blocker. [2025]
+1.7.11
+Do not offer a beta-blocker to people with second-degree or third-degree heart
+block who do not have a pacemaker or to people with bradycardia (that is, a
+heart rate of less than 50 beats per minute). [2025]
+1.7.12
+Assess heart rate and clinical status after each dose increment. [2010]
+1.7.13
+For people with symptoms and bradycardia, consider repeating a 12-lead ECG
+after each dose increment. [2025]
+For a short explanation of why the committee made the 2025 recommendations and
+how they might affect practice, see the rationale and impact section on starting and
+monitoring medicine use.
+Full details of the evidence and the committee's discussion are in evidence review A:
+medicines for heart failure with reduced ejection fraction.
+Digoxin
+1.7.14
+Do not routinely monitor serum digoxin concentrations. Be aware that a digoxin
+concentration measured within 8 to 12 hours of the last dose may be useful to
+confirm a clinical impression of toxicity or non-adherence. [2003]
+1.7.15
+Interpret the serum digoxin concentration in the clinical context as toxicity may
+occur even when the concentration is within the therapeutic range. [2003]
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 21
+SECTION: 1.8 Clinical review
+------------------------------------------------------------
+1.8 Clinical review
+1.8.1
+Monitor all people with heart failure. Provide:
+• a clinical assessment of functional capacity, fluid status, cardiac rhythm
+(minimum of examining the pulse), cognitive status and nutritional status
+• a review of medication, including need for changes and possible side effects
+• an assessment of renal function
+• iron status and haemoglobin measurement.
+Note: This is a minimum. Provide further monitoring for people with
+comorbidities or co-prescribed medications. [2010, amended 2025]
+1.8.2
+Provide more detailed monitoring if the person has significant comorbidity or if
+their condition has deteriorated since the previous review. [2003]
+1.8.3
+Determine the frequency of monitoring based on the person's clinical status and
+the stability of their condition. If the person's clinical condition or medication has
+changed, use a short timeframe for monitoring (days to every 2 weeks). For
+stable people with proven heart failure, monitor at least every 6 months. [2003]
+1.8.4
+For people with heart failure who want to be involved in monitoring their
+condition, provide sufficient education and support from their healthcare
+professional to enable this to happen, with clear guidance on what to do in the
+event of deterioration. [2003]
+People under 75 with normal renal function
+1.8.5
+For people aged under 75 in specialist care settings with heart failure with
+reduced ejection fraction and an estimated glomerular filtration rate (eGFR) more
+than 60 ml per minute per 1.73 m
+2, consider measuring N-terminal pro-B-type
+natriuretic peptide as part of optimising treatment. [2018]
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 22
+SECTION: 1.9 Other treatments and advice for all types of
+------------------------------------------------------------
+1.9 Other treatments and advice for all types of
+heart failure
+Diuretics
+1.9.1
+Use diuretics for the relief of congestive symptoms and fluid retention in people
+with heart failure and titrate (up and down) according to need using the lowest
+dose required. [2003]
+Amiodarone
+1.9.2
+Make the decision to prescribe amiodarone in consultation with a specialist.
+[2003]
+1.9.3
+Review the need to continue the amiodarone prescription at the 6-monthly
+clinical review. [2003, amended 2018]
+1.9.4
+Offer people taking amiodarone liver and thyroid function tests, and a review of
+side effects, as part of their routine 6-monthly clinical review. [2003, amended
+2018]
+Anticoagulants
+1.9.5
+For people with heart failure and atrial fibrillation, follow the recommendations on
+anticoagulation in the section on stroke prevention in NICE's guideline on atrial
+fibrillation. Be aware of the effects of impaired renal and liver function on
+anticoagulant therapies. [2018]
+1.9.6
+In people with heart failure in sinus rhythm, consider anticoagulation for those
+with a history of thromboembolism, left ventricular aneurysm or intracardiac
+thrombus. [2003]
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 23
+SECTION: 1.9 Other treatments and advice for all types of
+------------------------------------------------------------
+Vaccinations
+1.9.7
+Offer people with heart failure an annual vaccination against influenza. [2003]
+1.9.8
+Offer people with heart failure vaccination against pneumococcal disease (only
+required once). [2003]
+Contraception and pregnancy
+1.9.9
+For women, trans men and non-binary people of childbearing potential with heart
+failure, discuss contraception and pregnancy. If pregnancy is being contemplated
+or occurs, seek specialist advice. Subsequently, share specialist care between
+the cardiologist and obstetrician. [2003]
+Depression
+See NICE's guideline on depression in adults with a chronic physical health problem.
+Salt and fluid restriction
+1.9.10
+Do not routinely advise people with heart failure to restrict their sodium or fluid
+consumption. Ask about salt and fluid consumption and, if needed, advise as
+follows:
+• restricting fluids for people with dilutional hyponatraemia
+• reducing intake for people with high levels of salt or fluid consumption.
+Continue to review the need to restrict salt or fluid. [2018]
+1.9.11
+Advise people with heart failure to avoid salt substitutes that contain potassium.
+[2018]
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 24
+SECTION: 1.10 Interventional procedures
+------------------------------------------------------------
+Smoking and alcohol
+See NICE's guidance on smoking and tobacco and alcohol.
+Air travel
+1.9.12
+Advise that air travel will be possible for most people with heart failure,
+depending on their clinical condition at the time of travel. [2003]
+Driving
+1.9.13
+Ensure physicians are up to date with the latest Driver and Vehicle Licensing
+Agency (DVLA) guidelines. Check the DVLA website for regular updates. [2003]
+1.10 Interventional procedures
+Coronary revascularisation
+1.10.1
+Do not routinely offer coronary revascularisation to people with heart failure with
+reduced ejection fraction and coronary artery disease. [2018]
+Cardiac transplantation
+1.10.2
+Consider specialist referral for transplantation for people with severe refractory
+symptoms or refractory cardiogenic shock. [2003]
+Implantable cardioverter defibrillators and cardiac
+resynchronisation therapy
+1.10.3
+Implantable cardioverter defibrillators and cardiac resynchronisation therapy are
+recommended as options in NICE technology appraisal guidance for treating
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 25
+SECTION: 1.11 Cardiac rehabilitation
+------------------------------------------------------------
+heart failure with reduced ejection fraction. For full details, see the guidance on
+implantable cardioverter defibrillators and cardiac resynchronisation therapy
+(TA314, 2014).
+1.10.4
+When discussing implantation of a cardioverter defibrillator:
+• explain the risks, benefits and consequences of cardioverter defibrillator
+implantation, following the principles on shared decision making in NICE's
+guideline on shared decision making
+• ensure the person knows that the defibrillator function can be deactivated
+without affecting any cardiac resynchronisation or pacing, and reactivated
+later
+• explain the circumstances in which deactivation might be offered
+• discuss and dispel common misconceptions about the function of the device
+and the consequences of deactivation
+• provide the person and, if they wish, their family or carers, with written
+information covering the information discussed. [2018]
+1.10.5
+Review the benefits and potential harms of a cardioverter defibrillator remaining
+active in a person with heart failure:
+• at each 6-monthly review of their heart failure care
+• whenever their care goals change
+• as part of advance care planning if it is thought they are nearing the end of
+life. [2018]
+1.11 Cardiac rehabilitation
+1.11.1
+Offer people with heart failure a personalised, exercise-based cardiac
+rehabilitation programme. The programme:
+• should be preceded by an assessment to ensure that it is suitable for the
+person
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 26
+SECTION: 1.12 Palliative care
+------------------------------------------------------------
+• should be provided in a format and setting (at home, in the community or in
+the hospital) that is easily accessible for the person
+• should include a psychological and educational component
+• may be incorporated within an existing cardiac rehabilitation programme
+• should be accompanied by information about support available from
+healthcare professionals when the person is doing the programme. [2018,
+amended 2025]
+1.12 Palliative care
+1.12.1
+Do not offer long-term home oxygen therapy for advanced heart failure. Be aware
+that long-term home oxygen therapy may be offered for comorbidities, such as
+for some people with chronic obstructive pulmonary disease (see the section on
+oxygen in NICE's guideline on chronic obstructive pulmonary disease in over 16s).
+[2018]
+1.12.2
+Do not use prognostic risk tools to determine whether to refer a person with
+heart failure to palliative care services. [2018]
+1.12.3
+If the symptoms of a person with heart failure are worsening despite optimal
+specialist treatment, discuss their palliative care needs with the specialist heart
+failure multidisciplinary team (MDT) and think about a needs assessment for
+palliative care. [2018]
+1.12.4
+Offer people with heart failure and their families or carers access to professionals
+with palliative care skills within the heart failure team. [2003]
+1.12.5
+If it is thought that a person may be entering the last 2 to 3 days of life, follow
+NICE's guideline on care of dying adults in the last days of life. [2018]
+Terms used in this guideline
+Note: Heart failure is, by definition, symptomatic.
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 27
+SECTION: 2 in atrial fibrillation
+------------------------------------------------------------
+Heart failure with preserved ejection fraction
+Heart failure with left ventricular ejection fraction of 50% or more, plus a structural issue in
+the heart including 2 or more of the following:
+• left atrial volume greater than 34 ml per m
+2 in sinus rhythm, or greater than 40 ml
+per m
+2 in atrial fibrillation
+• ratio between early mitral inflow velocity and mitral annular early diastolic velocity (E:e'
+ratio) greater than 11
+• left ventricular hypertrophy, that is, wall thickness greater than 12 mm
+• pulmonary arterial pressure greater than 35 mmHg.
+Heart failure with mildly reduced ejection fraction
+Heart failure with left ventricular ejection fraction between 41% and 49%.
+Heart failure with reduced ejection fraction
+Heart failure with left ventricular ejection fraction of 40% or less.
+Mineralocorticoid receptor antagonist
+A medicine that antagonises the action of aldosterone at mineralocorticoid receptors.
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 28
+SECTION: 4 The impact of advanced kidney disease on the natriuretic
+------------------------------------------------------------
+Recommendations for research
+The guideline committee has made the following recommendations for research.
+Key recommendations for research
+1 Intravenous iron therapy in adults with iron deficiency and
+heart failure with mildly reduced or preserved ejection fraction
+What is the clinical and cost effectiveness of intravenous iron supplementation in adults
+with iron deficiency and heart failure with mildly reduced or preserved ejection fraction?
+For a short explanation of why the committee made this recommendation for
+research, see the rationale section on intravenous iron therapy for heart failure with
+reduced ejection fraction.
+Full details of the evidence and the committee's discussion are in evidence review C:
+IV iron therapy for heart failure.
+2 Diuretic therapy for managing fluid overload in people with
+advanced heart failure in the community
+In people with advanced heart failure and significant peripheral fluid overload, what is the
+clinical and cost effectiveness of oral, subcutaneous and intravenous diuretic therapy in
+the community?
+3 Cardiac MRI versus other imaging techniques for diagnosing
+heart failure
+What is the optimal imaging technique for the diagnosis of heart failure?
+4 The impact of advanced kidney disease on the natriuretic
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 29
+SECTION: 5 Risk tools for predicting non-sudden death in heart failure
+------------------------------------------------------------
+peptide threshold for diagnosing heart failure
+What are the optimal NT-proBNP thresholds for diagnosing heart failure in people with
+stage IIIb, IV or V chronic kidney disease?
+5 Risk tools for predicting non-sudden death in heart failure
+What is the most accurate prognostic risk tool in predicting 1-year mortality from heart
+failure at specific clinically relevant thresholds (for example, sensitivity, specificity,
+negative predictive value and positive predictive value at a threshold of 50% risk of
+mortality at 1 year)?
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 30
+SECTION: 5 Risk tools for predicting non-sudden death in heart failure
+------------------------------------------------------------
+Rationale and impact
+These sections briefly explain why the committee made the recommendations and how
+they might affect practice.
+Treatment combinations for heart failure with
+reduced ejection fraction
+Recommendations 1.4.1 to 1.4.4
+Why the committee made the recommendations
+Evidence showed adding a sodium-glucose cotransporter-2 (SGLT2) inhibitor to existing
+treatment with an angiotensin-converting enzyme (ACE) inhibitor or angiotensin II receptor
+blocker (ARB), beta-blocker and mineralocorticoid receptor antagonist (MRA) reduced
+mortality and hospitalisation for heart failure without important increases in adverse
+events. The committee agreed that treatment combinations for people with heart failure
+with reduced ejection fraction should now include an SGLT2 inhibitor.
+Similar benefits were seen when adding an MRA to existing treatment with an ACE inhibitor
+or ARB and beta-blocker although there was an increased risk of hyperkalaemia. The
+committee agreed an MRA should remain part of the treatment combination for people
+with heart failure with reduced ejection fraction.
+Economic modelling based on the clinical trials and real-world data suggested that early
+use of an MRA and SGLT2 inhibitor in combination with ACE inhibitor and beta-blocker
+would be cost-effective. For this reason and because the correct sequencing of medicines
+will vary from 1 person to another, the committee agreed to move away from a set of
+recommendations that include a sequence for introducing each medicine and instead
+listed treatment combinations for different scenarios.
+Evidence comparing treatment with an ACE inhibitor, beta-blocker and MRA against
+treatment with an angiotensin receptor-neprilysin inhibitor (ARNI), beta-blocker and MRA
+showed reduced all-cause and cardiovascular mortality for the group of people taking the
+treatment combination with an ARNI. More falls were seen in those taking an ARNI, while
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 31
+SECTION: 5 Risk tools for predicting non-sudden death in heart failure
+------------------------------------------------------------
+hyperkalaemia was more common among those taking an ACE inhibitor. The committee
+agreed that an ARNI can replace an ACE inhibitor in people who remain symptomatic when
+receiving the combination of ACE inhibitor, beta-blocker, MRA and SGLT2 inhibitor.
+However, where this combination is providing symptomatic improvement, switching to an
+ARNI is not advised because it is not as cost effective as an ACE inhibitor. The committee
+was aware that there should be a period of at least 36 hours between taking the last dose
+of an ACE inhibitor and the first dose of an ARNI.
+Economic modelling showed that ARNIs were cost effective compared to ARBs. The
+committee agreed that an ARNI should be offered instead of an ACE inhibitor to people
+who have symptoms of intolerance to ACE inhibitors (other than angioedema). The
+previous first choice in this situation was an ARB. The committee agreed that an ARB can
+still be used for people with angioedema after taking an ACE inhibitor, or who have
+symptoms of intolerance to ARNIs.
+How the recommendations might affect practice
+Growing numbers of people with heart failure with reduced ejection fraction are being
+prescribed an SGLT2 inhibitor or ARNI and these recommendations are likely to accelerate
+this trend. There is likely to be a reduction in hospitalisation for heart failure as a result of
+this change in prescribing.
+Return to recommendations
+Intravenous iron therapy for heart failure with
+reduced ejection fraction
+Recommendations 1.4.5 to 1.4.7
+Why the committee made the recommendations
+Evidence showed intravenous (IV) iron (iron sucrose, ferric carboxymaltose or ferric
+derisomaltose) improved exercise tolerance and quality of life in the first year for people
+with heart failure with reduced ejection fraction and iron deficiency. Some trials also
+showed reduced hospitalisation for heart failure. One study showed a significant risk of
+hypophosphatemia with ferric carboxymaltose. As hypophosphatemia can be monitored
+and treated, the committee agreed that the risk of this did not outweigh the expected
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 32
+SECTION: 5 Risk tools for predicting non-sudden death in heart failure
+------------------------------------------------------------
+benefits of IV iron.
+There was evidence that IV iron therapy is cost-effective in people with heart failure with
+reduced ejection fraction and iron deficiency and so the committee focused on this
+population. They agreed to define iron deficiency according to the definition used in the
+trials.
+To support the recommendation on when to consider IV iron, the committee made a
+recommendation to assess iron status with blood tests for transferrin saturation (TSAT)
+and serum ferritin, as well as measuring haemoglobin to check for anaemia.
+The committee highlighted the importance of considering alternative causes of iron
+deficiency anaemia when it is identified, but also the need to get the correct balance
+against over-investigating.
+As only 1 small trial was available for the mildly reduced or preserved ejection fraction
+population, the committee made a recommendation for research on use of IV iron therapy
+in adults with iron deficiency and heart failure with mildly reduced or preserved ejection
+fraction.
+How the recommendations might affect practice
+The use of IV iron therapy to treat iron deficiency in people with heart failure with reduced
+ejection fraction is quite common. In some places this might be a change in practice. With
+increased use of IV iron therapy there could be a reduction in hospitalisation.
+Return to recommendations
+Treatment combinations for heart failure with
+mildly reduced ejection fraction
+Recommendations 1.5.1 and 1.5.2
+Why the committee made the recommendations
+Evidence suggested each of the following medicines reduce hospitalisation for heart
+failure, and possibly mortality, in people with heart failure with mildly reduced ejection
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 33
+SECTION: 5 Risk tools for predicting non-sudden death in heart failure
+------------------------------------------------------------
+fraction: angiotensin-converting enzyme (ACE) inhibitor, angiotensin II receptor blocker
+(ARB), beta-blocker and mineralocorticoid receptor antagonist (MRA). In practice, an ACE
+inhibitor and ARB would not be prescribed together because of the lack of additional
+benefit and risk of adverse events. There was no cost-effectiveness evidence for these
+medicines, but all are relatively cheap in their generic form.
+Evidence comparing use of an angiotensin receptor-neprilysin inhibitor (ARNI) with use of
+an ARB for treating heart failure with mildly reduced ejection fraction showed no difference
+in mortality rates. Economic evidence also showed that ARNIs were not cost effective for
+this population group and so were not recommended.
+The committee did not review the evidence for sodium-glucose cotransporter-2 (SGLT2)
+inhibitors because the NICE technology appraisals 929 and 902 already recommend them
+as treatment options for people with heart failure with mildly reduced ejection fraction.
+The committee therefore agreed they should be considered alongside the other
+medicines.
+How the recommendations might affect practice
+Although this is a new recommendation for NICE, most people in this population will
+already be receiving a combination of these medicines, if not contraindicated and
+depending on comorbidities. Where there is an impact, it will include extra staff time for
+consultations to establish the correct combination and dose of each of medicine. However,
+there should be a reduction in hospitalisation for heart failure.
+Return to the recommendations
+Treatment combinations for heart failure with
+preserved ejection fraction
+Recommendation 1.5.4
+Why the committee made the recommendation
+Evidence showed treatment with a mineralocorticoid receptor antagonist (MRA) reduced
+hospitalisation for heart failure and may also improve all-cause and cardiovascular
+mortality in people with heart failure with preserved ejection fraction. However, there was
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 34
+SECTION: 5 Risk tools for predicting non-sudden death in heart failure
+------------------------------------------------------------
+an increased risk of hyperkalaemia. Although this requires careful monitoring and
+management the committee agreed this should not prevent them from recommending
+MRAs for this population group.
+The committee did not review the evidence for sodium-glucose cotransporter-2 (SGLT2)
+inhibitors because the NICE technology appraisals 929 and 902 already recommend them
+as treatment options for people with heart failure with preserved ejection fraction. The
+committee therefore agreed they should be considered alongside MRAs.
+How the recommendation might affect practice
+This is a significant change in practice. The impact will include staff time for consultation
+to establish the correct dose of MRA and treatment of hyperkalaemia. However, there is
+likely to be a reduction in hospitalisation for heart failure.
+Return to recommendation
+Starting and monitoring medicine use
+Recommendations 1.7.1 and 1.7.2, recommendations 1.7.3 to 1.7.5 and 1.7.7 and 1.7.8 and
+recommendations 1.7.10, 1.7.11 and 1.7.13
+Why the committee made the recommendations
+The order in which the medicines should be prescribed should be based on the presenting
+symptoms, comorbidities and past medical history and the preferences of the person, for
+example, expected side effects.
+It is not necessary to optimise the dose of a medicine before introducing another. How
+quickly to introduce the medicines depends on a number of factors including symptoms,
+frailty, blood pressure and renal function.
+Based on their experience and expertise, the committee agreed that angiotensin receptor-
+neprilysin inhibitors (ARNIs) could be prescribed by primary care prescribers without the
+advice of a heart failure specialist. However, in some circumstances, advice from a heart
+specialist might be needed and so should be considered.
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 35
+SECTION: 5 Risk tools for predicting non-sudden death in heart failure
+------------------------------------------------------------
+Evidence showed that angiotensin-converting enzyme (ACE) inhibitors, angiotensin
+receptor-neprilysin inhibitors (ARNIs), angiotensin II receptor blockers (ARBs) and
+mineralocorticoid receptor antagonists (MRAs) can affect renal function and electrolyte
+levels. However, these risks can be managed by measuring a person's electrolyte levels
+and renal function at baseline and at regular intervals or after increasing their dose. Local
+guidelines should be followed rather than automatically discontinuing a medicine if there is
+a rise in serum creatinine of more than 50% or potassium concentrations increase to more
+than 5.5 mmol per litre.
+The importance of measuring blood pressure after each dose increment was also stressed
+by the committee as postural hypotension is a common cause of hospital admission in
+older people.
+Beta-blockers can affect heart rate and rhythm. The committee agreed, based on their
+expertise and experience, that a 12-lead ECG should be undertaken in everyone before
+prescribing them a beta-blocker.
+The committee supported the current clinical practice of not offering a beta-blocker if a
+person has second- or third-degree heart block or bradycardia, that is a heart rate of less
+than 50 beats per minute. They discussed using beta-blockers in symptomatic people with
+bradycardia, and agreed that repeating a 12-lead ECG after each dose increment was a
+reasonable safety measure to ensure early detection of any new arrhythmias or
+conduction abnormalities that could indicate intolerance to the increased dose.
+How the recommendation might affect practice
+The recommendations reflect current practice but might increase prescribing of ARNIs by
+dropping the requirement that these medicines should be initiated by a heart failure
+specialist.
+Return to recommendations 1.7.1 and 1.7.2
+Return to recommendations 1.7.3 to 1.7.5 and 1.7.7 and 1.7.8
+Return to recommendations 1.7.10, 1.7.11 and 1.7.13
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 36
+SECTION: 5 Risk tools for predicting non-sudden death in heart failure
+------------------------------------------------------------
+Context
+Key facts and figures
+Heart failure is a complex clinical syndrome of symptoms and signs caused by impaired
+heart function. When this affects mainly the left ventricle, it can be due to either weakness
+of contraction or impaired relaxation of the left ventricle. Other problems affecting the
+right ventricle, the heart valves, the pulmonary circulation or the pericardium can lead to
+the development of heart failure.
+Almost 1 million people in the UK are currently diagnosed with heart failure, with 200,000
+new cases each year. Both the incidence and prevalence of heart failure increase steeply
+with age. The average age at diagnosis is 76 years. Increases in life expectancy, including
+for people with ischaemic heart disease and hypertension, has increased the incidence of
+heart failure. The increased prevalence of obesity is another contributor to the rising
+incidence and prevalence of heart failure.
+Current practice
+NICE's 2018 guideline on chronic heart failure concentrated on the weak left ventricular
+contraction phenotype of heart failure, otherwise called heart failure with reduced ejection
+fraction, as it was then the only phenotype of chronic heart failure where we had
+evidence-based treatments. The treatment algorithm then was based on stepwise
+introduction of medicines aiming to provide people with at least angiotensin-converting
+enzyme (ACE) inhibitors, beta-blockers and, if remaining symptomatic, mineralocorticoid
+receptor antagonists (MRAs). Those who continued to be symptomatic would be
+considered by the specialist heart failure multidisciplinary team for 1 or more of 4 further
+medicines.
+Since 2018, we have seen new developments in the treatment of not only heart failure with
+reduced ejection fraction, but also new evidence emerged for the treatment of the people
+with heart failure due to stiff ventricle, called heart failure with preserved ejection fraction;
+in addition to some evidence for treating those with heart failure with mildly reduced
+ejection fraction.
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 37
+SECTION: 5 Risk tools for predicting non-sudden death in heart failure
+------------------------------------------------------------
+In people with heart failure with reduced ejection fraction there will be a need to change
+the ethos of stepwise introduction of medicines and allow early initiation of multiple
+medicines before optimising the doses of each. The reason for the different approach
+being the evidence for impact on people's symptoms and prognosis at an early stage of
+introduction of each medicine class, and the tendency of all classes of medicine to lower
+blood pressure which, when exaggerated by optimising the dose of some of the
+medicines, can render the person unable to receive further treatment with other
+medicines.
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 38
+SECTION: 5 Risk tools for predicting non-sudden death in heart failure
+------------------------------------------------------------
+Finding more information and committee
+details
+To find out what NICE has said on related topics, including guidance in development, see
+the NICE topic page on cardiovascular conditions.
+For full details of the evidence and the guideline committee's discussions, see the
+evidence reviews and full guideline. You can also find information about how the guideline
+was developed, including details of the committee.
+NICE has produced tools and resources to help you put this guideline into practice. For
+general help and advice on putting our guidelines into practice, see resources to help you
+put NICE guidance into practice.
+conditions#notice-of-rights).
+39
+
+DOCUMENT: NICE_HF_2018_Guideline.pdf
+PAGE: 39
+SECTION: 5 Risk tools for predicting non-sudden death in heart failure
+------------------------------------------------------------
+Update information
+September 2025: We have reviewed the evidence on treating and monitoring heart failure
+with reduced ejection fraction, mildly reduced ejection fraction and preserved ejection
+fraction. Recommendations are marked [2025] if the evidence has been reviewed.
+September 2018: This guideline updates and replaces NICE guideline CG108 (published
+August 2010). NICE guideline CG108 updated and replaced NICE guideline CG5 (published
+July 2003).
+Minor changes since publication
+December 2025: We amended the rationale for recommendation 1.7.2 to clarify our advice
+on the prescribing of angiotensin receptor-neprilysin inhibitors (ARNIs) by primary care
+prescribers.
+October 2025: We amended the rationale for recommendation 1.7.10 to clarify that an ECG
+should be carried out before prescribing a beta-blocker.
+November 2021: We added links to NICE's guideline on heart valve disease.
+ISBN: 978-1-4731-7169-5
+conditions#notice-of-rights).
+39
+
