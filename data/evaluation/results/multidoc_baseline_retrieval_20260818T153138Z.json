@@ -1,0 +1,2988 @@
+{
+  "dataset_version": "2.0",
+  "evaluation_timestamp": "20260818T153138Z",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "collection_name": "medical_guidelines",
+  "collection_count": 1001,
+  "chunk_count": 1001,
+  "num_queries": 30,
+  "k_values": [
+    1,
+    3,
+    5,
+    10
+  ],
+  "retrieval_config": {
+    "query_prefix": "Represent this sentence for searching relevant passages: ",
+    "metadata_filter": {
+      "section": {
+        "$ne": "Front matter"
+      }
+    },
+    "distance_metric": "cosine",
+    "device": "cpu"
+  },
+  "metric_definitions": {
+    "precision": "lenient: relevance >= 1",
+    "strict_precision": "strict: relevance == 2",
+    "recall": "lenient: relevance >= 1",
+    "strict_recall": "strict: relevance == 2",
+    "f1": "harmonic mean of precision and recall",
+    "hit_rate": "lenient: any relevance >= 1 in top-K",
+    "strict_hit_rate": "strict: any relevance == 2 in top-K",
+    "mrr": "1/rank of first relevant (relevance >= 1)",
+    "ndcg": "graded relevance (0/1/2), DCG = sum((2^rel-1)/log2(rank+1))"
+  },
+  "aggregate_metrics": {
+    "per_k": {
+      "1": {
+        "precision": 0.3,
+        "strict_precision": 0.133333,
+        "recall": 0.067968,
+        "strict_recall": 0.072222,
+        "f1": 0.08942,
+        "strict_f1": 0.087302,
+        "hit_rate": 0.3,
+        "strict_hit_rate": 0.133333,
+        "ndcg": 0.188889
+      },
+      "3": {
+        "precision": 0.322222,
+        "strict_precision": 0.122222,
+        "recall": 0.135571,
+        "strict_recall": 0.163065,
+        "f1": 0.128935,
+        "strict_f1": 0.115377,
+        "hit_rate": 0.633333,
+        "strict_hit_rate": 0.366667,
+        "ndcg": 0.231411
+      },
+      "5": {
+        "precision": 0.306667,
+        "strict_precision": 0.12,
+        "recall": 0.16877,
+        "strict_recall": 0.188594,
+        "f1": 0.149795,
+        "strict_f1": 0.114165,
+        "hit_rate": 0.8,
+        "strict_hit_rate": 0.533333,
+        "ndcg": 0.250593
+      },
+      "10": {
+        "precision": 0.253333,
+        "strict_precision": 0.11,
+        "recall": 0.22898,
+        "strict_recall": 0.23407,
+        "f1": 0.174124,
+        "strict_f1": 0.11727,
+        "hit_rate": 0.933333,
+        "strict_hit_rate": 0.633333,
+        "ndcg": 0.265928
+      }
+    },
+    "mrr": 0.483095
+  },
+  "latency": {
+    "total": {
+      "mean": 59.98,
+      "median": 43.64,
+      "min": 31.57,
+      "max": 504.11
+    },
+    "embedding": {
+      "mean": 51.69,
+      "median": 36.95,
+      "min": 25.27,
+      "max": 477.55
+    },
+    "search": {
+      "mean": 8.29,
+      "median": 7.34,
+      "min": 5.51,
+      "max": 26.56
+    }
+  },
+  "per_query_results": [
+    {
+      "query_id": "mdq001",
+      "query": "What are the recommended first-line pharmacological treatments for heart failure with reduced ejection fraction according to NICE guidelines?",
+      "category": "nice",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0025",
+        "nice_hf_2018_chunk_0021",
+        "nice_hf_2018_chunk_0057",
+        "nice_hf_2018_chunk_0023",
+        "esc_hf_2021_chunk_0030",
+        "esc_hf_2021_chunk_0015",
+        "esc_hf_2021_chunk_0119",
+        "esc_hf_2021_chunk_0031",
+        "esc_hf_2021_chunk_0032",
+        "esc_hf_2021_chunk_0070"
+      ],
+      "retrieved_distances": [
+        0.19582223892211914,
+        0.1983581781387329,
+        0.20001530647277832,
+        0.20227503776550293,
+        0.20576298236846924,
+        0.21899497509002686,
+        0.2212005853652954,
+        0.2229369878768921,
+        0.2300429344177246,
+        0.23011451959609985
+      ],
+      "retrieved_relevance": [
+        1,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 7,
+      "total_relevant_strict": 1,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 0.0,
+          "recall": 0.14285714285714285,
+          "strict_recall": 0.0,
+          "f1": 0.25,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.3333333333333333
+        },
+        "3": {
+          "precision": 0.6666666666666666,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.2857142857142857,
+          "strict_recall": 1.0,
+          "f1": 0.4,
+          "strict_f1": 0.5,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.7002755876478819
+        },
+        "5": {
+          "precision": 0.6,
+          "strict_precision": 0.2,
+          "recall": 0.42857142857142855,
+          "strict_recall": 1.0,
+          "f1": 0.5,
+          "strict_f1": 0.33333333333333337,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.6716163029634937
+        },
+        "10": {
+          "precision": 0.3,
+          "strict_precision": 0.1,
+          "recall": 0.42857142857142855,
+          "strict_recall": 1.0,
+          "f1": 0.3529411764705882,
+          "strict_f1": 0.18181818181818182,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5894760609080437
+        }
+      },
+      "latency": {
+        "embedding_ms": 477.54510000231676,
+        "search_ms": 26.563299994450063,
+        "total_ms": 504.1083999967668
+      }
+    },
+    {
+      "query_id": "mdq002",
+      "query": "How does NICE recommend diagnosing chronic heart failure in adults, including the role of natriuretic peptides and echocardiography?",
+      "category": "nice",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0532",
+        "esc_hf_2021_chunk_0536",
+        "nice_hf_2018_chunk_0018",
+        "nice_hf_2018_chunk_0017",
+        "esc_hf_2021_chunk_0106",
+        "nice_hf_2018_chunk_0057",
+        "nice_hf_2018_chunk_0044",
+        "nice_hf_2018_chunk_0019",
+        "esc_hf_2021_chunk_0533",
+        "nice_hf_2018_chunk_0056"
+      ],
+      "retrieved_distances": [
+        0.2026306390762329,
+        0.21426904201507568,
+        0.21450138092041016,
+        0.22176647186279297,
+        0.2275904417037964,
+        0.22866040468215942,
+        0.22975075244903564,
+        0.23190408945083618,
+        0.2360450029373169,
+        0.23679417371749878
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "mrr": 0.3333333333333333,
+      "total_relevant_lenient": 5,
+      "total_relevant_strict": 4,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.2,
+          "strict_recall": 0.25,
+          "f1": 0.25,
+          "strict_f1": 0.28571428571428575,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.23463936301137825
+        },
+        "5": {
+          "precision": 0.4,
+          "strict_precision": 0.4,
+          "recall": 0.4,
+          "strict_recall": 0.5,
+          "f1": 0.4000000000000001,
+          "strict_f1": 0.4444444444444445,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.34590475968363393
+        },
+        "10": {
+          "precision": 0.3,
+          "strict_precision": 0.3,
+          "recall": 0.6,
+          "strict_recall": 0.75,
+          "f1": 0.4,
+          "strict_f1": 0.4285714285714285,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.46315365936483704
+        }
+      },
+      "latency": {
+        "embedding_ms": 45.10119999758899,
+        "search_ms": 16.760400001658127,
+        "total_ms": 61.86159999924712
+      }
+    },
+    {
+      "query_id": "mdq003",
+      "query": "What palliative care approach does NICE recommend for patients with advanced heart failure?",
+      "category": "nice",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0041",
+        "esc_hf_2021_chunk_0037",
+        "nice_hf_2018_chunk_0040",
+        "esc_hf_2021_chunk_0261",
+        "esc_hf_2021_chunk_0648",
+        "esc_hf_2021_chunk_0236",
+        "esc_hf_2021_chunk_0209",
+        "esc_hf_2021_chunk_0257",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0244"
+      ],
+      "retrieved_distances": [
+        0.22567516565322876,
+        0.22810465097427368,
+        0.23399674892425537,
+        0.2499791979789734,
+        0.25705671310424805,
+        0.26000702381134033,
+        0.2682214379310608,
+        0.2774975299835205,
+        0.2792952060699463,
+        0.2825528383255005
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 0.3333333333333333,
+      "total_relevant_lenient": 1,
+      "total_relevant_strict": 1,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.3333333333333333,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.5,
+          "strict_f1": 0.5,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.2,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.33333333333333337,
+          "strict_f1": 0.33333333333333337,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5
+        },
+        "10": {
+          "precision": 0.1,
+          "strict_precision": 0.1,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.18181818181818182,
+          "strict_f1": 0.18181818181818182,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5
+        }
+      },
+      "latency": {
+        "embedding_ms": 38.53640001034364,
+        "search_ms": 9.948299993993714,
+        "total_ms": 48.484700004337355
+      }
+    },
+    {
+      "query_id": "mdq004",
+      "query": "How should heart failure with preserved ejection fraction be treated according to NICE?",
+      "category": "nice",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0200",
+        "esc_hf_2021_chunk_0053",
+        "esc_hf_2023_focused_update_chunk_0018",
+        "nice_hf_2018_chunk_0031",
+        "nice_hf_2018_chunk_0057",
+        "esc_hf_2021_chunk_0031",
+        "esc_hf_2021_chunk_0017",
+        "esc_hf_2021_chunk_0016",
+        "esc_hf_2023_focused_update_chunk_0016",
+        "nice_hf_2018_chunk_0042"
+      ],
+      "retrieved_distances": [
+        0.1556994915008545,
+        0.20291578769683838,
+        0.20291578769683838,
+        0.20620185136795044,
+        0.22181272506713867,
+        0.2277921438217163,
+        0.23253893852233887,
+        0.23477387428283691,
+        0.23601222038269043,
+        0.23886346817016602
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 0.25,
+      "total_relevant_lenient": 7,
+      "total_relevant_strict": 4,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.0,
+          "recall": 0.14285714285714285,
+          "strict_recall": 0.0,
+          "f1": 0.16666666666666666,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.05335655014603674
+        },
+        "10": {
+          "precision": 0.1,
+          "strict_precision": 0.0,
+          "recall": 0.14285714285714285,
+          "strict_recall": 0.0,
+          "f1": 0.11764705882352941,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.049157187974015665
+        }
+      },
+      "latency": {
+        "embedding_ms": 33.370999997714534,
+        "search_ms": 7.394399988697842,
+        "total_ms": 40.765399986412376
+      }
+    },
+    {
+      "query_id": "mdq005",
+      "query": "What cardiac rehabilitation does NICE recommend for heart failure patients?",
+      "category": "nice",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0039",
+        "esc_hf_2021_chunk_0227",
+        "esc_hf_2021_chunk_0031",
+        "esc_hf_2021_chunk_0617",
+        "esc_hf_2021_chunk_0618",
+        "nice_hf_2018_chunk_0056",
+        "nice_hf_2018_chunk_0013",
+        "esc_hf_2023_focused_update_chunk_0014",
+        "nice_hf_2018_chunk_0037",
+        "nice_hf_2018_chunk_0057"
+      ],
+      "retrieved_distances": [
+        0.191240131855011,
+        0.2339279055595398,
+        0.2882080674171448,
+        0.29509037733078003,
+        0.2974656820297241,
+        0.29830700159072876,
+        0.2998046278953552,
+        0.30074936151504517,
+        0.3016643524169922,
+        0.3060685396194458
+      ],
+      "retrieved_relevance": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 1,
+      "total_relevant_strict": 1,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 1.0,
+          "strict_f1": 1.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.3333333333333333,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.5,
+          "strict_f1": 0.5,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.2,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.33333333333333337,
+          "strict_f1": 0.33333333333333337,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "10": {
+          "precision": 0.1,
+          "strict_precision": 0.1,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.18181818181818182,
+          "strict_f1": 0.18181818181818182,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        }
+      },
+      "latency": {
+        "embedding_ms": 28.69110001483932,
+        "search_ms": 6.8829999945592135,
+        "total_ms": 35.574100009398535
+      }
+    },
+    {
+      "query_id": "mdq006",
+      "query": "What is the role of SGLT2 inhibitors in heart failure treatment according to NICE, and for which patient groups are they recommended?",
+      "category": "nice",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0386",
+        "esc_hf_2023_focused_update_chunk_0034",
+        "nice_hf_2018_chunk_0026",
+        "esc_hf_2023_focused_update_chunk_0036",
+        "esc_hf_2021_chunk_0077",
+        "nice_hf_2018_chunk_0045",
+        "esc_hf_2021_chunk_0135",
+        "esc_hf_2021_chunk_0735",
+        "esc_hf_2023_focused_update_chunk_0051",
+        "esc_hf_2023_focused_update_chunk_0063"
+      ],
+      "retrieved_distances": [
+        0.20867091417312622,
+        0.2118738889694214,
+        0.2125369906425476,
+        0.2160223126411438,
+        0.23724400997161865,
+        0.24208343029022217,
+        0.2513396739959717,
+        0.25989776849746704,
+        0.262540340423584,
+        0.26855671405792236
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 0.3333333333333333,
+      "total_relevant_lenient": 7,
+      "total_relevant_strict": 4,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.14285714285714285,
+          "strict_recall": 0.25,
+          "f1": 0.2,
+          "strict_f1": 0.28571428571428575,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.23463936301137825
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.2,
+          "recall": 0.14285714285714285,
+          "strict_recall": 0.25,
+          "f1": 0.16666666666666666,
+          "strict_f1": 0.22222222222222224,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.18583510924552366
+        },
+        "10": {
+          "precision": 0.2,
+          "strict_precision": 0.1,
+          "recall": 0.2857142857142857,
+          "strict_recall": 0.25,
+          "f1": 0.23529411764705882,
+          "strict_f1": 0.14285714285714288,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.21186647823037164
+        }
+      },
+      "latency": {
+        "embedding_ms": 41.149500000756234,
+        "search_ms": 8.937600010540336,
+        "total_ms": 50.08710001129657
+      }
+    },
+    {
+      "query_id": "mdq007",
+      "query": "What interventional procedures does NICE recommend for heart failure patients, including ICDs and cardiac resynchronisation therapy?",
+      "category": "nice",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0037",
+        "esc_hf_2021_chunk_0159",
+        "esc_hf_2021_chunk_0160",
+        "nice_hf_2018_chunk_0039",
+        "esc_hf_2021_chunk_0167",
+        "esc_hf_2021_chunk_0085",
+        "esc_hf_2021_chunk_0591",
+        "esc_hf_2021_chunk_0158",
+        "esc_hf_2021_chunk_0479",
+        "esc_hf_2021_chunk_0480"
+      ],
+      "retrieved_distances": [
+        0.20225882530212402,
+        0.23722189664840698,
+        0.25845158100128174,
+        0.27180057764053345,
+        0.27821826934814453,
+        0.27892017364501953,
+        0.2815432548522949,
+        0.2836935520172119,
+        0.2842240333557129,
+        0.2873573303222656
+      ],
+      "retrieved_relevance": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 3,
+      "total_relevant_strict": 2,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.3333333333333333,
+          "strict_recall": 0.5,
+          "f1": 0.5,
+          "strict_f1": 0.6666666666666666,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.3333333333333333,
+          "strict_recall": 0.5,
+          "f1": 0.3333333333333333,
+          "strict_f1": 0.4,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5562983930884396
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.2,
+          "recall": 0.3333333333333333,
+          "strict_recall": 0.5,
+          "f1": 0.25,
+          "strict_f1": 0.28571428571428575,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5562983930884396
+        },
+        "10": {
+          "precision": 0.1,
+          "strict_precision": 0.1,
+          "recall": 0.3333333333333333,
+          "strict_recall": 0.5,
+          "f1": 0.15384615384615383,
+          "strict_f1": 0.16666666666666669,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5562983930884396
+        }
+      },
+      "latency": {
+        "embedding_ms": 39.624600001843646,
+        "search_ms": 8.965799992438406,
+        "total_ms": 48.59039999428205
+      }
+    },
+    {
+      "query_id": "mdq008",
+      "query": "What monitoring and clinical review schedule does NICE recommend for heart failure patients?",
+      "category": "nice",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0033",
+        "nice_hf_2018_chunk_0057",
+        "nice_hf_2018_chunk_0056",
+        "nice_hf_2018_chunk_0039",
+        "nice_hf_2018_chunk_0014",
+        "esc_hf_2023_focused_update_chunk_0061",
+        "nice_hf_2018_chunk_0012",
+        "esc_hf_2021_chunk_0372",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0031"
+      ],
+      "retrieved_distances": [
+        0.23225820064544678,
+        0.2572736144065857,
+        0.2755265235900879,
+        0.28028810024261475,
+        0.2805856466293335,
+        0.28186190128326416,
+        0.28526097536087036,
+        0.28527092933654785,
+        0.2863701581954956,
+        0.2879502773284912
+      ],
+      "retrieved_relevance": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 3,
+      "total_relevant_strict": 2,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.3333333333333333,
+          "strict_recall": 0.5,
+          "f1": 0.5,
+          "strict_f1": 0.6666666666666666,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.3333333333333333,
+          "strict_recall": 0.5,
+          "f1": 0.3333333333333333,
+          "strict_f1": 0.4,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5562983930884396
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.2,
+          "recall": 0.3333333333333333,
+          "strict_recall": 0.5,
+          "f1": 0.25,
+          "strict_f1": 0.28571428571428575,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5562983930884396
+        },
+        "10": {
+          "precision": 0.2,
+          "strict_precision": 0.1,
+          "recall": 0.6666666666666666,
+          "strict_recall": 0.5,
+          "f1": 0.30769230769230765,
+          "strict_f1": 0.16666666666666669,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.6181093256538219
+        }
+      },
+      "latency": {
+        "embedding_ms": 39.591999986441806,
+        "search_ms": 8.7028999987524,
+        "total_ms": 48.294899985194206
+      }
+    },
+    {
+      "query_id": "mdq009",
+      "query": "What are the cornerstone pharmacological therapies recommended by the 2021 ESC guidelines for heart failure with reduced ejection fraction?",
+      "category": "esc_2021",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0091",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0030",
+        "nice_hf_2018_chunk_0021",
+        "esc_hf_2021_chunk_0426",
+        "esc_hf_2021_chunk_0155",
+        "nice_hf_2018_chunk_0057",
+        "esc_hf_2021_chunk_0513",
+        "nice_hf_2018_chunk_0025",
+        "esc_hf_2021_chunk_0031"
+      ],
+      "retrieved_distances": [
+        0.20317208766937256,
+        0.21068990230560303,
+        0.21203011274337769,
+        0.22189873456954956,
+        0.22711318731307983,
+        0.22730159759521484,
+        0.22893714904785156,
+        0.22981226444244385,
+        0.2324732542037964,
+        0.23307424783706665
+      ],
+      "retrieved_relevance": [
+        2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 16,
+      "total_relevant_strict": 6,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.0625,
+          "strict_recall": 0.16666666666666666,
+          "f1": 0.11764705882352941,
+          "strict_f1": 0.2857142857142857,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.6666666666666666,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.125,
+          "strict_recall": 0.16666666666666666,
+          "f1": 0.21052631578947367,
+          "strict_f1": 0.2222222222222222,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5474918470265493
+        },
+        "5": {
+          "precision": 0.4,
+          "strict_precision": 0.2,
+          "recall": 0.125,
+          "strict_recall": 0.16666666666666666,
+          "f1": 0.19047619047619047,
+          "strict_f1": 0.1818181818181818,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.3956869061525521
+        },
+        "10": {
+          "precision": 0.2,
+          "strict_precision": 0.1,
+          "recall": 0.125,
+          "strict_recall": 0.16666666666666666,
+          "f1": 0.15384615384615385,
+          "strict_f1": 0.125,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.31381995052683836
+        }
+      },
+      "latency": {
+        "embedding_ms": 35.429000010481104,
+        "search_ms": 8.098099991912022,
+        "total_ms": 43.52710000239313
+      }
+    },
+    {
+      "query_id": "mdq010",
+      "query": "How do the 2021 ESC guidelines approach the diagnosis and treatment of heart failure with preserved ejection fraction?",
+      "category": "esc_2021",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0513",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0200",
+        "esc_hf_2021_chunk_0508",
+        "esc_hf_2021_chunk_0066",
+        "esc_hf_2021_chunk_0071",
+        "esc_hf_2023_focused_update_chunk_0021",
+        "esc_hf_2023_focused_update_chunk_0073",
+        "esc_hf_2021_chunk_0241",
+        "esc_hf_2021_chunk_0256"
+      ],
+      "retrieved_distances": [
+        0.17694520950317383,
+        0.18554973602294922,
+        0.20951342582702637,
+        0.21249282360076904,
+        0.21334123611450195,
+        0.2182101011276245,
+        0.2277672290802002,
+        0.2309926152229309,
+        0.23164403438568115,
+        0.23369979858398438
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 0.3333333333333333,
+      "total_relevant_lenient": 41,
+      "total_relevant_strict": 8,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.0,
+          "recall": 0.024390243902439025,
+          "strict_recall": 0.0,
+          "f1": 0.04545454545454545,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.07821312100379275
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.0,
+          "recall": 0.024390243902439025,
+          "strict_recall": 0.0,
+          "f1": 0.04347826086956522,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.05652670087893601
+        },
+        "10": {
+          "precision": 0.1,
+          "strict_precision": 0.0,
+          "recall": 0.024390243902439025,
+          "strict_recall": 0.0,
+          "f1": 0.03921568627450981,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.04015906726941507
+        }
+      },
+      "latency": {
+        "embedding_ms": 36.331200011773035,
+        "search_ms": 7.228000002214685,
+        "total_ms": 43.55920001398772
+      }
+    },
+    {
+      "query_id": "mdq011",
+      "query": "How should atrial fibrillation be managed in patients with heart failure according to the 2021 ESC guidelines?",
+      "category": "esc_2021",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0513",
+        "esc_hf_2021_chunk_0071",
+        "esc_hf_2021_chunk_0335",
+        "esc_hf_2021_chunk_0579",
+        "esc_hf_2021_chunk_0689",
+        "esc_hf_2021_chunk_0044",
+        "esc_hf_2021_chunk_0042",
+        "esc_hf_2021_chunk_0621",
+        "esc_hf_2021_chunk_0091"
+      ],
+      "retrieved_distances": [
+        0.16807007789611816,
+        0.18036335706710815,
+        0.18271684646606445,
+        0.19368600845336914,
+        0.19903695583343506,
+        0.20483416318893433,
+        0.20864784717559814,
+        0.21294474601745605,
+        0.21509718894958496,
+        0.21812355518341064
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "mrr": 0.14285714285714285,
+      "total_relevant_lenient": 50,
+      "total_relevant_strict": 19,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.1,
+          "strict_precision": 0.1,
+          "recall": 0.02,
+          "strict_recall": 0.05263157894736842,
+          "f1": 0.03333333333333333,
+          "strict_f1": 0.06896551724137931,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.07336392209936005
+        }
+      },
+      "latency": {
+        "embedding_ms": 38.38260000338778,
+        "search_ms": 8.39030000497587,
+        "total_ms": 46.77290000836365
+      }
+    },
+    {
+      "query_id": "mdq012",
+      "query": "What is the recommended management approach for acute heart failure according to the 2021 ESC guidelines?",
+      "category": "esc_2021",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0513",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0071",
+        "esc_hf_2021_chunk_0579",
+        "esc_hf_2021_chunk_0241",
+        "esc_hf_2021_chunk_0621",
+        "esc_hf_2023_focused_update_chunk_0021",
+        "esc_hf_2021_chunk_0031",
+        "esc_hf_2021_chunk_0659",
+        "esc_hf_2021_chunk_0426"
+      ],
+      "retrieved_distances": [
+        0.16808879375457764,
+        0.18156778812408447,
+        0.2047039270401001,
+        0.21076452732086182,
+        0.21716415882110596,
+        0.22003865242004395,
+        0.22142648696899414,
+        0.22248077392578125,
+        0.22433757781982422,
+        0.23056650161743164
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 0.3333333333333333,
+      "total_relevant_lenient": 45,
+      "total_relevant_strict": 24,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.0,
+          "recall": 0.022222222222222223,
+          "strict_recall": 0.0,
+          "f1": 0.04166666666666667,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.07821312100379275
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.0,
+          "recall": 0.022222222222222223,
+          "strict_recall": 0.0,
+          "f1": 0.039999999999999994,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.05652670087893601
+        },
+        "10": {
+          "precision": 0.1,
+          "strict_precision": 0.0,
+          "recall": 0.022222222222222223,
+          "strict_recall": 0.0,
+          "f1": 0.03636363636363636,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.03668196104968002
+        }
+      },
+      "latency": {
+        "embedding_ms": 37.90729999309406,
+        "search_ms": 6.855499988887459,
+        "total_ms": 44.762799981981516
+      }
+    },
+    {
+      "query_id": "mdq013",
+      "query": "What are the 2021 ESC recommendations for device therapy including ICDs and cardiac resynchronisation in heart failure?",
+      "category": "esc_2021",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0241",
+        "esc_hf_2021_chunk_0160",
+        "esc_hf_2021_chunk_0159",
+        "esc_hf_2021_chunk_0091",
+        "esc_hf_2021_chunk_0167",
+        "esc_hf_2021_chunk_0579",
+        "esc_hf_2021_chunk_0591",
+        "esc_hf_2021_chunk_0621",
+        "esc_hf_2021_chunk_0508",
+        "esc_hf_2021_chunk_0513"
+      ],
+      "retrieved_distances": [
+        0.19677650928497314,
+        0.22986596822738647,
+        0.2329005002975464,
+        0.2365933656692505,
+        0.2379467487335205,
+        0.24283576011657715,
+        0.24623572826385498,
+        0.2514262795448303,
+        0.2572927474975586,
+        0.25793278217315674
+      ],
+      "retrieved_relevance": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 0.5,
+      "total_relevant_lenient": 36,
+      "total_relevant_strict": 3,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.6666666666666666,
+          "strict_precision": 0.0,
+          "recall": 0.05555555555555555,
+          "strict_recall": 0.0,
+          "f1": 0.10256410256410256,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.17690709132574783
+        },
+        "5": {
+          "precision": 0.8,
+          "strict_precision": 0.0,
+          "recall": 0.1111111111111111,
+          "strict_recall": 0.0,
+          "f1": 0.19512195121951217,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.27023204104286475
+        },
+        "10": {
+          "precision": 0.4,
+          "strict_precision": 0.0,
+          "recall": 0.1111111111111111,
+          "strict_recall": 0.0,
+          "f1": 0.1739130434782609,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.22127954991426863
+        }
+      },
+      "latency": {
+        "embedding_ms": 47.676000016508624,
+        "search_ms": 6.56939999316819,
+        "total_ms": 54.245400009676814
+      }
+    },
+    {
+      "query_id": "mdq014",
+      "query": "How should diabetes be managed in heart failure patients according to the 2021 ESC guidelines, particularly regarding SGLT2 inhibitors?",
+      "category": "esc_2021",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0386",
+        "esc_hf_2021_chunk_0426",
+        "esc_hf_2021_chunk_0735",
+        "esc_hf_2021_chunk_0204",
+        "esc_hf_2023_focused_update_chunk_0013",
+        "nice_hf_2018_chunk_0026",
+        "esc_hf_2023_focused_update_chunk_0020",
+        "esc_hf_2023_focused_update_chunk_0051",
+        "esc_hf_2021_chunk_0091",
+        "esc_hf_2023_focused_update_chunk_0034"
+      ],
+      "retrieved_distances": [
+        0.18385136127471924,
+        0.20804250240325928,
+        0.20867252349853516,
+        0.21891844272613525,
+        0.22090977430343628,
+        0.22708219289779663,
+        0.23230957984924316,
+        0.23422205448150635,
+        0.2345706820487976,
+        0.23583614826202393
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 0.3333333333333333,
+      "total_relevant_lenient": 22,
+      "total_relevant_strict": 6,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.0,
+          "recall": 0.045454545454545456,
+          "strict_recall": 0.0,
+          "f1": 0.08,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.07821312100379275
+        },
+        "5": {
+          "precision": 0.4,
+          "strict_precision": 0.2,
+          "recall": 0.09090909090909091,
+          "strict_recall": 0.16666666666666666,
+          "f1": 0.14814814814814814,
+          "strict_f1": 0.1818181818181818,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.20259505072164247
+        },
+        "10": {
+          "precision": 0.2,
+          "strict_precision": 0.1,
+          "recall": 0.09090909090909091,
+          "strict_recall": 0.16666666666666666,
+          "f1": 0.12500000000000003,
+          "strict_f1": 0.125,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.16067847534468654
+        }
+      },
+      "latency": {
+        "embedding_ms": 34.50360000715591,
+        "search_ms": 6.734800001140684,
+        "total_ms": 41.238400008296594
+      }
+    },
+    {
+      "query_id": "mdq015",
+      "query": "What are the 2021 ESC recommendations for managing iron deficiency in heart failure patients?",
+      "category": "esc_2021",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2023_focused_update_chunk_0014",
+        "esc_hf_2023_focused_update_chunk_0068",
+        "esc_hf_2021_chunk_0398",
+        "esc_hf_2023_focused_update_chunk_0058",
+        "nice_hf_2018_chunk_0044",
+        "esc_hf_2021_chunk_0033",
+        "esc_hf_2023_focused_update_chunk_0069",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0756",
+        "nice_hf_2018_chunk_0048"
+      ],
+      "retrieved_distances": [
+        0.1316901445388794,
+        0.1353079080581665,
+        0.20016229152679443,
+        0.20527851581573486,
+        0.21024203300476074,
+        0.21069729328155518,
+        0.21425139904022217,
+        0.2194356918334961,
+        0.23176103830337524,
+        0.2344961166381836
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 0.3333333333333333,
+      "total_relevant_lenient": 49,
+      "total_relevant_strict": 12,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.0,
+          "recall": 0.02040816326530612,
+          "strict_recall": 0.0,
+          "f1": 0.03846153846153846,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.07821312100379275
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.0,
+          "recall": 0.02040816326530612,
+          "strict_recall": 0.0,
+          "f1": 0.03703703703703703,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.05652670087893601
+        },
+        "10": {
+          "precision": 0.2,
+          "strict_precision": 0.0,
+          "recall": 0.04081632653061224,
+          "strict_recall": 0.0,
+          "f1": 0.06779661016949151,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.06281471737590513
+        }
+      },
+      "latency": {
+        "embedding_ms": 32.29460000875406,
+        "search_ms": 7.860300014726818,
+        "total_ms": 40.15490002348088
+      }
+    },
+    {
+      "query_id": "mdq016",
+      "query": "How does obesity affect heart failure management according to the 2021 ESC guidelines?",
+      "category": "esc_2021",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0513",
+        "esc_hf_2021_chunk_0610",
+        "esc_hf_2021_chunk_0748",
+        "esc_hf_2021_chunk_0515",
+        "esc_hf_2021_chunk_0621",
+        "esc_hf_2021_chunk_0071",
+        "esc_hf_2021_chunk_0745",
+        "esc_hf_2021_chunk_0579",
+        "nice_hf_2018_chunk_0054"
+      ],
+      "retrieved_distances": [
+        0.20062130689620972,
+        0.20555901527404785,
+        0.2113034725189209,
+        0.2187885046005249,
+        0.22063511610031128,
+        0.22162854671478271,
+        0.2276911735534668,
+        0.23172926902770996,
+        0.23366999626159668,
+        0.23367488384246826
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "mrr": 0.25,
+      "total_relevant_lenient": 20,
+      "total_relevant_strict": 4,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.0,
+          "recall": 0.05,
+          "strict_recall": 0.0,
+          "f1": 0.08000000000000002,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.05335655014603674
+        },
+        "10": {
+          "precision": 0.2,
+          "strict_precision": 0.0,
+          "recall": 0.1,
+          "strict_recall": 0.0,
+          "f1": 0.13333333333333333,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.07718620423034737
+        }
+      },
+      "latency": {
+        "embedding_ms": 36.73029999481514,
+        "search_ms": 7.505099987611175,
+        "total_ms": 44.235399982426316
+      }
+    },
+    {
+      "query_id": "mdq017",
+      "query": "What new evidence regarding HFmrEF management is presented in the 2023 ESC focused update, particularly from the DELIVER and EMPEROR-Preserved trials?",
+      "category": "esc_2023",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2023_focused_update_chunk_0027",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2023_focused_update_chunk_0078",
+        "esc_hf_2021_chunk_0207",
+        "esc_hf_2021_chunk_0071",
+        "esc_hf_2021_chunk_0482",
+        "esc_hf_2023_focused_update_chunk_0026",
+        "esc_hf_2023_focused_update_chunk_0025",
+        "esc_hf_2023_focused_update_chunk_0028",
+        "esc_hf_2021_chunk_0544"
+      ],
+      "retrieved_distances": [
+        0.30280959606170654,
+        0.31865936517715454,
+        0.325599730014801,
+        0.32640498876571655,
+        0.33481431007385254,
+        0.33645641803741455,
+        0.3397507071495056,
+        0.3411042094230652,
+        0.34405791759490967,
+        0.3454165458679199
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 0.0,
+      "total_relevant_lenient": 1,
+      "total_relevant_strict": 1,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        }
+      },
+      "latency": {
+        "embedding_ms": 45.49390001920983,
+        "search_ms": 7.646999991266057,
+        "total_ms": 53.14090001047589
+      }
+    },
+    {
+      "query_id": "mdq018",
+      "query": "What are the updated recommendations for heart failure with preserved ejection fraction in the 2023 ESC focused update?",
+      "category": "esc_2023",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0200",
+        "esc_hf_2021_chunk_0031",
+        "nice_hf_2018_chunk_0057",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2023_focused_update_chunk_0025",
+        "esc_hf_2021_chunk_0053",
+        "esc_hf_2023_focused_update_chunk_0018",
+        "esc_hf_2021_chunk_0689",
+        "nice_hf_2018_chunk_0031",
+        "esc_hf_2021_chunk_0600"
+      ],
+      "retrieved_distances": [
+        0.1883544921875,
+        0.2111797332763672,
+        0.21860414743423462,
+        0.22365933656692505,
+        0.2422390580177307,
+        0.2427372932434082,
+        0.2427372932434082,
+        0.248313307762146,
+        0.2509239912033081,
+        0.252372682094574
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 0.0,
+      "total_relevant_lenient": 5,
+      "total_relevant_strict": 1,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        }
+      },
+      "latency": {
+        "embedding_ms": 37.91400001500733,
+        "search_ms": 5.511899973498657,
+        "total_ms": 43.42589998850599
+      }
+    },
+    {
+      "query_id": "mdq019",
+      "query": "How have SGLT2 inhibitor recommendations changed in the 2023 ESC focused update compared to 2021?",
+      "category": "esc_2023",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0426",
+        "esc_hf_2021_chunk_0204",
+        "esc_hf_2023_focused_update_chunk_0028",
+        "esc_hf_2023_focused_update_chunk_0034",
+        "esc_hf_2021_chunk_0077",
+        "esc_hf_2021_chunk_0735",
+        "nice_hf_2018_chunk_0026",
+        "esc_hf_2021_chunk_0386",
+        "esc_hf_2023_focused_update_chunk_0051",
+        "esc_hf_2023_focused_update_chunk_0036"
+      ],
+      "retrieved_distances": [
+        0.27179408073425293,
+        0.28650665283203125,
+        0.3079751133918762,
+        0.30844807624816895,
+        0.30868983268737793,
+        0.3089311718940735,
+        0.3117241859436035,
+        0.3135039806365967,
+        0.3173125982284546,
+        0.3174123764038086
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2
+      ],
+      "mrr": 0.3333333333333333,
+      "total_relevant_lenient": 24,
+      "total_relevant_strict": 14,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.041666666666666664,
+          "strict_recall": 0.07142857142857142,
+          "f1": 0.07407407407407407,
+          "strict_f1": 0.11764705882352941,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.23463936301137825
+        },
+        "5": {
+          "precision": 0.4,
+          "strict_precision": 0.4,
+          "recall": 0.08333333333333333,
+          "strict_recall": 0.14285714285714285,
+          "f1": 0.13793103448275862,
+          "strict_f1": 0.21052631578947364,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.3156484524795145
+        },
+        "10": {
+          "precision": 0.4,
+          "strict_precision": 0.4,
+          "recall": 0.16666666666666666,
+          "strict_recall": 0.2857142857142857,
+          "f1": 0.23529411764705882,
+          "strict_f1": 0.3333333333333333,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.3347092591719316
+        }
+      },
+      "latency": {
+        "embedding_ms": 35.15280000283383,
+        "search_ms": 6.221399991773069,
+        "total_ms": 41.3741999946069
+      }
+    },
+    {
+      "query_id": "mdq020",
+      "query": "What updates does the 2023 ESC focused update provide for the management of acute heart failure?",
+      "category": "esc_2023",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0513",
+        "esc_hf_2023_focused_update_chunk_0025",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0621",
+        "esc_hf_2021_chunk_0651",
+        "esc_hf_2021_chunk_0579",
+        "esc_hf_2021_chunk_0241",
+        "esc_hf_2021_chunk_0508",
+        "esc_hf_2021_chunk_0659",
+        "esc_hf_2021_chunk_0652"
+      ],
+      "retrieved_distances": [
+        0.24157750606536865,
+        0.25876450538635254,
+        0.26176685094833374,
+        0.2718220353126526,
+        0.27279525995254517,
+        0.2791088819503784,
+        0.28013497591018677,
+        0.2807866334915161,
+        0.28431689739227295,
+        0.2844984531402588
+      ],
+      "retrieved_relevance": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 0.5,
+      "total_relevant_lenient": 37,
+      "total_relevant_strict": 16,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.0,
+          "recall": 0.02702702702702703,
+          "strict_recall": 0.0,
+          "f1": 0.05,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0986939703219551
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.0,
+          "recall": 0.02702702702702703,
+          "strict_recall": 0.0,
+          "f1": 0.047619047619047616,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.07132875491150918
+        },
+        "10": {
+          "precision": 0.1,
+          "strict_precision": 0.0,
+          "recall": 0.02702702702702703,
+          "strict_recall": 0.0,
+          "f1": 0.0425531914893617,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.046287481291184845
+        }
+      },
+      "latency": {
+        "embedding_ms": 32.27720002178103,
+        "search_ms": 6.254199979593977,
+        "total_ms": 38.531400001375005
+      }
+    },
+    {
+      "query_id": "mdq021",
+      "query": "What are the 2023 ESC recommendations for managing diabetes in heart failure patients?",
+      "category": "esc_2023",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2023_focused_update_chunk_0013",
+        "esc_hf_2021_chunk_0031",
+        "esc_hf_2021_chunk_0515",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0033",
+        "esc_hf_2021_chunk_0030",
+        "esc_hf_2023_focused_update_chunk_0061",
+        "esc_hf_2021_chunk_0426",
+        "esc_hf_2021_chunk_0621",
+        "esc_hf_2023_focused_update_chunk_0020"
+      ],
+      "retrieved_distances": [
+        0.1954866647720337,
+        0.22233998775482178,
+        0.22270917892456055,
+        0.2305816411972046,
+        0.23229670524597168,
+        0.2485518455505371,
+        0.24918419122695923,
+        0.2513704299926758,
+        0.25225162506103516,
+        0.25275349617004395
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "mrr": 0.1,
+      "total_relevant_lenient": 18,
+      "total_relevant_strict": 10,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.1,
+          "strict_precision": 0.1,
+          "recall": 0.05555555555555555,
+          "strict_recall": 0.1,
+          "f1": 0.07142857142857142,
+          "strict_f1": 0.10000000000000002,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.0636207881989517
+        }
+      },
+      "latency": {
+        "embedding_ms": 36.44429999985732,
+        "search_ms": 7.278400007635355,
+        "total_ms": 43.722700007492676
+      }
+    },
+    {
+      "query_id": "mdq022",
+      "query": "What are the updated 2023 ESC recommendations for iron deficiency management in heart failure?",
+      "category": "esc_2023",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2023_focused_update_chunk_0014",
+        "esc_hf_2023_focused_update_chunk_0068",
+        "esc_hf_2021_chunk_0398",
+        "nice_hf_2018_chunk_0044",
+        "esc_hf_2023_focused_update_chunk_0069",
+        "esc_hf_2021_chunk_0033",
+        "esc_hf_2023_focused_update_chunk_0058",
+        "esc_hf_2023_focused_update_chunk_0026",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2023_focused_update_chunk_0025"
+      ],
+      "retrieved_distances": [
+        0.14188408851623535,
+        0.1482985019683838,
+        0.2139420509338379,
+        0.22064745426177979,
+        0.22293835878372192,
+        0.22533679008483887,
+        0.22984975576400757,
+        0.23600924015045166,
+        0.24238848686218262,
+        0.24581050872802734
+      ],
+      "retrieved_relevance": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 11,
+      "total_relevant_strict": 1,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 0.0,
+          "recall": 0.09090909090909091,
+          "strict_recall": 0.0,
+          "f1": 0.16666666666666669,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.3333333333333333
+        },
+        "3": {
+          "precision": 0.6666666666666666,
+          "strict_precision": 0.0,
+          "recall": 0.18181818181818182,
+          "strict_recall": 0.0,
+          "f1": 0.28571428571428575,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.39480936517049525
+        },
+        "5": {
+          "precision": 0.6,
+          "strict_precision": 0.0,
+          "recall": 0.2727272727272727,
+          "strict_recall": 0.0,
+          "f1": 0.37499999999999994,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.40775977174545963
+        },
+        "10": {
+          "precision": 0.6,
+          "strict_precision": 0.0,
+          "recall": 0.5454545454545454,
+          "strict_recall": 0.0,
+          "f1": 0.5714285714285713,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.45168775043253767
+        }
+      },
+      "latency": {
+        "embedding_ms": 25.265199976274744,
+        "search_ms": 6.305000017164275,
+        "total_ms": 31.57019999343902
+      }
+    },
+    {
+      "query_id": "mdq023",
+      "query": "How do the NICE 2018 and ESC 2021 guidelines differ in their first-line treatment recommendations for heart failure with reduced ejection fraction?",
+      "category": "cross_document",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0057",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0091",
+        "esc_hf_2021_chunk_0513",
+        "esc_hf_2021_chunk_0256",
+        "esc_hf_2023_focused_update_chunk_0027",
+        "esc_hf_2021_chunk_0071",
+        "esc_hf_2021_chunk_0241",
+        "esc_hf_2021_chunk_0426",
+        "esc_hf_2023_focused_update_chunk_0031"
+      ],
+      "retrieved_distances": [
+        0.18084537982940674,
+        0.18846702575683594,
+        0.2071911096572876,
+        0.21197986602783203,
+        0.21468067169189453,
+        0.21675527095794678,
+        0.22005212306976318,
+        0.22186660766601562,
+        0.23010766506195068,
+        0.23684453964233398
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 0.16666666666666666,
+      "total_relevant_lenient": 12,
+      "total_relevant_strict": 7,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.1,
+          "strict_precision": 0.0,
+          "recall": 0.08333333333333333,
+          "strict_recall": 0.0,
+          "f1": 0.0909090909090909,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.030137097218151047
+        }
+      },
+      "latency": {
+        "embedding_ms": 37.16340000391938,
+        "search_ms": 8.128799992846325,
+        "total_ms": 45.2921999967657
+      }
+    },
+    {
+      "query_id": "mdq024",
+      "query": "What is the role of ARNI (sacubitril/valsartan) in heart failure treatment across the NICE and ESC guidelines?",
+      "category": "cross_document",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0183",
+        "esc_hf_2021_chunk_0133",
+        "esc_hf_2021_chunk_0128",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0146",
+        "nice_hf_2018_chunk_0021",
+        "esc_hf_2021_chunk_0496",
+        "esc_hf_2021_chunk_0513",
+        "nice_hf_2018_chunk_0057",
+        "nice_hf_2018_chunk_0029"
+      ],
+      "retrieved_distances": [
+        0.1972348690032959,
+        0.20215296745300293,
+        0.20355737209320068,
+        0.22870182991027832,
+        0.24242913722991943,
+        0.2480689287185669,
+        0.2492971420288086,
+        0.2505708932876587,
+        0.2511260509490967,
+        0.25129151344299316
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        1
+      ],
+      "mrr": 0.16666666666666666,
+      "total_relevant_lenient": 18,
+      "total_relevant_strict": 5,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.3,
+          "strict_precision": 0.1,
+          "recall": 0.16666666666666666,
+          "strict_recall": 0.2,
+          "f1": 0.21428571428571427,
+          "strict_f1": 0.13333333333333333,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.15887361198334346
+        }
+      },
+      "latency": {
+        "embedding_ms": 34.33340002084151,
+        "search_ms": 7.11019997834228,
+        "total_ms": 41.44359999918379
+      }
+    },
+    {
+      "query_id": "mdq025",
+      "query": "What is the evolving role of SGLT2 inhibitors across the NICE 2018, ESC 2021, and ESC 2023 guidelines for heart failure?",
+      "category": "cross_document",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0426",
+        "nice_hf_2018_chunk_0026",
+        "esc_hf_2021_chunk_0386",
+        "esc_hf_2021_chunk_0735",
+        "esc_hf_2023_focused_update_chunk_0034",
+        "esc_hf_2023_focused_update_chunk_0036",
+        "esc_hf_2021_chunk_0204",
+        "nice_hf_2018_chunk_0045",
+        "esc_hf_2021_chunk_0077",
+        "nice_hf_2018_chunk_0057"
+      ],
+      "retrieved_distances": [
+        0.21610140800476074,
+        0.22659724950790405,
+        0.22848010063171387,
+        0.23818480968475342,
+        0.23997080326080322,
+        0.24937665462493896,
+        0.25102049112319946,
+        0.25568777322769165,
+        0.2577018737792969,
+        0.2621347904205322
+      ],
+      "retrieved_relevance": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 33,
+      "total_relevant_strict": 13,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 0.0,
+          "recall": 0.030303030303030304,
+          "strict_recall": 0.0,
+          "f1": 0.05882352941176471,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.3333333333333333
+        },
+        "3": {
+          "precision": 1.0,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.09090909090909091,
+          "strict_recall": 0.07692307692307693,
+          "f1": 0.16666666666666669,
+          "strict_f1": 0.125,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5307212739772436
+        },
+        "5": {
+          "precision": 1.0,
+          "strict_precision": 0.2,
+          "recall": 0.15151515151515152,
+          "strict_recall": 0.07692307692307693,
+          "f1": 0.2631578947368421,
+          "strict_f1": 0.1111111111111111,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.4759908431563516
+        },
+        "10": {
+          "precision": 0.9,
+          "strict_precision": 0.3,
+          "recall": 0.2727272727272727,
+          "strict_recall": 0.23076923076923078,
+          "f1": 0.41860465116279066,
+          "strict_f1": 0.2608695652173913,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.4977801302185518
+        }
+      },
+      "latency": {
+        "embedding_ms": 36.45779998623766,
+        "search_ms": 6.568100012373179,
+        "total_ms": 43.02589999861084
+      }
+    },
+    {
+      "query_id": "mdq026",
+      "query": "How do the NICE and ESC guidelines differ in their diagnostic approach to heart failure, including the use of natriuretic peptides and echocardiography?",
+      "category": "cross_document",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0513",
+        "nice_hf_2018_chunk_0057",
+        "esc_hf_2021_chunk_0535",
+        "nice_hf_2018_chunk_0056",
+        "esc_hf_2021_chunk_0536",
+        "esc_hf_2021_chunk_0265",
+        "nice_hf_2018_chunk_0018",
+        "esc_hf_2021_chunk_0659",
+        "esc_hf_2023_focused_update_chunk_0021"
+      ],
+      "retrieved_distances": [
+        0.19821763038635254,
+        0.20785075426101685,
+        0.22521626949310303,
+        0.23176443576812744,
+        0.23303508758544922,
+        0.23555278778076172,
+        0.23752272129058838,
+        0.24031990766525269,
+        0.2430938482284546,
+        0.24358922243118286
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        0
+      ],
+      "mrr": 0.25,
+      "total_relevant_lenient": 36,
+      "total_relevant_strict": 30,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.2,
+          "recall": 0.027777777777777776,
+          "strict_recall": 0.03333333333333333,
+          "f1": 0.048780487804878044,
+          "strict_f1": 0.05714285714285715,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.14606834984270645
+        },
+        "10": {
+          "precision": 0.3,
+          "strict_precision": 0.3,
+          "recall": 0.08333333333333333,
+          "strict_recall": 0.1,
+          "f1": 0.13043478260869565,
+          "strict_f1": 0.15,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.24261785528500338
+        }
+      },
+      "latency": {
+        "embedding_ms": 34.024499997030944,
+        "search_ms": 7.558399986010045,
+        "total_ms": 41.58289998304099
+      }
+    },
+    {
+      "query_id": "mdq027",
+      "query": "What specific changes in HFmrEF and HFpEF treatment recommendations occurred between the 2021 ESC guideline and the 2023 focused update?",
+      "category": "cross_document",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2023_focused_update_chunk_0027",
+        "esc_hf_2021_chunk_0489",
+        "esc_hf_2021_chunk_0071",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2023_focused_update_chunk_0028",
+        "esc_hf_2021_chunk_0207",
+        "esc_hf_2023_focused_update_chunk_0031",
+        "esc_hf_2023_focused_update_chunk_0069",
+        "esc_hf_2023_focused_update_chunk_0025",
+        "esc_hf_2021_chunk_0482"
+      ],
+      "retrieved_distances": [
+        0.20358490943908691,
+        0.25672268867492676,
+        0.2607210874557495,
+        0.26578187942504883,
+        0.2705676555633545,
+        0.28102409839630127,
+        0.28492021560668945,
+        0.29214102029800415,
+        0.29447293281555176,
+        0.29881858825683594
+      ],
+      "retrieved_relevance": [
+        1,
+        1,
+        1,
+        0,
+        2,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 58,
+      "total_relevant_strict": 10,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 0.0,
+          "recall": 0.017241379310344827,
+          "strict_recall": 0.0,
+          "f1": 0.03389830508474576,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.3333333333333333
+        },
+        "3": {
+          "precision": 1.0,
+          "strict_precision": 0.0,
+          "recall": 0.05172413793103448,
+          "strict_recall": 0.0,
+          "f1": 0.09836065573770492,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.33333333333333337
+        },
+        "5": {
+          "precision": 0.8,
+          "strict_precision": 0.2,
+          "recall": 0.06896551724137931,
+          "strict_recall": 0.1,
+          "f1": 0.12698412698412698,
+          "strict_f1": 0.13333333333333333,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.37211393506065904
+        },
+        "10": {
+          "precision": 0.7,
+          "strict_precision": 0.2,
+          "recall": 0.1206896551724138,
+          "strict_recall": 0.2,
+          "f1": 0.2058823529411765,
+          "strict_f1": 0.20000000000000004,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.35656927411806044
+        }
+      },
+      "latency": {
+        "embedding_ms": 43.736099993111566,
+        "search_ms": 6.3442999962717295,
+        "total_ms": 50.080399989383295
+      }
+    },
+    {
+      "query_id": "mdq028",
+      "query": "What evidence supports the use of beta-blockers in heart failure across the NICE and ESC guidelines?",
+      "category": "cross_document",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0057",
+        "esc_hf_2021_chunk_0621",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0552",
+        "esc_hf_2021_chunk_0064",
+        "esc_hf_2023_focused_update_chunk_0025",
+        "nice_hf_2018_chunk_0045",
+        "esc_hf_2021_chunk_0347",
+        "esc_hf_2021_chunk_0146",
+        "esc_hf_2021_chunk_0622"
+      ],
+      "retrieved_distances": [
+        0.19394463300704956,
+        0.2074422836303711,
+        0.20937204360961914,
+        0.21520757675170898,
+        0.23099839687347412,
+        0.2323462963104248,
+        0.23439210653305054,
+        0.23659038543701172,
+        0.23884767293930054,
+        0.23962128162384033
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "mrr": 0.25,
+      "total_relevant_lenient": 29,
+      "total_relevant_strict": 9,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.2,
+          "recall": 0.034482758620689655,
+          "strict_recall": 0.1111111111111111,
+          "f1": 0.0588235294117647,
+          "strict_f1": 0.14285714285714285,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.14606834984270645
+        },
+        "10": {
+          "precision": 0.2,
+          "strict_precision": 0.2,
+          "recall": 0.06896551724137931,
+          "strict_recall": 0.2222222222222222,
+          "f1": 0.10256410256410257,
+          "strict_f1": 0.2105263157894737,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.17149327798376052
+        }
+      },
+      "latency": {
+        "embedding_ms": 37.33749999082647,
+        "search_ms": 7.587100000819191,
+        "total_ms": 44.924599991645664
+      }
+    },
+    {
+      "query_id": "mdq029",
+      "query": "How do the guidelines recommend switching from ACE inhibitors to ARNI, and what are the key considerations?",
+      "category": "cross_document",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0133",
+        "nice_hf_2018_chunk_0046",
+        "nice_hf_2018_chunk_0029",
+        "esc_hf_2021_chunk_0320",
+        "esc_hf_2021_chunk_0120",
+        "esc_hf_2021_chunk_0145",
+        "nice_hf_2018_chunk_0021",
+        "nice_hf_2018_chunk_0045",
+        "esc_hf_2021_chunk_0125",
+        "esc_hf_2021_chunk_0487"
+      ],
+      "retrieved_distances": [
+        0.19809412956237793,
+        0.20570898056030273,
+        0.21036583185195923,
+        0.22964632511138916,
+        0.24002861976623535,
+        0.25163185596466064,
+        0.2676141858100891,
+        0.26796483993530273,
+        0.2694333791732788,
+        0.27263498306274414
+      ],
+      "retrieved_relevance": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        0,
+        0,
+        1
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 35,
+      "total_relevant_strict": 13,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 0.0,
+          "recall": 0.02857142857142857,
+          "strict_recall": 0.0,
+          "f1": 0.05555555555555556,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.3333333333333333
+        },
+        "3": {
+          "precision": 1.0,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.08571428571428572,
+          "strict_recall": 0.07692307692307693,
+          "f1": 0.15789473684210528,
+          "strict_f1": 0.125,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5307212739772436
+        },
+        "5": {
+          "precision": 1.0,
+          "strict_precision": 0.2,
+          "recall": 0.14285714285714285,
+          "strict_recall": 0.07692307692307693,
+          "f1": 0.25,
+          "strict_f1": 0.1111111111111111,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.4759908431563516
+        },
+        "10": {
+          "precision": 0.8,
+          "strict_precision": 0.3,
+          "recall": 0.22857142857142856,
+          "strict_recall": 0.23076923076923078,
+          "f1": 0.3555555555555555,
+          "strict_f1": 0.2608695652173913,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.4818546081706711
+        }
+      },
+      "latency": {
+        "embedding_ms": 34.50670000165701,
+        "search_ms": 6.983200000831857,
+        "total_ms": 41.48990000248887
+      }
+    },
+    {
+      "query_id": "mdq030",
+      "query": "How do the NICE and ESC guidelines classify heart failure by ejection fraction, and where do the definitions differ?",
+      "category": "cross_document",
+      "difficulty": "unknown",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0513",
+        "esc_hf_2021_chunk_0256",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0031",
+        "esc_hf_2023_focused_update_chunk_0021",
+        "esc_hf_2021_chunk_0200",
+        "esc_hf_2021_chunk_0034",
+        "nice_hf_2018_chunk_0057",
+        "esc_hf_2021_chunk_0515"
+      ],
+      "retrieved_distances": [
+        0.20600390434265137,
+        0.20770609378814697,
+        0.21099519729614258,
+        0.21596741676330566,
+        0.22718793153762817,
+        0.2309798002243042,
+        0.23521208763122559,
+        0.235653817653656,
+        0.23931372165679932,
+        0.2397836446762085
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "mrr": 0.25,
+      "total_relevant_lenient": 34,
+      "total_relevant_strict": 30,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.2,
+          "recall": 0.029411764705882353,
+          "strict_recall": 0.03333333333333333,
+          "f1": 0.05128205128205128,
+          "strict_f1": 0.05714285714285715,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.14606834984270645
+        },
+        "10": {
+          "precision": 0.2,
+          "strict_precision": 0.2,
+          "recall": 0.058823529411764705,
+          "strict_recall": 0.06666666666666667,
+          "f1": 0.0909090909090909,
+          "strict_f1": 0.1,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.16815228646891084
+        }
+      },
+      "latency": {
+        "embedding_ms": 37.658599991118535,
+        "search_ms": 5.8136000006925315,
+        "total_ms": 43.47219999181107
+      }
+    }
+  ],
+  "output_path": "data\\evaluation\\results\\multidoc_baseline_retrieval_20260818T153138Z.json"
+}

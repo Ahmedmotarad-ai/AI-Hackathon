@@ -1,0 +1,642 @@
+{
+  "basic_statistics": {
+    "total_chunks": 1001,
+    "chunks_per_document": {
+      "NICE_HF_2018_Guideline.pdf": 57,
+      "ESC_HF_2021_Guideline.pdf": 856,
+      "ESC_HF_2023_Focused_Update.pdf": 88
+    },
+    "chunks_per_guideline_year": {
+      "2018": 57,
+      "2021": 856,
+      "2023": 88
+    },
+    "chunks_per_guideline_type": {
+      "full_guideline": 913,
+      "focused_update": 88
+    }
+  },
+  "token_statistics": {
+    "min": 3,
+    "median": 325,
+    "mean": 283.1,
+    "p90": 445.0,
+    "p95": 448.0,
+    "max": 450,
+    "chunks_gt_450": 0,
+    "chunks_gt_512": 0
+  },
+  "character_statistics": {
+    "min": 1,
+    "median": 1055,
+    "mean": 961.8,
+    "p95": 1848.0,
+    "max": 2401
+  },
+  "very_small_chunks": {
+    "lt_100_tokens": {
+      "count": 190,
+      "examples": [
+        {
+          "index": 12,
+          "chunk_id": "nice_hf_2018_chunk_0013",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "tokens": 87,
+          "chars": 354,
+          "text_preview": "person with heart failure and shared with the specialist heart failure MDT \n• arrange access to specialist heart failure"
+        },
+        {
+          "index": 15,
+          "chunk_id": "nice_hf_2018_chunk_0016",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "tokens": 10,
+          "chars": 28,
+          "text_preview": "1.2 Diagnosing heart failure"
+        },
+        {
+          "index": 23,
+          "chunk_id": "nice_hf_2018_chunk_0024",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "tokens": 20,
+          "chars": 95,
+          "text_preview": "1.5 Treating people with newly diagnosed and pre-\nexisting heart failure with mildly reduced or"
+        },
+        {
+          "index": 27,
+          "chunk_id": "nice_hf_2018_chunk_0028",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "tokens": 10,
+          "chars": 42,
+          "text_preview": "1.7 Starting and monitoring medication use"
+        },
+        {
+          "index": 30,
+          "chunk_id": "nice_hf_2018_chunk_0031",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "tokens": 57,
+          "chars": 208,
+          "text_preview": "preserved ejection fraction. \nChronic heart failure in adults: diagnosis and management (NG106)\n© NICE 2026. All rights "
+        },
+        {
+          "index": 35,
+          "chunk_id": "nice_hf_2018_chunk_0036",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "tokens": 92,
+          "chars": 416,
+          "text_preview": "Smoking and alcohol \nSee NICE's guidance on smoking and tobacco and alcohol. \nAir travel \n1.9.12 \nAdvise that air travel"
+        },
+        {
+          "index": 37,
+          "chunk_id": "nice_hf_2018_chunk_0038",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "tokens": 7,
+          "chars": 12,
+          "text_preview": "life. [2018]"
+        },
+        {
+          "index": 42,
+          "chunk_id": "nice_hf_2018_chunk_0043",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "tokens": 17,
+          "chars": 106,
+          "text_preview": "Recommendations for research \nThe guideline committee has made the following recommendations for research."
+        },
+        {
+          "index": 46,
+          "chunk_id": "nice_hf_2018_chunk_0047",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "tokens": 60,
+          "chars": 207,
+          "text_preview": "Chronic heart failure in adults: diagnosis and management (NG106)\n© NICE 2026. All rights reserved. Subject to Notice of"
+        },
+        {
+          "index": 61,
+          "chunk_id": "esc_hf_2021_chunk_0005",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "tokens": 38,
+          "chars": 96,
+          "text_preview": "Downloaded from academic.oup.com/eurheartj/article/42/36/3599/6358045 by guest on 18 August 2026"
+        }
+      ]
+    },
+    "lt_50_tokens": {
+      "count": 111,
+      "examples": [
+        {
+          "index": 15,
+          "chunk_id": "nice_hf_2018_chunk_0016",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "tokens": 10,
+          "chars": 28,
+          "text_preview": "1.2 Diagnosing heart failure"
+        },
+        {
+          "index": 23,
+          "chunk_id": "nice_hf_2018_chunk_0024",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "tokens": 20,
+          "chars": 95,
+          "text_preview": "1.5 Treating people with newly diagnosed and pre-\nexisting heart failure with mildly reduced or"
+        },
+        {
+          "index": 27,
+          "chunk_id": "nice_hf_2018_chunk_0028",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "tokens": 10,
+          "chars": 42,
+          "text_preview": "1.7 Starting and monitoring medication use"
+        },
+        {
+          "index": 37,
+          "chunk_id": "nice_hf_2018_chunk_0038",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "tokens": 7,
+          "chars": 12,
+          "text_preview": "life. [2018]"
+        },
+        {
+          "index": 42,
+          "chunk_id": "nice_hf_2018_chunk_0043",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "tokens": 17,
+          "chars": 106,
+          "text_preview": "Recommendations for research \nThe guideline committee has made the following recommendations for research."
+        },
+        {
+          "index": 61,
+          "chunk_id": "esc_hf_2021_chunk_0005",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "tokens": 38,
+          "chars": 96,
+          "text_preview": "Downloaded from academic.oup.com/eurheartj/article/42/36/3599/6358045 by guest on 18 August 2026"
+        },
+        {
+          "index": 73,
+          "chunk_id": "esc_hf_2021_chunk_0017",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "tokens": 31,
+          "chars": 131,
+          "text_preview": "8.4 Treatment of heart failure with preserved ejection fraction . . 3631\n9 Multidisciplinary team management for the pre"
+        },
+        {
+          "index": 99,
+          "chunk_id": "esc_hf_2021_chunk_0043",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "tokens": 44,
+          "chars": 141,
+          "text_preview": "Abbreviations and acronyms\n6MWT\n6-minute walk test\n99mTc-PYP\nTechnetium-labelled pyrophosphate\nAATAC\nAblation vs. Amioda"
+        },
+        {
+          "index": 101,
+          "chunk_id": "esc_hf_2021_chunk_0045",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "tokens": 31,
+          "chars": 108,
+          "text_preview": "Acute heart failure\nAL\nLight chain immunoglobulin\nAL-CA\nLight chain immunoglobulin cardiac\namyloidosis\nAMICA"
+        },
+        {
+          "index": 102,
+          "chunk_id": "esc_hf_2021_chunk_0046",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "tokens": 44,
+          "chars": 159,
+          "text_preview": "Atrial Fibrillation Management in Congestive\nHeart Failure With Ablation (trial)\nANCA\nAntineutrophil cytoplasmic antibod"
+        }
+      ]
+    }
+  },
+  "section_quality": {
+    "unique_sections_per_document": {
+      "NICE_HF_2018_Guideline.pdf": 29,
+      "ESC_HF_2021_Guideline.pdf": 55,
+      "ESC_HF_2023_Focused_Update.pdf": 21
+    },
+    "top_sections_by_chunk_count": [
+      {
+        "section": "Treatment",
+        "count": 158
+      },
+      {
+        "section": "Recommendations",
+        "count": 142
+      },
+      {
+        "section": "Diagnosis",
+        "count": 106
+      },
+      {
+        "section": "Digoxin",
+        "count": 41
+      },
+      {
+        "section": "Atrial fibrillation",
+        "count": 39
+      },
+      {
+        "section": "Iron deficiency",
+        "count": 37
+      },
+      {
+        "section": "Front matter",
+        "count": 36
+      },
+      {
+        "section": "Beta-blockers",
+        "count": 33
+      },
+      {
+        "section": "Heart failure with preserved ejection fraction",
+        "count": 30
+      },
+      {
+        "section": "Diabetes",
+        "count": 29
+      },
+      {
+        "section": "Heart failure with reduced ejection fraction",
+        "count": 24
+      },
+      {
+        "section": "Sinus rhythm",
+        "count": 19
+      },
+      {
+        "section": "Endomyocardial biopsy",
+        "count": 17
+      },
+      {
+        "section": "Heart transplantation",
+        "count": 16
+      },
+      {
+        "section": "Acute heart failure",
+        "count": 14
+      },
+      {
+        "section": "Sleep-disordered breathing",
+        "count": 14
+      },
+      {
+        "section": "Mitral regurgitation",
+        "count": 13
+      },
+      {
+        "section": "Obesity",
+        "count": 13
+      },
+      {
+        "section": "Palliative care",
+        "count": 12
+      },
+      {
+        "section": "Ivabradine",
+        "count": 11
+      }
+    ],
+    "chunks_with_unknown_section": {
+      "count": 0,
+      "chunk_ids": []
+    },
+    "chunks_with_empty_section": {
+      "count": 0,
+      "chunk_ids": []
+    }
+  },
+  "page_continuity": {
+    "bad_page_ranges": [],
+    "page_jumps": [
+      {
+        "chunk_id": "nice_hf_2018_chunk_0011",
+        "page_start": 4,
+        "prev_end": 6
+      },
+      {
+        "chunk_id": "nice_hf_2018_chunk_0013",
+        "page_start": 6,
+        "prev_end": 7
+      },
+      {
+        "chunk_id": "nice_hf_2018_chunk_0026",
+        "page_start": 16,
+        "prev_end": 17
+      },
+      {
+        "chunk_id": "nice_hf_2018_chunk_0038",
+        "page_start": 24,
+        "prev_end": 25
+      },
+      {
+        "chunk_id": "nice_hf_2018_chunk_0051",
+        "page_start": 33,
+        "prev_end": 34
+      },
+      {
+        "chunk_id": "esc_hf_2021_chunk_0050",
+        "page_start": 6,
+        "prev_end": 7
+      },
+      {
+        "chunk_id": "esc_hf_2021_chunk_0083",
+        "page_start": 12,
+        "prev_end": 13
+      },
+      {
+        "chunk_id": "esc_hf_2021_chunk_0084",
+        "page_start": 12,
+        "prev_end": 13
+      },
+      {
+        "chunk_id": "esc_hf_2021_chunk_0125",
+        "page_start": 22,
+        "prev_end": 23
+      },
+      {
+        "chunk_id": "esc_hf_2021_chunk_0133",
+        "page_start": 23,
+        "prev_end": 24
+      },
+      {
+        "chunk_id": "esc_hf_2021_chunk_0139",
+        "page_start": 24,
+        "prev_end": 25
+      },
+      {
+        "chunk_id": "esc_hf_2021_chunk_0160",
+        "page_start": 27,
+        "prev_end": 28
+      },
+      {
+        "chunk_id": "esc_hf_2021_chunk_0161",
+        "page_start": 27,
+        "prev_end": 28
+      },
+      {
+        "chunk_id": "esc_hf_2021_chunk_0185",
+        "page_start": 31,
+        "prev_end": 32
+      },
+      {
+        "chunk_id": "esc_hf_2021_chunk_0211",
+        "page_start": 35,
+        "prev_end": 36
+      },
+      {
+        "chunk_id": "esc_hf_2021_chunk_0215",
+        "page_start": 36,
+        "prev_end": 37
+      },
+      {
+        "chunk_id": "esc_hf_2021_chunk_0243",
+        "page_start": 42,
+        "prev_end": 43
+      },
+      {
+        "chunk_id": "esc_hf_2021_chunk_0262",
+        "page_start": 46,
+        "prev_end": 47
+      },
+      {
+        "chunk_id": "esc_hf_2021_chunk_0266",
+        "page_start": 47,
+        "prev_end": 48
+      },
+      {
+        "chunk_id": "esc_hf_2021_chunk_0298",
+        "page_start": 53,
+        "prev_end": 54
+      }
+    ],
+    "multi_doc_chunks": []
+  },
+  "document_integrity": {
+    "nice_chunks_with_esc_markers": {
+      "count": 0,
+      "chunk_ids": []
+    },
+    "esc_chunks_with_nice_markers": {
+      "count": 1,
+      "chunk_ids": [
+        "esc_hf_2021_chunk_0591"
+      ]
+    }
+  },
+  "metadata_integrity": {
+    "missing_metadata": {
+      "count": 0,
+      "issues": []
+    },
+    "esc_2021_missing_superseded_by": {
+      "count": 0,
+      "chunk_ids": []
+    },
+    "esc_2023_missing_parent_guideline": {
+      "count": 0,
+      "chunk_ids": []
+    },
+    "nice_spurious_parent_superseded": {
+      "count": 0,
+      "chunk_ids": []
+    }
+  },
+  "duplicate_analysis": {
+    "exact_duplicate_texts": {
+      "count": 6,
+      "examples": [
+        {
+          "text_preview": "Downloaded from academic.oup.com/eurheartj/article/42/36/3599/6358045 by guest on 18 August 2026",
+          "locations": [
+            {
+              "index": 61,
+              "chunk_id": "esc_hf_2021_chunk_0005",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            },
+            {
+              "index": 123,
+              "chunk_id": "esc_hf_2021_chunk_0067",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            },
+            {
+              "index": 212,
+              "chunk_id": "esc_hf_2021_chunk_0156",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            },
+            {
+              "index": 251,
+              "chunk_id": "esc_hf_2021_chunk_0195",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            },
+            {
+              "index": 627,
+              "chunk_id": "esc_hf_2021_chunk_0571",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            },
+            {
+              "index": 667,
+              "chunk_id": "esc_hf_2021_chunk_0611",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            },
+            {
+              "index": 721,
+              "chunk_id": "esc_hf_2021_chunk_0665",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            }
+          ]
+        },
+        {
+          "text_preview": "....................................................................................................",
+          "locations": [
+            {
+              "index": 241,
+              "chunk_id": "esc_hf_2021_chunk_0185",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            },
+            {
+              "index": 769,
+              "chunk_id": "esc_hf_2021_chunk_0713",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            }
+          ]
+        },
+        {
+          "text_preview": "Education topic",
+          "locations": [
+            {
+              "index": 268,
+              "chunk_id": "esc_hf_2021_chunk_0212",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            },
+            {
+              "index": 272,
+              "chunk_id": "esc_hf_2021_chunk_0216",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            },
+            {
+              "index": 280,
+              "chunk_id": "esc_hf_2021_chunk_0224",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            }
+          ]
+        },
+        {
+          "text_preview": "Goal for the patient and caregiver",
+          "locations": [
+            {
+              "index": 269,
+              "chunk_id": "esc_hf_2021_chunk_0213",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            },
+            {
+              "index": 273,
+              "chunk_id": "esc_hf_2021_chunk_0217",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            },
+            {
+              "index": 281,
+              "chunk_id": "esc_hf_2021_chunk_0225",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            }
+          ]
+        },
+        {
+          "text_preview": "Renal replacement\ntherapy\n(Class IIa)\nOR\nConsider",
+          "locations": [
+            {
+              "index": 338,
+              "chunk_id": "esc_hf_2021_chunk_0282",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            },
+            {
+              "index": 340,
+              "chunk_id": "esc_hf_2021_chunk_0284",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            },
+            {
+              "index": 351,
+              "chunk_id": "esc_hf_2021_chunk_0295",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            }
+          ]
+        },
+        {
+          "text_preview": "Rate control",
+          "locations": [
+            {
+              "index": 390,
+              "chunk_id": "esc_hf_2021_chunk_0334",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            },
+            {
+              "index": 402,
+              "chunk_id": "esc_hf_2021_chunk_0346",
+              "document": "ESC_HF_2021_Guideline.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    "repeated_short_texts": {
+      "count": 4,
+      "examples": [
+        {
+          "text_preview": "Downloaded from academic.oup.com/eurheartj/article/42/36/3599/6358045 by guest on 18 August 2026",
+          "occurrences": 7
+        },
+        {
+          "text_preview": "Education topic",
+          "occurrences": 3
+        },
+        {
+          "text_preview": "Goal for the patient and caregiver",
+          "occurrences": 3
+        },
+        {
+          "text_preview": "Renal replacement\ntherapy\n(Class IIa)\nOR\nConsider",
+          "occurrences": 3
+        }
+      ]
+    }
+  },
+  "clinical_content": {
+    "NICE_HF_2018": {
+      "heart failure": 221,
+      "diagnosis": 50,
+      "symptoms": 19,
+      "ace inhibitor": 18,
+      "beta-blocker": 22,
+      "diuretic": 5,
+      "nice": 114
+    },
+    "ESC_HF_2021": {
+      "HFrEF": 206,
+      "HFmrEF": 82,
+      "HFpEF": 117,
+      "SGLT2": 48,
+      "ARNI": 57,
+      "beta-blocker": 99,
+      "MRA": 58,
+      "diuretic": 145,
+      "ACE inhibitor": 4,
+      "recommendation": 195
+    },
+    "ESC_HF_2023": {
+      "SGLT2": 17,
+      "HFmrEF": 20,
+      "HFpEF": 19,
+      "acute heart failure": 11,
+      "recommendation": 64,
+      "dapagliflozin": 26,
+      "empagliflozin": 20
+    }
+  },
+  "final_assessment": {
+    "verdict": "FAIL",
+    "hard_failures": [
+      "1 ESC chunks with NICE markers"
+    ],
+    "soft_warnings": [
+      "111 chunks under 50 tokens",
+      "6 exact duplicate text blocks"
+    ],
+    "summary": "Corpus: 1001 chunks across 3 documents. Token range: 3-450, median 325. 0 chunks >450 tokens, 111 chunks <50 tokens. 0 Unknown sections. 6 exact duplicate text blocks."
+  }
+}

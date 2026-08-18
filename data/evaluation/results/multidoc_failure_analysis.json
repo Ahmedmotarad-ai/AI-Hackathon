@@ -1,0 +1,2676 @@
+{
+  "report_title": "Step 8: Multi-Document Baseline Failure Analysis",
+  "source_results": "data\\evaluation\\results\\multidoc_baseline_retrieval_20260818T153138Z.json",
+  "source_eval": "data\\evaluation\\multidoc_eval_dataset.json",
+  "analysis_timestamp": "20260818T153138Z",
+  "corpus": {
+    "total_chunks": 1001,
+    "total_queries": 30,
+    "documents": [
+      "NICE HF 2018 (57 chunks)",
+      "ESC HF 2021 (856 chunks)",
+      "ESC HF 2023 Focused Update (88 chunks)"
+    ]
+  },
+  "A_overall_baseline": {
+    "overall_per_k": {
+      "1": {
+        "precision": 0.3,
+        "strict_precision": 0.1333,
+        "recall": 0.068,
+        "strict_recall": 0.0722,
+        "f1": 0.0894,
+        "strict_f1": 0.0873,
+        "hit_rate": 0.3,
+        "strict_hit_rate": 0.1333,
+        "ndcg": 0.1889
+      },
+      "3": {
+        "precision": 0.3222,
+        "strict_precision": 0.1222,
+        "recall": 0.1356,
+        "strict_recall": 0.1631,
+        "f1": 0.1289,
+        "strict_f1": 0.1154,
+        "hit_rate": 0.6333,
+        "strict_hit_rate": 0.3667,
+        "ndcg": 0.2314
+      },
+      "5": {
+        "precision": 0.3067,
+        "strict_precision": 0.12,
+        "recall": 0.1688,
+        "strict_recall": 0.1886,
+        "f1": 0.1498,
+        "strict_f1": 0.1142,
+        "hit_rate": 0.8,
+        "strict_hit_rate": 0.5333,
+        "ndcg": 0.2506
+      },
+      "10": {
+        "precision": 0.2533,
+        "strict_precision": 0.11,
+        "recall": 0.229,
+        "strict_recall": 0.2341,
+        "f1": 0.1741,
+        "strict_f1": 0.1173,
+        "hit_rate": 0.9333,
+        "strict_hit_rate": 0.6333,
+        "ndcg": 0.2659
+      }
+    },
+    "mrr": 0.4831,
+    "latency": {
+      "total": {
+        "mean": 59.98,
+        "median": 43.64,
+        "min": 31.57,
+        "max": 504.11
+      },
+      "embedding": {
+        "mean": 51.69,
+        "median": 36.95
+      },
+      "search": {
+        "mean": 8.29,
+        "median": 7.34
+      }
+    }
+  },
+  "B_category_breakdown": {
+    "NICE 2018": {
+      "count": 8,
+      "p_at_5": 0.275,
+      "recall_at_5": 0.4726,
+      "strict_recall_at_5": 0.5938,
+      "ndcg_at_5": 0.4837,
+      "hit_at_5": 1.0,
+      "strict_hit_at_5": 0.875,
+      "mrr": 0.6562
+    },
+    "ESC 2021": {
+      "count": 8,
+      "p_at_5": 0.3,
+      "recall_at_5": 0.0555,
+      "strict_recall_at_5": 0.0417,
+      "ndcg_at_5": 0.1364,
+      "hit_at_5": 0.875,
+      "strict_hit_at_5": 0.25,
+      "mrr": 0.4033
+    },
+    "ESC 2023": {
+      "count": 6,
+      "p_at_5": 0.2,
+      "recall_at_5": 0.0638,
+      "strict_recall_at_5": 0.0238,
+      "ndcg_at_5": 0.1325,
+      "hit_at_5": 0.5,
+      "strict_hit_at_5": 0.1667,
+      "mrr": 0.3222
+    },
+    "Cross-Document": {
+      "count": 8,
+      "p_at_5": 0.425,
+      "recall_at_5": 0.0569,
+      "strict_recall_at_5": 0.054,
+      "ndcg_at_5": 0.2203,
+      "hit_at_5": 0.75,
+      "strict_hit_at_5": 0.75,
+      "mrr": 0.5104
+    }
+  },
+  "C_query_level_failures": {
+    "hit_at_5_zero": {
+      "count": 6,
+      "queries": [
+        {
+          "query_id": "mdq011",
+          "category": "esc_2021",
+          "query": "How should atrial fibrillation be managed in patients with heart failure according to the 2021 ESC guidelines?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0513",
+            "esc_hf_2021_chunk_0071",
+            "esc_hf_2021_chunk_0335",
+            "esc_hf_2021_chunk_0579"
+          ],
+          "retrieved_documents": [
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.1429
+        },
+        {
+          "query_id": "mdq017",
+          "category": "esc_2023",
+          "query": "What new evidence regarding HFmrEF management is presented in the 2023 ESC focused update, particularly from the DELIVER and EMPEROR-Preserved trials?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2023_focused_update_chunk_0027",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2023_focused_update_chunk_0078",
+            "esc_hf_2021_chunk_0207",
+            "esc_hf_2021_chunk_0071"
+          ],
+          "retrieved_documents": [
+            "ESC 2023",
+            "ESC 2021",
+            "ESC 2023",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.0
+        },
+        {
+          "query_id": "mdq018",
+          "category": "esc_2023",
+          "query": "What are the updated recommendations for heart failure with preserved ejection fraction in the 2023 ESC focused update?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2021_chunk_0200",
+            "esc_hf_2021_chunk_0031",
+            "nice_hf_2018_chunk_0057",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2023_focused_update_chunk_0025"
+          ],
+          "retrieved_documents": [
+            "ESC 2021",
+            "ESC 2021",
+            "NICE",
+            "ESC 2021",
+            "ESC 2023"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.0
+        },
+        {
+          "query_id": "mdq021",
+          "category": "esc_2023",
+          "query": "What are the 2023 ESC recommendations for managing diabetes in heart failure patients?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2023_focused_update_chunk_0013",
+            "esc_hf_2021_chunk_0031",
+            "esc_hf_2021_chunk_0515",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0033"
+          ],
+          "retrieved_documents": [
+            "ESC 2023",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.1
+        },
+        {
+          "query_id": "mdq023",
+          "category": "cross_document",
+          "query": "How do the NICE 2018 and ESC 2021 guidelines differ in their first-line treatment recommendations for heart failure with reduced ejection fraction?",
+          "retrieved_chunk_ids": [
+            "nice_hf_2018_chunk_0057",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0091",
+            "esc_hf_2021_chunk_0513",
+            "esc_hf_2021_chunk_0256"
+          ],
+          "retrieved_documents": [
+            "NICE",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.1667
+        },
+        {
+          "query_id": "mdq024",
+          "category": "cross_document",
+          "query": "What is the role of ARNI (sacubitril/valsartan) in heart failure treatment across the NICE and ESC guidelines?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2021_chunk_0183",
+            "esc_hf_2021_chunk_0133",
+            "esc_hf_2021_chunk_0128",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0146"
+          ],
+          "retrieved_documents": [
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.1667
+        }
+      ]
+    },
+    "bottom_5_by_ndcg5": [
+      {
+        "query_id": "mdq011",
+        "category": "esc_2021",
+        "query": "How should atrial fibrillation be managed in patients with heart failure according to the 2021 ESC guidelines?",
+        "retrieved_chunk_ids": [
+          "esc_hf_2021_chunk_0070",
+          "esc_hf_2021_chunk_0513",
+          "esc_hf_2021_chunk_0071",
+          "esc_hf_2021_chunk_0335",
+          "esc_hf_2021_chunk_0579"
+        ],
+        "retrieved_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "retrieved_relevance": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "retrieved_ranks": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "nDCG_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "strict_recall_at_5": 0.0,
+        "mrr": 0.1429
+      },
+      {
+        "query_id": "mdq017",
+        "category": "esc_2023",
+        "query": "What new evidence regarding HFmrEF management is presented in the 2023 ESC focused update, particularly from the DELIVER and EMPEROR-Preserved trials?",
+        "retrieved_chunk_ids": [
+          "esc_hf_2023_focused_update_chunk_0027",
+          "esc_hf_2021_chunk_0070",
+          "esc_hf_2023_focused_update_chunk_0078",
+          "esc_hf_2021_chunk_0207",
+          "esc_hf_2021_chunk_0071"
+        ],
+        "retrieved_documents": [
+          "ESC 2023",
+          "ESC 2021",
+          "ESC 2023",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "retrieved_relevance": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "retrieved_ranks": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "nDCG_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "strict_recall_at_5": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "query_id": "mdq018",
+        "category": "esc_2023",
+        "query": "What are the updated recommendations for heart failure with preserved ejection fraction in the 2023 ESC focused update?",
+        "retrieved_chunk_ids": [
+          "esc_hf_2021_chunk_0200",
+          "esc_hf_2021_chunk_0031",
+          "nice_hf_2018_chunk_0057",
+          "esc_hf_2021_chunk_0070",
+          "esc_hf_2023_focused_update_chunk_0025"
+        ],
+        "retrieved_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "NICE",
+          "ESC 2021",
+          "ESC 2023"
+        ],
+        "retrieved_relevance": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "retrieved_ranks": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "nDCG_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "strict_recall_at_5": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "query_id": "mdq021",
+        "category": "esc_2023",
+        "query": "What are the 2023 ESC recommendations for managing diabetes in heart failure patients?",
+        "retrieved_chunk_ids": [
+          "esc_hf_2023_focused_update_chunk_0013",
+          "esc_hf_2021_chunk_0031",
+          "esc_hf_2021_chunk_0515",
+          "esc_hf_2021_chunk_0070",
+          "esc_hf_2021_chunk_0033"
+        ],
+        "retrieved_documents": [
+          "ESC 2023",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "retrieved_relevance": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "retrieved_ranks": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "nDCG_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "strict_recall_at_5": 0.0,
+        "mrr": 0.1
+      },
+      {
+        "query_id": "mdq023",
+        "category": "cross_document",
+        "query": "How do the NICE 2018 and ESC 2021 guidelines differ in their first-line treatment recommendations for heart failure with reduced ejection fraction?",
+        "retrieved_chunk_ids": [
+          "nice_hf_2018_chunk_0057",
+          "esc_hf_2021_chunk_0070",
+          "esc_hf_2021_chunk_0091",
+          "esc_hf_2021_chunk_0513",
+          "esc_hf_2021_chunk_0256"
+        ],
+        "retrieved_documents": [
+          "NICE",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "retrieved_relevance": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "retrieved_ranks": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "nDCG_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "strict_recall_at_5": 0.0,
+        "mrr": 0.1667
+      }
+    ],
+    "bottom_5_by_mrr": [
+      {
+        "query_id": "mdq017",
+        "category": "esc_2023",
+        "query": "What new evidence regarding HFmrEF management is presented in the 2023 ESC focused update, particularly from the DELIVER and EMPEROR-Preserved trials?",
+        "retrieved_chunk_ids": [
+          "esc_hf_2023_focused_update_chunk_0027",
+          "esc_hf_2021_chunk_0070",
+          "esc_hf_2023_focused_update_chunk_0078",
+          "esc_hf_2021_chunk_0207",
+          "esc_hf_2021_chunk_0071"
+        ],
+        "retrieved_documents": [
+          "ESC 2023",
+          "ESC 2021",
+          "ESC 2023",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "retrieved_relevance": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "retrieved_ranks": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "nDCG_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "strict_recall_at_5": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "query_id": "mdq018",
+        "category": "esc_2023",
+        "query": "What are the updated recommendations for heart failure with preserved ejection fraction in the 2023 ESC focused update?",
+        "retrieved_chunk_ids": [
+          "esc_hf_2021_chunk_0200",
+          "esc_hf_2021_chunk_0031",
+          "nice_hf_2018_chunk_0057",
+          "esc_hf_2021_chunk_0070",
+          "esc_hf_2023_focused_update_chunk_0025"
+        ],
+        "retrieved_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "NICE",
+          "ESC 2021",
+          "ESC 2023"
+        ],
+        "retrieved_relevance": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "retrieved_ranks": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "nDCG_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "strict_recall_at_5": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "query_id": "mdq021",
+        "category": "esc_2023",
+        "query": "What are the 2023 ESC recommendations for managing diabetes in heart failure patients?",
+        "retrieved_chunk_ids": [
+          "esc_hf_2023_focused_update_chunk_0013",
+          "esc_hf_2021_chunk_0031",
+          "esc_hf_2021_chunk_0515",
+          "esc_hf_2021_chunk_0070",
+          "esc_hf_2021_chunk_0033"
+        ],
+        "retrieved_documents": [
+          "ESC 2023",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "retrieved_relevance": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "retrieved_ranks": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "nDCG_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "strict_recall_at_5": 0.0,
+        "mrr": 0.1
+      },
+      {
+        "query_id": "mdq011",
+        "category": "esc_2021",
+        "query": "How should atrial fibrillation be managed in patients with heart failure according to the 2021 ESC guidelines?",
+        "retrieved_chunk_ids": [
+          "esc_hf_2021_chunk_0070",
+          "esc_hf_2021_chunk_0513",
+          "esc_hf_2021_chunk_0071",
+          "esc_hf_2021_chunk_0335",
+          "esc_hf_2021_chunk_0579"
+        ],
+        "retrieved_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "retrieved_relevance": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "retrieved_ranks": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "nDCG_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "strict_recall_at_5": 0.0,
+        "mrr": 0.1429
+      },
+      {
+        "query_id": "mdq023",
+        "category": "cross_document",
+        "query": "How do the NICE 2018 and ESC 2021 guidelines differ in their first-line treatment recommendations for heart failure with reduced ejection fraction?",
+        "retrieved_chunk_ids": [
+          "nice_hf_2018_chunk_0057",
+          "esc_hf_2021_chunk_0070",
+          "esc_hf_2021_chunk_0091",
+          "esc_hf_2021_chunk_0513",
+          "esc_hf_2021_chunk_0256"
+        ],
+        "retrieved_documents": [
+          "NICE",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "retrieved_relevance": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "retrieved_ranks": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "nDCG_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "strict_recall_at_5": 0.0,
+        "mrr": 0.1667
+      }
+    ],
+    "precision_at_5_zero": {
+      "count": 6,
+      "queries": [
+        {
+          "query_id": "mdq011",
+          "category": "esc_2021",
+          "query": "How should atrial fibrillation be managed in patients with heart failure according to the 2021 ESC guidelines?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0513",
+            "esc_hf_2021_chunk_0071",
+            "esc_hf_2021_chunk_0335",
+            "esc_hf_2021_chunk_0579"
+          ],
+          "retrieved_documents": [
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.1429
+        },
+        {
+          "query_id": "mdq017",
+          "category": "esc_2023",
+          "query": "What new evidence regarding HFmrEF management is presented in the 2023 ESC focused update, particularly from the DELIVER and EMPEROR-Preserved trials?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2023_focused_update_chunk_0027",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2023_focused_update_chunk_0078",
+            "esc_hf_2021_chunk_0207",
+            "esc_hf_2021_chunk_0071"
+          ],
+          "retrieved_documents": [
+            "ESC 2023",
+            "ESC 2021",
+            "ESC 2023",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.0
+        },
+        {
+          "query_id": "mdq018",
+          "category": "esc_2023",
+          "query": "What are the updated recommendations for heart failure with preserved ejection fraction in the 2023 ESC focused update?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2021_chunk_0200",
+            "esc_hf_2021_chunk_0031",
+            "nice_hf_2018_chunk_0057",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2023_focused_update_chunk_0025"
+          ],
+          "retrieved_documents": [
+            "ESC 2021",
+            "ESC 2021",
+            "NICE",
+            "ESC 2021",
+            "ESC 2023"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.0
+        },
+        {
+          "query_id": "mdq021",
+          "category": "esc_2023",
+          "query": "What are the 2023 ESC recommendations for managing diabetes in heart failure patients?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2023_focused_update_chunk_0013",
+            "esc_hf_2021_chunk_0031",
+            "esc_hf_2021_chunk_0515",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0033"
+          ],
+          "retrieved_documents": [
+            "ESC 2023",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.1
+        },
+        {
+          "query_id": "mdq023",
+          "category": "cross_document",
+          "query": "How do the NICE 2018 and ESC 2021 guidelines differ in their first-line treatment recommendations for heart failure with reduced ejection fraction?",
+          "retrieved_chunk_ids": [
+            "nice_hf_2018_chunk_0057",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0091",
+            "esc_hf_2021_chunk_0513",
+            "esc_hf_2021_chunk_0256"
+          ],
+          "retrieved_documents": [
+            "NICE",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.1667
+        },
+        {
+          "query_id": "mdq024",
+          "category": "cross_document",
+          "query": "What is the role of ARNI (sacubitril/valsartan) in heart failure treatment across the NICE and ESC guidelines?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2021_chunk_0183",
+            "esc_hf_2021_chunk_0133",
+            "esc_hf_2021_chunk_0128",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0146"
+          ],
+          "retrieved_documents": [
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.1667
+        }
+      ]
+    },
+    "low_recall_at_5": {
+      "count": 17,
+      "queries": [
+        {
+          "query_id": "mdq010",
+          "category": "esc_2021",
+          "query": "How do the 2021 ESC guidelines approach the diagnosis and treatment of heart failure with preserved ejection fraction?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2021_chunk_0513",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0200",
+            "esc_hf_2021_chunk_0508",
+            "esc_hf_2021_chunk_0066"
+          ],
+          "retrieved_documents": [
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0565,
+          "recall_at_5": 0.0244,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.3333
+        },
+        {
+          "query_id": "mdq011",
+          "category": "esc_2021",
+          "query": "How should atrial fibrillation be managed in patients with heart failure according to the 2021 ESC guidelines?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0513",
+            "esc_hf_2021_chunk_0071",
+            "esc_hf_2021_chunk_0335",
+            "esc_hf_2021_chunk_0579"
+          ],
+          "retrieved_documents": [
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.1429
+        },
+        {
+          "query_id": "mdq012",
+          "category": "esc_2021",
+          "query": "What is the recommended management approach for acute heart failure according to the 2021 ESC guidelines?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2021_chunk_0513",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0071",
+            "esc_hf_2021_chunk_0579",
+            "esc_hf_2021_chunk_0241"
+          ],
+          "retrieved_documents": [
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0565,
+          "recall_at_5": 0.0222,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.3333
+        },
+        {
+          "query_id": "mdq014",
+          "category": "esc_2021",
+          "query": "How should diabetes be managed in heart failure patients according to the 2021 ESC guidelines, particularly regarding SGLT2 inhibitors?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2021_chunk_0386",
+            "esc_hf_2021_chunk_0426",
+            "esc_hf_2021_chunk_0735",
+            "esc_hf_2021_chunk_0204",
+            "esc_hf_2023_focused_update_chunk_0013"
+          ],
+          "retrieved_documents": [
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2023"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            1,
+            2,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.2026,
+          "recall_at_5": 0.0909,
+          "strict_recall_at_5": 0.1667,
+          "mrr": 0.3333
+        },
+        {
+          "query_id": "mdq015",
+          "category": "esc_2021",
+          "query": "What are the 2021 ESC recommendations for managing iron deficiency in heart failure patients?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2023_focused_update_chunk_0014",
+            "esc_hf_2023_focused_update_chunk_0068",
+            "esc_hf_2021_chunk_0398",
+            "esc_hf_2023_focused_update_chunk_0058",
+            "nice_hf_2018_chunk_0044"
+          ],
+          "retrieved_documents": [
+            "ESC 2023",
+            "ESC 2023",
+            "ESC 2021",
+            "ESC 2023",
+            "NICE"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0565,
+          "recall_at_5": 0.0204,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.3333
+        },
+        {
+          "query_id": "mdq016",
+          "category": "esc_2021",
+          "query": "How does obesity affect heart failure management according to the 2021 ESC guidelines?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0513",
+            "esc_hf_2021_chunk_0610",
+            "esc_hf_2021_chunk_0748",
+            "esc_hf_2021_chunk_0515"
+          ],
+          "retrieved_documents": [
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0534,
+          "recall_at_5": 0.05,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.25
+        },
+        {
+          "query_id": "mdq017",
+          "category": "esc_2023",
+          "query": "What new evidence regarding HFmrEF management is presented in the 2023 ESC focused update, particularly from the DELIVER and EMPEROR-Preserved trials?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2023_focused_update_chunk_0027",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2023_focused_update_chunk_0078",
+            "esc_hf_2021_chunk_0207",
+            "esc_hf_2021_chunk_0071"
+          ],
+          "retrieved_documents": [
+            "ESC 2023",
+            "ESC 2021",
+            "ESC 2023",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.0
+        },
+        {
+          "query_id": "mdq018",
+          "category": "esc_2023",
+          "query": "What are the updated recommendations for heart failure with preserved ejection fraction in the 2023 ESC focused update?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2021_chunk_0200",
+            "esc_hf_2021_chunk_0031",
+            "nice_hf_2018_chunk_0057",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2023_focused_update_chunk_0025"
+          ],
+          "retrieved_documents": [
+            "ESC 2021",
+            "ESC 2021",
+            "NICE",
+            "ESC 2021",
+            "ESC 2023"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.0
+        },
+        {
+          "query_id": "mdq019",
+          "category": "esc_2023",
+          "query": "How have SGLT2 inhibitor recommendations changed in the 2023 ESC focused update compared to 2021?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2021_chunk_0426",
+            "esc_hf_2021_chunk_0204",
+            "esc_hf_2023_focused_update_chunk_0028",
+            "esc_hf_2023_focused_update_chunk_0034",
+            "esc_hf_2021_chunk_0077"
+          ],
+          "retrieved_documents": [
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2023",
+            "ESC 2023",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            2,
+            2,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.3156,
+          "recall_at_5": 0.0833,
+          "strict_recall_at_5": 0.1429,
+          "mrr": 0.3333
+        },
+        {
+          "query_id": "mdq020",
+          "category": "esc_2023",
+          "query": "What updates does the 2023 ESC focused update provide for the management of acute heart failure?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2021_chunk_0513",
+            "esc_hf_2023_focused_update_chunk_0025",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0621",
+            "esc_hf_2021_chunk_0651"
+          ],
+          "retrieved_documents": [
+            "ESC 2021",
+            "ESC 2023",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0713,
+          "recall_at_5": 0.027,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.5
+        },
+        {
+          "query_id": "mdq021",
+          "category": "esc_2023",
+          "query": "What are the 2023 ESC recommendations for managing diabetes in heart failure patients?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2023_focused_update_chunk_0013",
+            "esc_hf_2021_chunk_0031",
+            "esc_hf_2021_chunk_0515",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0033"
+          ],
+          "retrieved_documents": [
+            "ESC 2023",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.1
+        },
+        {
+          "query_id": "mdq023",
+          "category": "cross_document",
+          "query": "How do the NICE 2018 and ESC 2021 guidelines differ in their first-line treatment recommendations for heart failure with reduced ejection fraction?",
+          "retrieved_chunk_ids": [
+            "nice_hf_2018_chunk_0057",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0091",
+            "esc_hf_2021_chunk_0513",
+            "esc_hf_2021_chunk_0256"
+          ],
+          "retrieved_documents": [
+            "NICE",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.1667
+        },
+        {
+          "query_id": "mdq024",
+          "category": "cross_document",
+          "query": "What is the role of ARNI (sacubitril/valsartan) in heart failure treatment across the NICE and ESC guidelines?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2021_chunk_0183",
+            "esc_hf_2021_chunk_0133",
+            "esc_hf_2021_chunk_0128",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0146"
+          ],
+          "retrieved_documents": [
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.0,
+          "recall_at_5": 0.0,
+          "strict_recall_at_5": 0.0,
+          "mrr": 0.1667
+        },
+        {
+          "query_id": "mdq026",
+          "category": "cross_document",
+          "query": "How do the NICE and ESC guidelines differ in their diagnostic approach to heart failure, including the use of natriuretic peptides and echocardiography?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0513",
+            "nice_hf_2018_chunk_0057",
+            "esc_hf_2021_chunk_0535",
+            "nice_hf_2018_chunk_0056"
+          ],
+          "retrieved_documents": [
+            "ESC 2021",
+            "ESC 2021",
+            "NICE",
+            "ESC 2021",
+            "NICE"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.1461,
+          "recall_at_5": 0.0278,
+          "strict_recall_at_5": 0.0333,
+          "mrr": 0.25
+        },
+        {
+          "query_id": "mdq027",
+          "category": "cross_document",
+          "query": "What specific changes in HFmrEF and HFpEF treatment recommendations occurred between the 2021 ESC guideline and the 2023 focused update?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2023_focused_update_chunk_0027",
+            "esc_hf_2021_chunk_0489",
+            "esc_hf_2021_chunk_0071",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2023_focused_update_chunk_0028"
+          ],
+          "retrieved_documents": [
+            "ESC 2023",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2023"
+          ],
+          "retrieved_relevance": [
+            1,
+            1,
+            1,
+            0,
+            2
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.3721,
+          "recall_at_5": 0.069,
+          "strict_recall_at_5": 0.1,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "mdq028",
+          "category": "cross_document",
+          "query": "What evidence supports the use of beta-blockers in heart failure across the NICE and ESC guidelines?",
+          "retrieved_chunk_ids": [
+            "nice_hf_2018_chunk_0057",
+            "esc_hf_2021_chunk_0621",
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0552",
+            "esc_hf_2021_chunk_0064"
+          ],
+          "retrieved_documents": [
+            "NICE",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.1461,
+          "recall_at_5": 0.0345,
+          "strict_recall_at_5": 0.1111,
+          "mrr": 0.25
+        },
+        {
+          "query_id": "mdq030",
+          "category": "cross_document",
+          "query": "How do the NICE and ESC guidelines classify heart failure by ejection fraction, and where do the definitions differ?",
+          "retrieved_chunk_ids": [
+            "esc_hf_2021_chunk_0070",
+            "esc_hf_2021_chunk_0513",
+            "esc_hf_2021_chunk_0256",
+            "nice_hf_2018_chunk_0042",
+            "nice_hf_2018_chunk_0031"
+          ],
+          "retrieved_documents": [
+            "ESC 2021",
+            "ESC 2021",
+            "ESC 2021",
+            "NICE",
+            "NICE"
+          ],
+          "retrieved_relevance": [
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "retrieved_ranks": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "nDCG_at_5": 0.1461,
+          "recall_at_5": 0.0294,
+          "strict_recall_at_5": 0.0333,
+          "mrr": 0.25
+        }
+      ]
+    }
+  },
+  "D_document_confusion": {
+    "summary": {
+      "total_wrong_doc_in_top5": 47,
+      "queries_with_contamination": 16,
+      "total_queries": 30
+    },
+    "contamination_by_expected_doc": {
+      "NICE": {
+        "count": 7,
+        "query_ids": [
+          "mdq001",
+          "mdq002",
+          "mdq003",
+          "mdq004",
+          "mdq005",
+          "mdq006",
+          "mdq007"
+        ]
+      },
+      "ESC 2021": {
+        "count": 3,
+        "query_ids": [
+          "mdq009",
+          "mdq014",
+          "mdq015"
+        ]
+      },
+      "ESC 2023": {
+        "count": 6,
+        "query_ids": [
+          "mdq017",
+          "mdq018",
+          "mdq019",
+          "mdq020",
+          "mdq021",
+          "mdq022"
+        ]
+      }
+    },
+    "per_query": [
+      {
+        "query_id": "mdq001",
+        "category": "nice",
+        "query": "What are the recommended first-line pharmacological treatments for heart failure...",
+        "expected_documents": [
+          "NICE"
+        ],
+        "top5_documents": [
+          "NICE",
+          "NICE",
+          "NICE",
+          "NICE",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          1,
+          2,
+          0,
+          1,
+          0
+        ],
+        "from_expected_doc": 4,
+        "from_wrong_doc": 1,
+        "doc_distribution": {
+          "NICE": 4,
+          "ESC 2021": 1
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": "Expected NICE but got ['ESC 2021']"
+      },
+      {
+        "query_id": "mdq002",
+        "category": "nice",
+        "query": "How does NICE recommend diagnosing chronic heart failure in adults, including th...",
+        "expected_documents": [
+          "NICE"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "NICE",
+          "NICE",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        "from_expected_doc": 2,
+        "from_wrong_doc": 3,
+        "doc_distribution": {
+          "ESC 2021": 3,
+          "NICE": 2
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": "Expected NICE but got ['ESC 2021', 'ESC 2021', 'ESC 2021']"
+      },
+      {
+        "query_id": "mdq003",
+        "category": "nice",
+        "query": "What palliative care approach does NICE recommend for patients with advanced hea...",
+        "expected_documents": [
+          "NICE"
+        ],
+        "top5_documents": [
+          "NICE",
+          "ESC 2021",
+          "NICE",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "from_expected_doc": 2,
+        "from_wrong_doc": 3,
+        "doc_distribution": {
+          "NICE": 2,
+          "ESC 2021": 3
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": "Expected NICE but got ['ESC 2021', 'ESC 2021', 'ESC 2021']"
+      },
+      {
+        "query_id": "mdq004",
+        "category": "nice",
+        "query": "How should heart failure with preserved ejection fraction be treated according t...",
+        "expected_documents": [
+          "NICE"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2023",
+          "NICE",
+          "NICE"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "from_expected_doc": 2,
+        "from_wrong_doc": 3,
+        "doc_distribution": {
+          "ESC 2021": 2,
+          "ESC 2023": 1,
+          "NICE": 2
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": "Expected NICE but got ['ESC 2021', 'ESC 2021', 'ESC 2023']"
+      },
+      {
+        "query_id": "mdq005",
+        "category": "nice",
+        "query": "What cardiac rehabilitation does NICE recommend for heart failure patients?",
+        "expected_documents": [
+          "NICE"
+        ],
+        "top5_documents": [
+          "NICE",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "from_expected_doc": 1,
+        "from_wrong_doc": 4,
+        "doc_distribution": {
+          "NICE": 1,
+          "ESC 2021": 4
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": "Expected NICE but got ['ESC 2021', 'ESC 2021', 'ESC 2021', 'ESC 2021']"
+      },
+      {
+        "query_id": "mdq006",
+        "category": "nice",
+        "query": "What is the role of SGLT2 inhibitors in heart failure treatment according to NIC...",
+        "expected_documents": [
+          "NICE"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "ESC 2023",
+          "NICE",
+          "ESC 2023",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "from_expected_doc": 1,
+        "from_wrong_doc": 4,
+        "doc_distribution": {
+          "ESC 2021": 2,
+          "ESC 2023": 2,
+          "NICE": 1
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": "Expected NICE but got ['ESC 2021', 'ESC 2023', 'ESC 2023', 'ESC 2021']"
+      },
+      {
+        "query_id": "mdq007",
+        "category": "nice",
+        "query": "What interventional procedures does NICE recommend for heart failure patients, i...",
+        "expected_documents": [
+          "NICE"
+        ],
+        "top5_documents": [
+          "NICE",
+          "ESC 2021",
+          "ESC 2021",
+          "NICE",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "from_expected_doc": 2,
+        "from_wrong_doc": 3,
+        "doc_distribution": {
+          "NICE": 2,
+          "ESC 2021": 3
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": "Expected NICE but got ['ESC 2021', 'ESC 2021', 'ESC 2021']"
+      },
+      {
+        "query_id": "mdq008",
+        "category": "nice",
+        "query": "What monitoring and clinical review schedule does NICE recommend for heart failu...",
+        "expected_documents": [
+          "NICE"
+        ],
+        "top5_documents": [
+          "NICE",
+          "NICE",
+          "NICE",
+          "NICE",
+          "NICE"
+        ],
+        "top5_relevance": [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "from_expected_doc": 5,
+        "from_wrong_doc": 0,
+        "doc_distribution": {
+          "NICE": 5
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": null
+      },
+      {
+        "query_id": "mdq009",
+        "category": "esc_2021",
+        "query": "What are the cornerstone pharmacological therapies recommended by the 2021 ESC g...",
+        "expected_documents": [
+          "ESC 2021"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "NICE",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          2,
+          0,
+          1,
+          0,
+          0
+        ],
+        "from_expected_doc": 4,
+        "from_wrong_doc": 1,
+        "doc_distribution": {
+          "ESC 2021": 4,
+          "NICE": 1
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": "Expected ESC 2021 but got ['NICE']"
+      },
+      {
+        "query_id": "mdq010",
+        "category": "esc_2021",
+        "query": "How do the 2021 ESC guidelines approach the diagnosis and treatment of heart fai...",
+        "expected_documents": [
+          "ESC 2021"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "from_expected_doc": 5,
+        "from_wrong_doc": 0,
+        "doc_distribution": {
+          "ESC 2021": 5
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": null
+      },
+      {
+        "query_id": "mdq011",
+        "category": "esc_2021",
+        "query": "How should atrial fibrillation be managed in patients with heart failure accordi...",
+        "expected_documents": [
+          "ESC 2021"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "from_expected_doc": 5,
+        "from_wrong_doc": 0,
+        "doc_distribution": {
+          "ESC 2021": 5
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": null
+      },
+      {
+        "query_id": "mdq012",
+        "category": "esc_2021",
+        "query": "What is the recommended management approach for acute heart failure according to...",
+        "expected_documents": [
+          "ESC 2021"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "from_expected_doc": 5,
+        "from_wrong_doc": 0,
+        "doc_distribution": {
+          "ESC 2021": 5
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": null
+      },
+      {
+        "query_id": "mdq013",
+        "category": "esc_2021",
+        "query": "What are the 2021 ESC recommendations for device therapy including ICDs and card...",
+        "expected_documents": [
+          "ESC 2021"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "from_expected_doc": 5,
+        "from_wrong_doc": 0,
+        "doc_distribution": {
+          "ESC 2021": 5
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": null
+      },
+      {
+        "query_id": "mdq014",
+        "category": "esc_2021",
+        "query": "How should diabetes be managed in heart failure patients according to the 2021 E...",
+        "expected_documents": [
+          "ESC 2021"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2023"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          1,
+          2,
+          0
+        ],
+        "from_expected_doc": 4,
+        "from_wrong_doc": 1,
+        "doc_distribution": {
+          "ESC 2021": 4,
+          "ESC 2023": 1
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": "Expected ESC 2021 but got ['ESC 2023']"
+      },
+      {
+        "query_id": "mdq015",
+        "category": "esc_2021",
+        "query": "What are the 2021 ESC recommendations for managing iron deficiency in heart fail...",
+        "expected_documents": [
+          "ESC 2021"
+        ],
+        "top5_documents": [
+          "ESC 2023",
+          "ESC 2023",
+          "ESC 2021",
+          "ESC 2023",
+          "NICE"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "from_expected_doc": 1,
+        "from_wrong_doc": 4,
+        "doc_distribution": {
+          "ESC 2023": 3,
+          "ESC 2021": 1,
+          "NICE": 1
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": "Expected ESC 2021 but got ['ESC 2023', 'ESC 2023', 'ESC 2023', 'NICE']"
+      },
+      {
+        "query_id": "mdq016",
+        "category": "esc_2021",
+        "query": "How does obesity affect heart failure management according to the 2021 ESC guide...",
+        "expected_documents": [
+          "ESC 2021"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "from_expected_doc": 5,
+        "from_wrong_doc": 0,
+        "doc_distribution": {
+          "ESC 2021": 5
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": null
+      },
+      {
+        "query_id": "mdq017",
+        "category": "esc_2023",
+        "query": "What new evidence regarding HFmrEF management is presented in the 2023 ESC focus...",
+        "expected_documents": [
+          "ESC 2023"
+        ],
+        "top5_documents": [
+          "ESC 2023",
+          "ESC 2021",
+          "ESC 2023",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "from_expected_doc": 2,
+        "from_wrong_doc": 3,
+        "doc_distribution": {
+          "ESC 2023": 2,
+          "ESC 2021": 3
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": "Expected ESC 2023 but got ['ESC 2021', 'ESC 2021', 'ESC 2021']"
+      },
+      {
+        "query_id": "mdq018",
+        "category": "esc_2023",
+        "query": "What are the updated recommendations for heart failure with preserved ejection f...",
+        "expected_documents": [
+          "ESC 2023"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "NICE",
+          "ESC 2021",
+          "ESC 2023"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "from_expected_doc": 1,
+        "from_wrong_doc": 4,
+        "doc_distribution": {
+          "ESC 2021": 3,
+          "NICE": 1,
+          "ESC 2023": 1
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": "Expected ESC 2023 but got ['ESC 2021', 'ESC 2021', 'NICE', 'ESC 2021']"
+      },
+      {
+        "query_id": "mdq019",
+        "category": "esc_2023",
+        "query": "How have SGLT2 inhibitor recommendations changed in the 2023 ESC focused update ...",
+        "expected_documents": [
+          "ESC 2023"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2023",
+          "ESC 2023",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        "from_expected_doc": 2,
+        "from_wrong_doc": 3,
+        "doc_distribution": {
+          "ESC 2021": 3,
+          "ESC 2023": 2
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": "Expected ESC 2023 but got ['ESC 2021', 'ESC 2021', 'ESC 2021']"
+      },
+      {
+        "query_id": "mdq020",
+        "category": "esc_2023",
+        "query": "What updates does the 2023 ESC focused update provide for the management of acut...",
+        "expected_documents": [
+          "ESC 2023"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "ESC 2023",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "from_expected_doc": 1,
+        "from_wrong_doc": 4,
+        "doc_distribution": {
+          "ESC 2021": 4,
+          "ESC 2023": 1
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": "Expected ESC 2023 but got ['ESC 2021', 'ESC 2021', 'ESC 2021', 'ESC 2021']"
+      },
+      {
+        "query_id": "mdq021",
+        "category": "esc_2023",
+        "query": "What are the 2023 ESC recommendations for managing diabetes in heart failure pat...",
+        "expected_documents": [
+          "ESC 2023"
+        ],
+        "top5_documents": [
+          "ESC 2023",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "from_expected_doc": 1,
+        "from_wrong_doc": 4,
+        "doc_distribution": {
+          "ESC 2023": 1,
+          "ESC 2021": 4
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": "Expected ESC 2023 but got ['ESC 2021', 'ESC 2021', 'ESC 2021', 'ESC 2021']"
+      },
+      {
+        "query_id": "mdq022",
+        "category": "esc_2023",
+        "query": "What are the updated 2023 ESC recommendations for iron deficiency management in ...",
+        "expected_documents": [
+          "ESC 2023"
+        ],
+        "top5_documents": [
+          "ESC 2023",
+          "ESC 2023",
+          "ESC 2021",
+          "NICE",
+          "ESC 2023"
+        ],
+        "top5_relevance": [
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "from_expected_doc": 3,
+        "from_wrong_doc": 2,
+        "doc_distribution": {
+          "ESC 2023": 3,
+          "ESC 2021": 1,
+          "NICE": 1
+        },
+        "cross_doc_dominance": null,
+        "contamination_type": "Expected ESC 2023 but got ['ESC 2021', 'NICE']"
+      },
+      {
+        "query_id": "mdq023",
+        "category": "cross_document",
+        "query": "How do the NICE 2018 and ESC 2021 guidelines differ in their first-line treatmen...",
+        "expected_documents": [
+          "ESC 2021",
+          "ESC 2023",
+          "NICE"
+        ],
+        "top5_documents": [
+          "NICE",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "from_expected_doc": 5,
+        "from_wrong_doc": 0,
+        "doc_distribution": {
+          "NICE": 1,
+          "ESC 2021": 4
+        },
+        "cross_doc_dominance": "NICE=1, ESC=4",
+        "contamination_type": null
+      },
+      {
+        "query_id": "mdq024",
+        "category": "cross_document",
+        "query": "What is the role of ARNI (sacubitril/valsartan) in heart failure treatment acros...",
+        "expected_documents": [
+          "ESC 2021",
+          "ESC 2023",
+          "NICE"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "from_expected_doc": 5,
+        "from_wrong_doc": 0,
+        "doc_distribution": {
+          "ESC 2021": 5
+        },
+        "cross_doc_dominance": "ESC dominated (5/5)",
+        "contamination_type": null
+      },
+      {
+        "query_id": "mdq025",
+        "category": "cross_document",
+        "query": "What is the evolving role of SGLT2 inhibitors across the NICE 2018, ESC 2021, an...",
+        "expected_documents": [
+          "ESC 2021",
+          "ESC 2023",
+          "NICE"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "NICE",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2023"
+        ],
+        "top5_relevance": [
+          1,
+          2,
+          1,
+          1,
+          1
+        ],
+        "from_expected_doc": 5,
+        "from_wrong_doc": 0,
+        "doc_distribution": {
+          "ESC 2021": 3,
+          "NICE": 1,
+          "ESC 2023": 1
+        },
+        "cross_doc_dominance": "NICE=1, ESC=4",
+        "contamination_type": null
+      },
+      {
+        "query_id": "mdq026",
+        "category": "cross_document",
+        "query": "How do the NICE and ESC guidelines differ in their diagnostic approach to heart ...",
+        "expected_documents": [
+          "ESC 2021",
+          "ESC 2023",
+          "NICE"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "NICE",
+          "ESC 2021",
+          "NICE"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "from_expected_doc": 5,
+        "from_wrong_doc": 0,
+        "doc_distribution": {
+          "ESC 2021": 3,
+          "NICE": 2
+        },
+        "cross_doc_dominance": "NICE=2, ESC=3",
+        "contamination_type": null
+      },
+      {
+        "query_id": "mdq027",
+        "category": "cross_document",
+        "query": "What specific changes in HFmrEF and HFpEF treatment recommendations occurred bet...",
+        "expected_documents": [
+          "ESC 2021",
+          "ESC 2023"
+        ],
+        "top5_documents": [
+          "ESC 2023",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2023"
+        ],
+        "top5_relevance": [
+          1,
+          1,
+          1,
+          0,
+          2
+        ],
+        "from_expected_doc": 5,
+        "from_wrong_doc": 0,
+        "doc_distribution": {
+          "ESC 2023": 2,
+          "ESC 2021": 3
+        },
+        "cross_doc_dominance": "ESC dominated (5/5)",
+        "contamination_type": null
+      },
+      {
+        "query_id": "mdq028",
+        "category": "cross_document",
+        "query": "What evidence supports the use of beta-blockers in heart failure across the NICE...",
+        "expected_documents": [
+          "ESC 2021",
+          "ESC 2023",
+          "NICE"
+        ],
+        "top5_documents": [
+          "NICE",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "from_expected_doc": 5,
+        "from_wrong_doc": 0,
+        "doc_distribution": {
+          "NICE": 1,
+          "ESC 2021": 4
+        },
+        "cross_doc_dominance": "NICE=1, ESC=4",
+        "contamination_type": null
+      },
+      {
+        "query_id": "mdq029",
+        "category": "cross_document",
+        "query": "How do the guidelines recommend switching from ACE inhibitors to ARNI, and what ...",
+        "expected_documents": [
+          "ESC 2021",
+          "NICE"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "NICE",
+          "NICE",
+          "ESC 2021",
+          "ESC 2021"
+        ],
+        "top5_relevance": [
+          1,
+          2,
+          1,
+          1,
+          1
+        ],
+        "from_expected_doc": 5,
+        "from_wrong_doc": 0,
+        "doc_distribution": {
+          "ESC 2021": 3,
+          "NICE": 2
+        },
+        "cross_doc_dominance": "NICE=2, ESC=3",
+        "contamination_type": null
+      },
+      {
+        "query_id": "mdq030",
+        "category": "cross_document",
+        "query": "How do the NICE and ESC guidelines classify heart failure by ejection fraction, ...",
+        "expected_documents": [
+          "ESC 2021",
+          "ESC 2023",
+          "NICE"
+        ],
+        "top5_documents": [
+          "ESC 2021",
+          "ESC 2021",
+          "ESC 2021",
+          "NICE",
+          "NICE"
+        ],
+        "top5_relevance": [
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "from_expected_doc": 5,
+        "from_wrong_doc": 0,
+        "doc_distribution": {
+          "ESC 2021": 3,
+          "NICE": 2
+        },
+        "cross_doc_dominance": "NICE=2, ESC=3",
+        "contamination_type": null
+      }
+    ]
+  },
+  "E_root_cause_analysis": {
+    "esc_2021_confused_with_esc_2023": {
+      "count": 2,
+      "total_esc_2021_queries": 8,
+      "pct": 25.0,
+      "evidence": "2/8 ESC 2021 queries have ESC 2023 in top-5"
+    },
+    "esc_2023_confused_with_esc_2021": {
+      "count": 6,
+      "total_esc_2023_queries": 6,
+      "pct": 100.0,
+      "evidence": "6/6 ESC 2023 queries have ESC 2021 in top-5"
+    },
+    "corpus_dilution_nice": {
+      "nice_queries_with_esc_in_top5": 7,
+      "total_nice_queries": 8,
+      "pct": 87.5,
+      "evidence": "7/8 NICE queries have non-NICE content in top-5"
+    },
+    "cross_document_failures": {
+      "queries_missing_both": 0,
+      "queries_missing_nice": 2,
+      "queries_missing_esc": 0,
+      "total_cross_queries": 8,
+      "evidence": "8 cross-doc queries: 2 miss NICE, 0 miss ESC"
+    },
+    "first_result_accuracy": {
+      "first_result_from_wrong_doc": 7,
+      "top1_wrong_count": 21,
+      "total_queries": 30,
+      "pct_first_wrong": 23.3,
+      "evidence": "7/30 queries have wrong doc as top-1 result"
+    },
+    "dominant_causes": [
+      "corpus_dilution",
+      "semantic_similarity_esc21_23"
+    ]
+  },
+  "F_comparison_to_nice_only_baseline": {
+    "previous_nice_only": {
+      "p@1": 0.95,
+      "r@5": 0.6226,
+      "ndcg@5": 0.8064,
+      "mrr": 0.9667,
+      "median_latency_ms": 42.5,
+      "num_queries": 20,
+      "num_chunks": 45
+    },
+    "new_nice_subset": {
+      "p@1": 0.5,
+      "r@5": 0.4726,
+      "ndcg@5": 0.4837,
+      "mrr": 0.6562,
+      "median_latency_ms": 48.54,
+      "num_queries": 8,
+      "num_chunks": 1001
+    },
+    "drops": {
+      "p@1": {
+        "previous": 0.95,
+        "current": 0.5,
+        "absolute_change": -0.45,
+        "pct_change": -47.4
+      },
+      "r@5": {
+        "previous": 0.6226,
+        "current": 0.4726,
+        "absolute_change": -0.15,
+        "pct_change": -24.1
+      },
+      "ndcg@5": {
+        "previous": 0.8064,
+        "current": 0.4837,
+        "absolute_change": -0.3227,
+        "pct_change": -40.0
+      },
+      "mrr": {
+        "previous": 0.9667,
+        "current": 0.6562,
+        "absolute_change": -0.3105,
+        "pct_change": -32.1
+      }
+    },
+    "explanation": "NICE-only queries saw major drops when corpus expanded from 45 to 1001 chunks. P@1 fell from 0.95 to 0.5 (-47.4%), nDCG@5 fell from 0.8064 to 0.4837 (-40.0%), and MRR fell from 0.9667 to 0.6562 (-32.1%). This confirms the corpus dilution effect: semantically similar ESC chunks compete with and outrank the correct NICE chunks."
+  },
+  "G_key_findings": [
+    {
+      "id": 1,
+      "finding": "Corpus dilution caused massive degradation for NICE queries",
+      "evidence": "NICE P@1 dropped from 0.95 to 0.5 (7/8 NICE queries have ESC in top-5). nDCG@5 dropped from 0.8064 to 0.4837.",
+      "severity": "high"
+    },
+    {
+      "id": 2,
+      "finding": "Cross-document queries dominate the worst performers",
+      "evidence": "7/8 bottom nDCG@5 queries are cross-document. Cross-doc MRR=0.5104 vs NICE MRR=0.6562.",
+      "severity": "high"
+    },
+    {
+      "id": 3,
+      "finding": "ESC 2021 and ESC 2023 content compete heavily with each other",
+      "evidence": "2/8 ESC 2021 queries retrieve ESC 2023 content; 6/6 ESC 2023 queries retrieve ESC 2021 content.",
+      "severity": "medium"
+    },
+    {
+      "id": 4,
+      "finding": "The embedding model (BGE-small-en) struggles with document-specific queries",
+      "evidence": "Only 50% of NICE queries retrieve the correct doc at rank 1. Queries with document qualifiers (e.g., 'according to NICE') still retrieve wrong docs.",
+      "severity": "high"
+    },
+    {
+      "id": 5,
+      "finding": "Recall ceiling is low even for best-performing categories",
+      "evidence": "Best Recall@5 is 0.47 (NICE), meaning even good queries miss most relevant chunks in top-5.",
+      "severity": "medium"
+    },
+    {
+      "id": 6,
+      "finding": "First-result accuracy is poor across the board",
+      "evidence": "7/30 queries (23.3%) have a wrong-document chunk at rank 1.",
+      "severity": "high"
+    },
+    {
+      "id": 7,
+      "finding": "Latency remained stable despite 22x corpus growth",
+      "evidence": "Median latency 43.64ms (new) vs 42.5ms (old) on 1001 vs 45 chunks.",
+      "severity": "low"
+    }
+  ],
+  "H_recommended_next_experiment": {
+    "recommendation": "Metadata-filtered retrieval with document-source metadata",
+    "rationale": "The dominant failure mode is corpus dilution (7/8 NICE queries retrieve ESC content, 7/30 queries have wrong doc at rank 1). The current metadata filter only excludes 'Front matter' but does not help route queries to the correct document. A document-source metadata filter (nice/esc_2021/esc_2023) on each chunk would allow the retrieval to be scoped to the correct document when the query specifies a document, while still allowing cross-document queries to search all documents.",
+    "expected_impact": "Should dramatically improve NICE queries (currently P@1=0.5, target P@1>=0.85) and ESC document-specific queries, while maintaining cross-document query performance.",
+    "alternative": "If metadata filtering is not feasible, the next best experiment would be cross-encoder reranking, which can re-score results to boost correct-document chunks."
+  }
+}

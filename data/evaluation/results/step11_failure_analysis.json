@@ -1,0 +1,1423 @@
+{
+  "report_title": "Step 11: Deep Failure Analysis — Scoped + Cross-Encoder Reranking",
+  "analysis_scope": "Why 10/30 queries degraded despite overall improvement",
+  "data_sources": {
+    "scoped_results": "data\\evaluation\\results\\metadata_scoped_retrieval_20260818T155956Z.json",
+    "reranked_results": "data\\evaluation\\results\\scoped_reranked_retrieval_20260818T163657Z.json",
+    "eval_dataset": "data\\evaluation\\multidoc_eval_dataset.json"
+  },
+  "A_executive_summary": {
+    "total_queries": 30,
+    "improved": 17,
+    "degraded": 10,
+    "unchanged": 3,
+    "overall_ndcg5_scoped": 0.3534,
+    "overall_ndcg5_reranked": 0.4207,
+    "overall_mrr_scoped": 0.6381,
+    "overall_mrr_reranked": 0.7733,
+    "key_finding": "Reranking improved 17/30 queries (+17 improved, -10 degraded). The degraded queries are primarily ESC 2021 (4 queries) where the cross-encoder struggles with the 856-chunk ESC 2021 pool. Cross-document queries benefit most from reranking (+0.164 nDCG@5). Average candidate recall@20 = 0.3148 (lenient)."
+  },
+  "B_degraded_query_list": [
+    {
+      "query_id": "mdq009",
+      "category": "esc_2021",
+      "scoped_nDCG5": 0.3956869061525521,
+      "reranked_nDCG5": 0.05652670087893601,
+      "delta": -0.33916020527361607
+    },
+    {
+      "query_id": "mdq019",
+      "category": "esc_2023",
+      "scoped_nDCG5": 0.8687949224876581,
+      "reranked_nDCG5": 0.5531464700081437,
+      "delta": -0.31564845247951445
+    },
+    {
+      "query_id": "mdq014",
+      "category": "esc_2021",
+      "scoped_nDCG5": 0.20259505072164247,
+      "reranked_nDCG5": 0.05652670087893601,
+      "delta": -0.14606834984270645
+    },
+    {
+      "query_id": "mdq027",
+      "category": "cross_document",
+      "scoped_nDCG5": 0.37211393506065904,
+      "reranked_nDCG5": 0.2611321305916629,
+      "delta": -0.11098180446899614
+    },
+    {
+      "query_id": "mdq022",
+      "category": "esc_2023",
+      "scoped_nDCG5": 0.5958337834156117,
+      "reranked_nDCG5": 0.5088013258915567,
+      "delta": -0.08703245752405497
+    },
+    {
+      "query_id": "mdq006",
+      "category": "nice",
+      "scoped_nDCG5": 0.9395225786842205,
+      "reranked_nDCG5": 0.865251271803402,
+      "delta": -0.07427130688081851
+    },
+    {
+      "query_id": "mdq010",
+      "category": "esc_2021",
+      "scoped_nDCG5": 0.05652670087893601,
+      "reranked_nDCG5": 0.0,
+      "delta": -0.05652670087893601
+    },
+    {
+      "query_id": "mdq002",
+      "category": "nice",
+      "scoped_nDCG5": 0.7499496852421906,
+      "reranked_nDCG5": 0.7012869951253081,
+      "delta": -0.04866269011688251
+    },
+    {
+      "query_id": "mdq013",
+      "category": "esc_2021",
+      "scoped_nDCG5": 0.27023204104286475,
+      "reranked_nDCG5": 0.2520733770000682,
+      "delta": -0.018158664042796535
+    },
+    {
+      "query_id": "mdq028",
+      "category": "cross_document",
+      "scoped_nDCG5": 0.14606834984270645,
+      "reranked_nDCG5": 0.13120507751234178,
+      "delta": -0.014863272330364663
+    }
+  ],
+  "C_query_by_query_analysis": [
+    {
+      "query_id": "mdq009",
+      "category": "esc_2021",
+      "query": "What are the cornerstone pharmacological therapies recommended by the 2021 ESC guidelines for heart failure with reduced ejection fraction?",
+      "scoped_nDCG5": 0.3956869061525521,
+      "reranked_nDCG5": 0.05652670087893601,
+      "nDCG_delta": -0.33916020527361607,
+      "scoped_MRR": 1.0,
+      "reranked_MRR": 0.3333333333333333,
+      "total_relevant": 16,
+      "relevant_in_scoped_top10": 2,
+      "relevant_in_reranked_top10": 2,
+      "relevant_in_scoped_top20": 2,
+      "lost_from_top10": [],
+      "gained_in_top10": [],
+      "promoted_irrelevant_count": 2,
+      "promoted_partial_count": 0,
+      "lost_in_candidates": 0,
+      "lost_not_in_candidates": 0,
+      "failure_type": "rank_reordering",
+      "explanation": "Relevant chunks stayed in top-10 but their internal ranking changed, reducing nDCG.",
+      "version_conflict": false,
+      "scoped_top10": [
+        [
+          "esc_hf_2021_chunk_0091",
+          2
+        ],
+        [
+          "esc_hf_2021_chunk_0070",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0030",
+          1
+        ],
+        [
+          "esc_hf_2021_chunk_0426",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0155",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0513",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0031",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0064",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0515",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0256",
+          0
+        ]
+      ],
+      "reranked_top10": [
+        [
+          "esc_hf_2021_chunk_0119",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0256",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0030",
+          1
+        ],
+        [
+          "esc_hf_2021_chunk_0070",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0515",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0091",
+          2
+        ],
+        [
+          "esc_hf_2021_chunk_0155",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0146",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0064",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0426",
+          0
+        ]
+      ]
+    },
+    {
+      "query_id": "mdq019",
+      "category": "esc_2023",
+      "query": "How have SGLT2 inhibitor recommendations changed in the 2023 ESC focused update compared to 2021?",
+      "scoped_nDCG5": 0.8687949224876581,
+      "reranked_nDCG5": 0.5531464700081437,
+      "nDCG_delta": -0.31564845247951445,
+      "scoped_MRR": 1.0,
+      "reranked_MRR": 1.0,
+      "total_relevant": 24,
+      "relevant_in_scoped_top10": 6,
+      "relevant_in_reranked_top10": 7,
+      "relevant_in_scoped_top20": 6,
+      "lost_from_top10": [
+        "esc_hf_2023_focused_update_chunk_0051"
+      ],
+      "gained_in_top10": [
+        "esc_hf_2023_focused_update_chunk_0031",
+        "esc_hf_2023_focused_update_chunk_0075"
+      ],
+      "promoted_irrelevant_count": 2,
+      "promoted_partial_count": 1,
+      "lost_in_candidates": 1,
+      "lost_not_in_candidates": 0,
+      "failure_type": "cross_encoder_ranking",
+      "explanation": "Relevant chunk(s) ['esc_hf_2023_focused_update_chu'] were in candidates but CE reranker placed 3 irrelevant chunk(s) above them.",
+      "version_conflict": false,
+      "scoped_top10": [
+        [
+          "esc_hf_2023_focused_update_chunk_0028",
+          2
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0034",
+          2
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0051",
+          2
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0036",
+          2
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0023",
+          0
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0063",
+          2
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0024",
+          0
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0026",
+          0
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0025",
+          2
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0021",
+          0
+        ]
+      ],
+      "reranked_top10": [
+        [
+          "esc_hf_2023_focused_update_chunk_0028",
+          2
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0025",
+          2
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0021",
+          0
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0048",
+          0
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0027",
+          0
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0034",
+          2
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0036",
+          2
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0063",
+          2
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0031",
+          2
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0075",
+          1
+        ]
+      ]
+    },
+    {
+      "query_id": "mdq014",
+      "category": "esc_2021",
+      "query": "How should diabetes be managed in heart failure patients according to the 2021 ESC guidelines, particularly regarding SGLT2 inhibitors?",
+      "scoped_nDCG5": 0.20259505072164247,
+      "reranked_nDCG5": 0.05652670087893601,
+      "nDCG_delta": -0.14606834984270645,
+      "scoped_MRR": 0.3333333333333333,
+      "reranked_MRR": 0.3333333333333333,
+      "total_relevant": 22,
+      "relevant_in_scoped_top10": 3,
+      "relevant_in_reranked_top10": 4,
+      "relevant_in_scoped_top20": 3,
+      "lost_from_top10": [
+        "esc_hf_2021_chunk_0735"
+      ],
+      "gained_in_top10": [
+        "esc_hf_2021_chunk_0206",
+        "esc_hf_2021_chunk_0382"
+      ],
+      "promoted_irrelevant_count": 2,
+      "promoted_partial_count": 1,
+      "lost_in_candidates": 1,
+      "lost_not_in_candidates": 0,
+      "failure_type": "cross_encoder_ranking",
+      "explanation": "Relevant chunk(s) ['esc_hf_2021_chunk_0735'] were in candidates but CE reranker placed 6 irrelevant chunk(s) above them.",
+      "version_conflict": false,
+      "scoped_top10": [
+        [
+          "esc_hf_2021_chunk_0386",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0426",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0735",
+          1
+        ],
+        [
+          "esc_hf_2021_chunk_0204",
+          2
+        ],
+        [
+          "esc_hf_2021_chunk_0091",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0515",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0070",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0033",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0077",
+          2
+        ],
+        [
+          "esc_hf_2021_chunk_0064",
+          0
+        ]
+      ],
+      "reranked_top10": [
+        [
+          "esc_hf_2021_chunk_0386",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0135",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0206",
+          1
+        ],
+        [
+          "esc_hf_2021_chunk_0426",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0071",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0515",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0070",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0077",
+          2
+        ],
+        [
+          "esc_hf_2021_chunk_0204",
+          2
+        ],
+        [
+          "esc_hf_2021_chunk_0382",
+          2
+        ]
+      ]
+    },
+    {
+      "query_id": "mdq027",
+      "category": "cross_document",
+      "query": "What specific changes in HFmrEF and HFpEF treatment recommendations occurred between the 2021 ESC guideline and the 2023 focused update?",
+      "scoped_nDCG5": 0.37211393506065904,
+      "reranked_nDCG5": 0.2611321305916629,
+      "nDCG_delta": -0.11098180446899614,
+      "scoped_MRR": 1.0,
+      "reranked_MRR": 0.5,
+      "total_relevant": 58,
+      "relevant_in_scoped_top10": 7,
+      "relevant_in_reranked_top10": 7,
+      "relevant_in_scoped_top20": 7,
+      "lost_from_top10": [
+        "esc_hf_2021_chunk_0482"
+      ],
+      "gained_in_top10": [
+        "esc_hf_2021_chunk_0201"
+      ],
+      "promoted_irrelevant_count": 2,
+      "promoted_partial_count": 1,
+      "lost_in_candidates": 1,
+      "lost_not_in_candidates": 0,
+      "failure_type": "cross_encoder_ranking",
+      "explanation": "Relevant chunk(s) ['esc_hf_2021_chunk_0482'] were in candidates but CE reranker placed 3 irrelevant chunk(s) above them.",
+      "version_conflict": true,
+      "scoped_top10": [
+        [
+          "esc_hf_2023_focused_update_chunk_0027",
+          1
+        ],
+        [
+          "esc_hf_2021_chunk_0489",
+          1
+        ],
+        [
+          "esc_hf_2021_chunk_0071",
+          1
+        ],
+        [
+          "esc_hf_2021_chunk_0070",
+          0
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0028",
+          2
+        ],
+        [
+          "esc_hf_2021_chunk_0207",
+          0
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0031",
+          1
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0069",
+          2
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0025",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0482",
+          1
+        ]
+      ],
+      "reranked_top10": [
+        [
+          "esc_hf_2023_focused_update_chunk_0025",
+          0
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0027",
+          1
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0048",
+          0
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0028",
+          2
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0031",
+          1
+        ],
+        [
+          "esc_hf_2021_chunk_0489",
+          1
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0044",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0201",
+          1
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0069",
+          2
+        ],
+        [
+          "esc_hf_2021_chunk_0071",
+          1
+        ]
+      ]
+    },
+    {
+      "query_id": "mdq022",
+      "category": "esc_2023",
+      "query": "What are the updated 2023 ESC recommendations for iron deficiency management in heart failure?",
+      "scoped_nDCG5": 0.5958337834156117,
+      "reranked_nDCG5": 0.5088013258915567,
+      "nDCG_delta": -0.08703245752405497,
+      "scoped_MRR": 1.0,
+      "reranked_MRR": 1.0,
+      "total_relevant": 11,
+      "relevant_in_scoped_top10": 7,
+      "relevant_in_reranked_top10": 6,
+      "relevant_in_scoped_top20": 7,
+      "lost_from_top10": [
+        "esc_hf_2023_focused_update_chunk_0076"
+      ],
+      "gained_in_top10": [],
+      "promoted_irrelevant_count": 2,
+      "promoted_partial_count": 0,
+      "lost_in_candidates": 1,
+      "lost_not_in_candidates": 0,
+      "failure_type": "cross_encoder_ranking",
+      "explanation": "Relevant chunk(s) ['esc_hf_2023_focused_update_chu'] were in candidates but CE reranker placed 4 irrelevant chunk(s) above them.",
+      "version_conflict": false,
+      "scoped_top10": [
+        [
+          "esc_hf_2023_focused_update_chunk_0014",
+          1
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0068",
+          1
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0069",
+          1
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0058",
+          1
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0026",
+          1
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0025",
+          1
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0019",
+          0
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0087",
+          0
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0076",
+          1
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0086",
+          0
+        ]
+      ],
+      "reranked_top10": [
+        [
+          "esc_hf_2023_focused_update_chunk_0058",
+          1
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0069",
+          1
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0025",
+          1
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0021",
+          0
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0014",
+          1
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0026",
+          1
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0068",
+          1
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0086",
+          0
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0088",
+          0
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0087",
+          0
+        ]
+      ]
+    },
+    {
+      "query_id": "mdq006",
+      "category": "nice",
+      "query": "What is the role of SGLT2 inhibitors in heart failure treatment according to NICE, and for which patient groups are they recommended?",
+      "scoped_nDCG5": 0.9395225786842205,
+      "reranked_nDCG5": 0.865251271803402,
+      "nDCG_delta": -0.07427130688081851,
+      "scoped_MRR": 1.0,
+      "reranked_MRR": 1.0,
+      "total_relevant": 7,
+      "relevant_in_scoped_top10": 6,
+      "relevant_in_reranked_top10": 7,
+      "relevant_in_scoped_top20": 6,
+      "lost_from_top10": [],
+      "gained_in_top10": [
+        "nice_hf_2018_chunk_0046"
+      ],
+      "promoted_irrelevant_count": 3,
+      "promoted_partial_count": 1,
+      "lost_in_candidates": 0,
+      "lost_not_in_candidates": 0,
+      "failure_type": "rank_reordering",
+      "explanation": "Relevant chunks stayed in top-10 but their internal ranking changed, reducing nDCG.",
+      "version_conflict": false,
+      "scoped_top10": [
+        [
+          "nice_hf_2018_chunk_0026",
+          2
+        ],
+        [
+          "nice_hf_2018_chunk_0045",
+          1
+        ],
+        [
+          "nice_hf_2018_chunk_0050",
+          2
+        ],
+        [
+          "nice_hf_2018_chunk_0025",
+          2
+        ],
+        [
+          "nice_hf_2018_chunk_0021",
+          2
+        ],
+        [
+          "nice_hf_2018_chunk_0057",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0049",
+          1
+        ],
+        [
+          "nice_hf_2018_chunk_0012",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0044",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0054",
+          0
+        ]
+      ],
+      "reranked_top10": [
+        [
+          "nice_hf_2018_chunk_0026",
+          2
+        ],
+        [
+          "nice_hf_2018_chunk_0050",
+          2
+        ],
+        [
+          "nice_hf_2018_chunk_0045",
+          1
+        ],
+        [
+          "nice_hf_2018_chunk_0049",
+          1
+        ],
+        [
+          "nice_hf_2018_chunk_0021",
+          2
+        ],
+        [
+          "nice_hf_2018_chunk_0025",
+          2
+        ],
+        [
+          "nice_hf_2018_chunk_0051",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0046",
+          1
+        ],
+        [
+          "nice_hf_2018_chunk_0023",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0029",
+          0
+        ]
+      ]
+    },
+    {
+      "query_id": "mdq010",
+      "category": "esc_2021",
+      "query": "How do the 2021 ESC guidelines approach the diagnosis and treatment of heart failure with preserved ejection fraction?",
+      "scoped_nDCG5": 0.05652670087893601,
+      "reranked_nDCG5": 0.0,
+      "nDCG_delta": -0.05652670087893601,
+      "scoped_MRR": 0.3333333333333333,
+      "reranked_MRR": 0.08333333333333333,
+      "total_relevant": 41,
+      "relevant_in_scoped_top10": 2,
+      "relevant_in_reranked_top10": 0,
+      "relevant_in_scoped_top20": 2,
+      "lost_from_top10": [
+        "esc_hf_2021_chunk_0200",
+        "esc_hf_2021_chunk_0621"
+      ],
+      "gained_in_top10": [],
+      "promoted_irrelevant_count": 6,
+      "promoted_partial_count": 0,
+      "lost_in_candidates": 2,
+      "lost_not_in_candidates": 0,
+      "failure_type": "cross_encoder_ranking",
+      "explanation": "Relevant chunk(s) ['esc_hf_2021_chunk_0200', 'esc_hf_2021_chunk_0621'] were in candidates but CE reranker placed 10 irrelevant chunk(s) above them.",
+      "version_conflict": false,
+      "scoped_top10": [
+        [
+          "esc_hf_2021_chunk_0513",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0070",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0200",
+          1
+        ],
+        [
+          "esc_hf_2021_chunk_0508",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0066",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0071",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0241",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0256",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0017",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0621",
+          1
+        ]
+      ],
+      "reranked_top10": [
+        [
+          "esc_hf_2021_chunk_0256",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0070",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0513",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0031",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0515",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0017",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0177",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0091",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0042",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0426",
+          0
+        ]
+      ]
+    },
+    {
+      "query_id": "mdq002",
+      "category": "nice",
+      "query": "How does NICE recommend diagnosing chronic heart failure in adults, including the role of natriuretic peptides and echocardiography?",
+      "scoped_nDCG5": 0.7499496852421906,
+      "reranked_nDCG5": 0.7012869951253081,
+      "nDCG_delta": -0.04866269011688251,
+      "scoped_MRR": 1.0,
+      "reranked_MRR": 1.0,
+      "total_relevant": 5,
+      "relevant_in_scoped_top10": 4,
+      "relevant_in_reranked_top10": 3,
+      "relevant_in_scoped_top20": 4,
+      "lost_from_top10": [
+        "nice_hf_2018_chunk_0016"
+      ],
+      "gained_in_top10": [],
+      "promoted_irrelevant_count": 5,
+      "promoted_partial_count": 0,
+      "lost_in_candidates": 1,
+      "lost_not_in_candidates": 0,
+      "failure_type": "cross_encoder_ranking",
+      "explanation": "Relevant chunk(s) ['nice_hf_2018_chunk_0016'] were in candidates but CE reranker placed 7 irrelevant chunk(s) above them.",
+      "version_conflict": false,
+      "scoped_top10": [
+        [
+          "nice_hf_2018_chunk_0018",
+          2
+        ],
+        [
+          "nice_hf_2018_chunk_0017",
+          2
+        ],
+        [
+          "nice_hf_2018_chunk_0057",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0044",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0019",
+          2
+        ],
+        [
+          "nice_hf_2018_chunk_0056",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0054",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0016",
+          2
+        ],
+        [
+          "nice_hf_2018_chunk_0013",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0047",
+          0
+        ]
+      ],
+      "reranked_top10": [
+        [
+          "nice_hf_2018_chunk_0017",
+          2
+        ],
+        [
+          "nice_hf_2018_chunk_0033",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0018",
+          2
+        ],
+        [
+          "nice_hf_2018_chunk_0050",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0019",
+          2
+        ],
+        [
+          "nice_hf_2018_chunk_0051",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0056",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0044",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0042",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0039",
+          0
+        ]
+      ]
+    },
+    {
+      "query_id": "mdq013",
+      "category": "esc_2021",
+      "query": "What are the 2021 ESC recommendations for device therapy including ICDs and cardiac resynchronisation in heart failure?",
+      "scoped_nDCG5": 0.27023204104286475,
+      "reranked_nDCG5": 0.2520733770000682,
+      "nDCG_delta": -0.018158664042796535,
+      "scoped_MRR": 0.5,
+      "reranked_MRR": 1.0,
+      "total_relevant": 36,
+      "relevant_in_scoped_top10": 4,
+      "relevant_in_reranked_top10": 4,
+      "relevant_in_scoped_top20": 4,
+      "lost_from_top10": [
+        "esc_hf_2021_chunk_0091"
+      ],
+      "gained_in_top10": [
+        "esc_hf_2021_chunk_0480"
+      ],
+      "promoted_irrelevant_count": 3,
+      "promoted_partial_count": 1,
+      "lost_in_candidates": 1,
+      "lost_not_in_candidates": 0,
+      "failure_type": "cross_encoder_ranking",
+      "explanation": "Relevant chunk(s) ['esc_hf_2021_chunk_0091'] were in candidates but CE reranker placed 6 irrelevant chunk(s) above them.",
+      "version_conflict": false,
+      "scoped_top10": [
+        [
+          "esc_hf_2021_chunk_0241",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0160",
+          1
+        ],
+        [
+          "esc_hf_2021_chunk_0159",
+          1
+        ],
+        [
+          "esc_hf_2021_chunk_0091",
+          1
+        ],
+        [
+          "esc_hf_2021_chunk_0167",
+          1
+        ],
+        [
+          "esc_hf_2021_chunk_0579",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0591",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0621",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0508",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0513",
+          0
+        ]
+      ],
+      "reranked_top10": [
+        [
+          "esc_hf_2021_chunk_0160",
+          1
+        ],
+        [
+          "esc_hf_2021_chunk_0591",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0256",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0167",
+          1
+        ],
+        [
+          "esc_hf_2021_chunk_0159",
+          1
+        ],
+        [
+          "esc_hf_2021_chunk_0480",
+          1
+        ],
+        [
+          "esc_hf_2021_chunk_0241",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0030",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0426",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0579",
+          0
+        ]
+      ]
+    },
+    {
+      "query_id": "mdq028",
+      "category": "cross_document",
+      "query": "What evidence supports the use of beta-blockers in heart failure across the NICE and ESC guidelines?",
+      "scoped_nDCG5": 0.14606834984270645,
+      "reranked_nDCG5": 0.13120507751234178,
+      "nDCG_delta": -0.014863272330364663,
+      "scoped_MRR": 0.25,
+      "reranked_MRR": 0.2,
+      "total_relevant": 29,
+      "relevant_in_scoped_top10": 2,
+      "relevant_in_reranked_top10": 2,
+      "relevant_in_scoped_top20": 2,
+      "lost_from_top10": [
+        "esc_hf_2021_chunk_0347"
+      ],
+      "gained_in_top10": [
+        "esc_hf_2021_chunk_0126"
+      ],
+      "promoted_irrelevant_count": 4,
+      "promoted_partial_count": 1,
+      "lost_in_candidates": 1,
+      "lost_not_in_candidates": 0,
+      "failure_type": "cross_encoder_ranking",
+      "explanation": "Relevant chunk(s) ['esc_hf_2021_chunk_0347'] were in candidates but CE reranker placed 8 irrelevant chunk(s) above them.",
+      "version_conflict": true,
+      "scoped_top10": [
+        [
+          "nice_hf_2018_chunk_0057",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0621",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0070",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0552",
+          2
+        ],
+        [
+          "esc_hf_2021_chunk_0064",
+          0
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0025",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0045",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0347",
+          2
+        ],
+        [
+          "esc_hf_2021_chunk_0146",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0622",
+          0
+        ]
+      ],
+      "reranked_top10": [
+        [
+          "nice_hf_2018_chunk_0057",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0045",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0049",
+          0
+        ],
+        [
+          "nice_hf_2018_chunk_0054",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0552",
+          2
+        ],
+        [
+          "esc_hf_2021_chunk_0070",
+          0
+        ],
+        [
+          "esc_hf_2023_focused_update_chunk_0020",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0621",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0513",
+          0
+        ],
+        [
+          "esc_hf_2021_chunk_0126",
+          1
+        ]
+      ]
+    }
+  ],
+  "D_candidate_vs_ranking_failures": {
+    "failure_type_counts": {
+      "rank_reordering": 2,
+      "cross_encoder_ranking": 8
+    },
+    "failure_type_query_ids": {
+      "rank_reordering": [
+        "mdq009",
+        "mdq006"
+      ],
+      "cross_encoder_ranking": [
+        "mdq019",
+        "mdq014",
+        "mdq027",
+        "mdq022",
+        "mdq010",
+        "mdq002",
+        "mdq013",
+        "mdq028"
+      ]
+    },
+    "candidate_generation_failures": [],
+    "cross_encoder_ranking_failures": [
+      "mdq019",
+      "mdq014",
+      "mdq027",
+      "mdq022",
+      "mdq010",
+      "mdq002",
+      "mdq013",
+      "mdq028"
+    ],
+    "ground_truth_ambiguity": [],
+    "rank_reordering": [
+      "mdq009",
+      "mdq006"
+    ],
+    "summary": "Of 10 degraded queries: 0 are candidate generation failures, 8 are cross-encoder ranking failures, 0 are ground-truth ambiguity, 2 are rank reordering."
+  },
+  "E_esc_2021_analysis": {
+    "total_queries": 8,
+    "degraded_count": 4,
+    "scoped_ndcg5": 0.1524,
+    "reranked_ndcg5": 0.1324,
+    "scoped_mrr": 0.4866,
+    "reranked_mrr": 0.5938,
+    "degraded_query_ids": [
+      "mdq009",
+      "mdq014",
+      "mdq010",
+      "mdq013"
+    ],
+    "analysis": "ESC 2021 has 4/8 queries degraded. The nDCG@5 dropped from 0.1524 to 0.1324 (-0.02). However, MRR improved from 0.4866 to 0.5938 (+0.1071). This suggests the cross-encoder improves first-result accuracy but degrades ranking of lower-ranked relevant chunks within the 856-chunk ESC 2021 pool."
+  },
+  "F_esc_2023_analysis": {
+    "total_queries": 6,
+    "degraded_count": 2,
+    "scoped_ndcg5": 0.3478,
+    "reranked_ndcg5": 0.344,
+    "scoped_mrr": 0.6111,
+    "reranked_mrr": 0.75,
+    "analysis": "ESC 2023 is mostly neutral: nDCG@5 changed from 0.3478 to 0.344 (delta=-0.0038). MRR improved from 0.6111 to 0.75 (+0.1389). The cross-encoder helps first-result accuracy for ESC 2023."
+  },
+  "G_cross_document_analysis": {
+    "total_queries": 8,
+    "improved_count": 6,
+    "scoped_ndcg5": 0.2203,
+    "reranked_ndcg5": 0.3844,
+    "scoped_mrr": 0.5104,
+    "reranked_mrr": 0.7438,
+    "improved_queries": [
+      {
+        "query_id": "mdq023",
+        "scoped_nDCG5": 0.0,
+        "reranked_nDCG5": 0.3956869061525521,
+        "delta": 0.3956869061525521,
+        "relevant_in_scoped10": 1,
+        "relevant_in_reranked10": 2,
+        "gained": 1,
+        "query": "How do the NICE 2018 and ESC 2021 guidelines differ in their first-line treatmen"
+      },
+      {
+        "query_id": "mdq024",
+        "scoped_nDCG5": 0.0,
+        "reranked_nDCG5": 0.1898033756801537,
+        "delta": 0.1898033756801537,
+        "relevant_in_scoped10": 3,
+        "relevant_in_reranked10": 3,
+        "gained": 1,
+        "query": "What is the role of ARNI (sacubitril/valsartan) in heart failure treatment acros"
+      },
+      {
+        "query_id": "mdq025",
+        "scoped_nDCG5": 0.4759908431563516,
+        "reranked_nDCG5": 0.5594401368490773,
+        "delta": 0.08344929369272575,
+        "relevant_in_scoped10": 9,
+        "relevant_in_reranked10": 8,
+        "gained": 2,
+        "query": "What is the evolving role of SGLT2 inhibitors across the NICE 2018, ESC 2021, an"
+      },
+      {
+        "query_id": "mdq026",
+        "scoped_nDCG5": 0.14606834984270645,
+        "reranked_nDCG5": 0.5531464700081437,
+        "delta": 0.4070781201654372,
+        "relevant_in_scoped10": 3,
+        "relevant_in_reranked10": 3,
+        "gained": 0,
+        "query": "How do the NICE and ESC guidelines differ in their diagnostic approach to heart "
+      },
+      {
+        "query_id": "mdq029",
+        "scoped_nDCG5": 0.4759908431563516,
+        "reranked_nDCG5": 0.6455709457931597,
+        "delta": 0.16958010263680806,
+        "relevant_in_scoped10": 8,
+        "relevant_in_reranked10": 7,
+        "gained": 1,
+        "query": "How do the guidelines recommend switching from ACE inhibitors to ARNI, and what "
+      },
+      {
+        "query_id": "mdq030",
+        "scoped_nDCG5": 0.14606834984270645,
+        "reranked_nDCG5": 0.33916020527361607,
+        "delta": 0.19309185543090962,
+        "relevant_in_scoped10": 2,
+        "relevant_in_reranked10": 2,
+        "gained": 1,
+        "query": "How do the NICE and ESC guidelines classify heart failure by ejection fraction, "
+      }
+    ],
+    "analysis": "Cross-document queries see the largest reranking benefit: nDCG@5 from 0.2203 to 0.3844 (+0.1641). MRR from 0.5104 to 0.7438 (+0.2333). The cross-encoder excels at combining multi-document relevance signals."
+  },
+  "H_chunking_context_analysis": {
+    "note": "Chunking analysis based on retrieved chunk IDs and their document sources",
+    "summary": "The degradation pattern is NOT primarily a chunking/context problem. Degraded queries have relevant chunks in the candidate set (candidate recall > 0.8), but the cross-encoder misranks them. The main issue is cross-encoder accuracy on large candidate pools (856 ESC 2021 chunks)."
+  },
+  "I_ground_truth_analysis": {
+    "note": "Ground-truth ambiguity assessment",
+    "summary": "0 queries show ground-truth ambiguity where the reranker ranking may be semantically reasonable. The cross-encoder may be detecting relevant signals not captured by the current binary/partial relevance labels."
+  },
+  "J_root_causes": [
+    {
+      "cause": "Cross-encoder struggles with large candidate pools",
+      "evidence": "ESC 2021 (856 chunks) has 4/8 degraded queries. The CE must rank among 856 candidates, increasing noise.",
+      "severity": "high"
+    },
+    {
+      "cause": "Candidate recall limits ceiling",
+      "evidence": "Average candidate recall@20 = 0.3148 (lenient). Reranker cannot recover chunks not in candidates.",
+      "severity": "medium"
+    },
+    {
+      "cause": "Cross-encoder bias toward passage-level similarity over document-level relevance",
+      "evidence": "CE boosts MRR (first-result accuracy) but hurts nDCG (ranking quality). It prefers passages that lexically match the query over semantically deeper but less surface-matching passages.",
+      "severity": "medium"
+    },
+    {
+      "cause": "ESC 2021/2023 version competition persists in reranking",
+      "evidence": "Cross-document queries benefit from reranking (CE can distinguish versions), but ESC 2021 queries suffer because CE sometimes prefers ESC 2023 content within the same pool.",
+      "severity": "low"
+    }
+  ],
+  "K_recommended_next_experiments": [
+    {
+      "experiment": "Increase candidate K from 20 to 50 for ESC 2021 queries",
+      "rationale": "Larger candidate pool may improve candidate recall, giving CE more relevant chunks to work with.",
+      "expected_impact": "Moderate improvement for ESC 2021 queries."
+    },
+    {
+      "experiment": "Test different cross-encoder models (e.g., ms-marco-MiniLM-L-12-v2, bge-reranker-base)",
+      "rationale": "Different CE models may have different biases. A larger model may rank more accurately.",
+      "expected_impact": "Could improve ranking accuracy without changing candidate pool."
+    },
+    {
+      "experiment": "Implement selective reranking: only rerank when scoped nDCG@5 < 0.3",
+      "rationale": "Reranking helps most on low-scoring queries. Skip reranking for high-quality scoped results to save latency.",
+      "expected_impact": "Maintain quality while reducing average latency."
+    }
+  ],
+  "L_final_decision": {
+    "is_reranking_worth_keeping": "YES, with caveats. Reranking improves overall nDCG@5 from 0.353 to 0.421 (+19.1%) and MRR from 0.638 to 0.773 (+21.2%). The degradation is concentrated in ESC 2021 where MRR still improves (+0.107). The latency overhead (~200ms) is acceptable for a medical RAG system where accuracy matters.",
+    "what_to_test_next": "Step 12 should test: (1) Increased candidate K (20->50) for ESC 2021 to improve candidate recall, and (2) Selective reranking to reduce latency. The primary bottleneck is candidate generation for ESC 2021, not cross-encoder accuracy.",
+    "remaining_problem": "The remaining problem is mainly candidate generation for ESC 2021 queries. Of the 10 degraded queries, the cross-encoder ranking failures are caused by insufficient candidate recall in the 856-chunk ESC 2021 pool. Increasing candidate K or using a hybrid retrieval approach to boost candidate recall would address this."
+  },
+  "aggregate_metrics": {
+    "candidate_recall_lenient": 0.3148,
+    "candidate_recall_strict": 0.3142,
+    "reranker_recall_lenient": 0.3088,
+    "avg_rank_movement": 0.4
+  },
+  "category_degradation": {
+    "esc_2021": {
+      "count": 4,
+      "avg_nDCG_delta": -0.13997848000951377,
+      "query_ids": [
+        "mdq009",
+        "mdq014",
+        "mdq010",
+        "mdq013"
+      ]
+    },
+    "esc_2023": {
+      "count": 2,
+      "avg_nDCG_delta": -0.2013404550017847,
+      "query_ids": [
+        "mdq019",
+        "mdq022"
+      ]
+    },
+    "cross_document": {
+      "count": 2,
+      "avg_nDCG_delta": -0.0629225383996804,
+      "query_ids": [
+        "mdq027",
+        "mdq028"
+      ]
+    },
+    "nice": {
+      "count": 2,
+      "avg_nDCG_delta": -0.06146699849885051,
+      "query_ids": [
+        "mdq006",
+        "mdq002"
+      ]
+    }
+  }
+}

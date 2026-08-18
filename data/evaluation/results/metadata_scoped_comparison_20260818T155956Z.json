@@ -1,0 +1,776 @@
+{
+  "overall": {
+    "P@1": {
+      "baseline": 0.3,
+      "scoped": 0.5
+    },
+    "R@1": {
+      "baseline": 0.068,
+      "scoped": 0.0871
+    },
+    "nDCG@1": {
+      "baseline": 0.1889,
+      "scoped": 0.3222
+    },
+    "Hit@1": {
+      "baseline": 0.3,
+      "scoped": 0.5
+    },
+    "P@3": {
+      "baseline": 0.3222,
+      "scoped": 0.4333
+    },
+    "R@3": {
+      "baseline": 0.1356,
+      "scoped": 0.1715
+    },
+    "nDCG@3": {
+      "baseline": 0.2314,
+      "scoped": 0.3268
+    },
+    "Hit@3": {
+      "baseline": 0.6333,
+      "scoped": 0.7333
+    },
+    "P@5": {
+      "baseline": 0.3067,
+      "scoped": 0.42
+    },
+    "R@5": {
+      "baseline": 0.1688,
+      "scoped": 0.2266
+    },
+    "nDCG@5": {
+      "baseline": 0.2506,
+      "scoped": 0.3534
+    },
+    "Hit@5": {
+      "baseline": 0.8,
+      "scoped": 0.8667
+    },
+    "P@10": {
+      "baseline": 0.2533,
+      "scoped": 0.34
+    },
+    "R@10": {
+      "baseline": 0.229,
+      "scoped": 0.3148
+    },
+    "nDCG@10": {
+      "baseline": 0.2659,
+      "scoped": 0.3687
+    },
+    "Hit@10": {
+      "baseline": 0.9333,
+      "scoped": 0.9667
+    },
+    "MRR": {
+      "baseline": 0.4831,
+      "scoped": 0.6381
+    },
+    "mean_latency_ms": {
+      "baseline": 59.98,
+      "scoped": 54.55
+    },
+    "median_latency_ms": {
+      "baseline": 43.64,
+      "scoped": 39.22
+    }
+  },
+  "category_level": {
+    "NICE 2018": {
+      "count": 8,
+      "P@1": {
+        "baseline": 0.5,
+        "scoped": 0.875
+      },
+      "P@5": {
+        "baseline": 0.275,
+        "scoped": 0.45
+      },
+      "R@5": {
+        "baseline": 0.4726,
+        "scoped": 0.6048
+      },
+      "nDCG@5": {
+        "baseline": 0.4837,
+        "scoped": 0.6915
+      },
+      "Hit@5": {
+        "baseline": 1.0,
+        "scoped": 1.0
+      },
+      "MRR": {
+        "baseline": 0.6562,
+        "scoped": 0.9375
+      }
+    },
+    "ESC 2021": {
+      "count": 8,
+      "P@1": {
+        "baseline": 0.125,
+        "scoped": 0.25
+      },
+      "P@5": {
+        "baseline": 0.3,
+        "scoped": 0.325
+      },
+      "R@5": {
+        "baseline": 0.0555,
+        "scoped": 0.0581
+      },
+      "nDCG@5": {
+        "baseline": 0.1364,
+        "scoped": 0.1524
+      },
+      "Hit@5": {
+        "baseline": 0.875,
+        "scoped": 0.875
+      },
+      "MRR": {
+        "baseline": 0.4033,
+        "scoped": 0.4866
+      }
+    },
+    "ESC 2023": {
+      "count": 6,
+      "P@1": {
+        "baseline": 0.1667,
+        "scoped": 0.5
+      },
+      "P@5": {
+        "baseline": 0.2,
+        "scoped": 0.5
+      },
+      "R@5": {
+        "baseline": 0.0638,
+        "scoped": 0.1737
+      },
+      "nDCG@5": {
+        "baseline": 0.1325,
+        "scoped": 0.3478
+      },
+      "Hit@5": {
+        "baseline": 0.5,
+        "scoped": 0.8333
+      },
+      "MRR": {
+        "baseline": 0.3222,
+        "scoped": 0.6111
+      }
+    },
+    "Cross-Document": {
+      "count": 8,
+      "P@1": {
+        "baseline": 0.375,
+        "scoped": 0.375
+      },
+      "P@5": {
+        "baseline": 0.425,
+        "scoped": 0.425
+      },
+      "R@5": {
+        "baseline": 0.0569,
+        "scoped": 0.0569
+      },
+      "nDCG@5": {
+        "baseline": 0.2203,
+        "scoped": 0.2203
+      },
+      "Hit@5": {
+        "baseline": 0.75,
+        "scoped": 0.75
+      },
+      "MRR": {
+        "baseline": 0.5104,
+        "scoped": 0.5104
+      }
+    }
+  },
+  "source_confusion": {
+    "all": {
+      "baseline": {
+        "total_queries": 30,
+        "wrong_doc_top1_count": 7,
+        "wrong_doc_top1_rate": 0.2333,
+        "wrong_doc_top5_total_slots": 150,
+        "wrong_doc_top5_count": 47,
+        "wrong_doc_top5_rate": 0.3133
+      },
+      "scoped": {
+        "total_queries": 30,
+        "wrong_doc_top1_count": 0,
+        "wrong_doc_top1_rate": 0.0,
+        "wrong_doc_top5_total_slots": 150,
+        "wrong_doc_top5_count": 0,
+        "wrong_doc_top5_rate": 0.0
+      }
+    },
+    "single_document_queries": {
+      "baseline": {
+        "total_queries": 22,
+        "wrong_doc_top1_count": 7,
+        "wrong_doc_top1_rate": 0.3182,
+        "wrong_doc_top5_total_slots": 110,
+        "wrong_doc_top5_count": 47,
+        "wrong_doc_top5_rate": 0.4273
+      },
+      "scoped": {
+        "total_queries": 22,
+        "wrong_doc_top1_count": 0,
+        "wrong_doc_top1_rate": 0.0,
+        "wrong_doc_top5_total_slots": 110,
+        "wrong_doc_top5_count": 0,
+        "wrong_doc_top5_rate": 0.0
+      }
+    },
+    "cross_document_queries": {
+      "baseline": {
+        "total_queries": 8,
+        "wrong_doc_top1_count": 0,
+        "wrong_doc_top1_rate": 0.0,
+        "wrong_doc_top5_total_slots": 40,
+        "wrong_doc_top5_count": 0,
+        "wrong_doc_top5_rate": 0.0
+      },
+      "scoped": {
+        "total_queries": 8,
+        "wrong_doc_top1_count": 0,
+        "wrong_doc_top1_rate": 0.0,
+        "wrong_doc_top5_total_slots": 40,
+        "wrong_doc_top5_count": 0,
+        "wrong_doc_top5_rate": 0.0
+      }
+    }
+  },
+  "per_query_confusion_scoped": [
+    {
+      "query_id": "mdq001",
+      "category": "nice",
+      "expected_documents": [
+        "NICE"
+      ],
+      "top1_document": "NICE",
+      "top5_documents": [
+        "NICE",
+        "NICE",
+        "NICE",
+        "NICE",
+        "NICE"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq002",
+      "category": "nice",
+      "expected_documents": [
+        "NICE"
+      ],
+      "top1_document": "NICE",
+      "top5_documents": [
+        "NICE",
+        "NICE",
+        "NICE",
+        "NICE",
+        "NICE"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq003",
+      "category": "nice",
+      "expected_documents": [
+        "NICE"
+      ],
+      "top1_document": "NICE",
+      "top5_documents": [
+        "NICE",
+        "NICE",
+        "NICE",
+        "NICE",
+        "NICE"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq004",
+      "category": "nice",
+      "expected_documents": [
+        "NICE"
+      ],
+      "top1_document": "NICE",
+      "top5_documents": [
+        "NICE",
+        "NICE",
+        "NICE",
+        "NICE",
+        "NICE"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq005",
+      "category": "nice",
+      "expected_documents": [
+        "NICE"
+      ],
+      "top1_document": "NICE",
+      "top5_documents": [
+        "NICE",
+        "NICE",
+        "NICE",
+        "NICE",
+        "NICE"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq006",
+      "category": "nice",
+      "expected_documents": [
+        "NICE"
+      ],
+      "top1_document": "NICE",
+      "top5_documents": [
+        "NICE",
+        "NICE",
+        "NICE",
+        "NICE",
+        "NICE"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq007",
+      "category": "nice",
+      "expected_documents": [
+        "NICE"
+      ],
+      "top1_document": "NICE",
+      "top5_documents": [
+        "NICE",
+        "NICE",
+        "NICE",
+        "NICE",
+        "NICE"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq008",
+      "category": "nice",
+      "expected_documents": [
+        "NICE"
+      ],
+      "top1_document": "NICE",
+      "top5_documents": [
+        "NICE",
+        "NICE",
+        "NICE",
+        "NICE",
+        "NICE"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq009",
+      "category": "esc_2021",
+      "expected_documents": [
+        "ESC 2021"
+      ],
+      "top1_document": "ESC 2021",
+      "top5_documents": [
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq010",
+      "category": "esc_2021",
+      "expected_documents": [
+        "ESC 2021"
+      ],
+      "top1_document": "ESC 2021",
+      "top5_documents": [
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq011",
+      "category": "esc_2021",
+      "expected_documents": [
+        "ESC 2021"
+      ],
+      "top1_document": "ESC 2021",
+      "top5_documents": [
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq012",
+      "category": "esc_2021",
+      "expected_documents": [
+        "ESC 2021"
+      ],
+      "top1_document": "ESC 2021",
+      "top5_documents": [
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq013",
+      "category": "esc_2021",
+      "expected_documents": [
+        "ESC 2021"
+      ],
+      "top1_document": "ESC 2021",
+      "top5_documents": [
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq014",
+      "category": "esc_2021",
+      "expected_documents": [
+        "ESC 2021"
+      ],
+      "top1_document": "ESC 2021",
+      "top5_documents": [
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq015",
+      "category": "esc_2021",
+      "expected_documents": [
+        "ESC 2021"
+      ],
+      "top1_document": "ESC 2021",
+      "top5_documents": [
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq016",
+      "category": "esc_2021",
+      "expected_documents": [
+        "ESC 2021"
+      ],
+      "top1_document": "ESC 2021",
+      "top5_documents": [
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq017",
+      "category": "esc_2023",
+      "expected_documents": [
+        "ESC 2023"
+      ],
+      "top1_document": "ESC 2023",
+      "top5_documents": [
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq018",
+      "category": "esc_2023",
+      "expected_documents": [
+        "ESC 2023"
+      ],
+      "top1_document": "ESC 2023",
+      "top5_documents": [
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq019",
+      "category": "esc_2023",
+      "expected_documents": [
+        "ESC 2023"
+      ],
+      "top1_document": "ESC 2023",
+      "top5_documents": [
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq020",
+      "category": "esc_2023",
+      "expected_documents": [
+        "ESC 2023"
+      ],
+      "top1_document": "ESC 2023",
+      "top5_documents": [
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq021",
+      "category": "esc_2023",
+      "expected_documents": [
+        "ESC 2023"
+      ],
+      "top1_document": "ESC 2023",
+      "top5_documents": [
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq022",
+      "category": "esc_2023",
+      "expected_documents": [
+        "ESC 2023"
+      ],
+      "top1_document": "ESC 2023",
+      "top5_documents": [
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023",
+        "ESC 2023"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq023",
+      "category": "cross_document",
+      "expected_documents": [
+        "ESC 2021",
+        "ESC 2023",
+        "NICE"
+      ],
+      "top1_document": "NICE",
+      "top5_documents": [
+        "NICE",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq024",
+      "category": "cross_document",
+      "expected_documents": [
+        "ESC 2021",
+        "ESC 2023",
+        "NICE"
+      ],
+      "top1_document": "ESC 2021",
+      "top5_documents": [
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq025",
+      "category": "cross_document",
+      "expected_documents": [
+        "ESC 2021",
+        "ESC 2023",
+        "NICE"
+      ],
+      "top1_document": "ESC 2021",
+      "top5_documents": [
+        "ESC 2021",
+        "NICE",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2023"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq026",
+      "category": "cross_document",
+      "expected_documents": [
+        "ESC 2021",
+        "ESC 2023",
+        "NICE"
+      ],
+      "top1_document": "ESC 2021",
+      "top5_documents": [
+        "ESC 2021",
+        "ESC 2021",
+        "NICE",
+        "ESC 2021",
+        "NICE"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq027",
+      "category": "cross_document",
+      "expected_documents": [
+        "ESC 2021",
+        "ESC 2023"
+      ],
+      "top1_document": "ESC 2023",
+      "top5_documents": [
+        "ESC 2023",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2023"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq028",
+      "category": "cross_document",
+      "expected_documents": [
+        "ESC 2021",
+        "ESC 2023",
+        "NICE"
+      ],
+      "top1_document": "NICE",
+      "top5_documents": [
+        "NICE",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq029",
+      "category": "cross_document",
+      "expected_documents": [
+        "ESC 2021",
+        "NICE"
+      ],
+      "top1_document": "ESC 2021",
+      "top5_documents": [
+        "ESC 2021",
+        "NICE",
+        "NICE",
+        "ESC 2021",
+        "ESC 2021"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    },
+    {
+      "query_id": "mdq030",
+      "category": "cross_document",
+      "expected_documents": [
+        "ESC 2021",
+        "ESC 2023",
+        "NICE"
+      ],
+      "top1_document": "ESC 2021",
+      "top5_documents": [
+        "ESC 2021",
+        "ESC 2021",
+        "ESC 2021",
+        "NICE",
+        "NICE"
+      ],
+      "wrong_doc_top1": 0,
+      "wrong_doc_top5": 0
+    }
+  ],
+  "hypothesis": {
+    "confirmed": true,
+    "evidence": "All single-document categories improved. Cross-document unchanged."
+  }
+}

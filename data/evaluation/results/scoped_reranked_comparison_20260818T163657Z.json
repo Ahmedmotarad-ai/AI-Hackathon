@@ -1,0 +1,561 @@
+{
+  "overall": {
+    "P@1": {
+      "baseline": 0.3,
+      "scoped": 0.5,
+      "scoped_reranked": 0.6667
+    },
+    "R@1": {
+      "baseline": 0.068,
+      "scoped": 0.0871,
+      "scoped_reranked": 0.1269
+    },
+    "nDCG@1": {
+      "baseline": 0.1889,
+      "scoped": 0.3222,
+      "scoped_reranked": 0.5333
+    },
+    "Hit@1": {
+      "baseline": 0.3,
+      "scoped": 0.5,
+      "scoped_reranked": 0.6667
+    },
+    "P@3": {
+      "baseline": 0.3222,
+      "scoped": 0.4333,
+      "scoped_reranked": 0.5222
+    },
+    "R@3": {
+      "baseline": 0.1356,
+      "scoped": 0.1715,
+      "scoped_reranked": 0.2104
+    },
+    "nDCG@3": {
+      "baseline": 0.2314,
+      "scoped": 0.3268,
+      "scoped_reranked": 0.4483
+    },
+    "Hit@3": {
+      "baseline": 0.6333,
+      "scoped": 0.7333,
+      "scoped_reranked": 0.8667
+    },
+    "P@5": {
+      "baseline": 0.3067,
+      "scoped": 0.42,
+      "scoped_reranked": 0.44
+    },
+    "R@5": {
+      "baseline": 0.1688,
+      "scoped": 0.2266,
+      "scoped_reranked": 0.2468
+    },
+    "nDCG@5": {
+      "baseline": 0.2506,
+      "scoped": 0.3534,
+      "scoped_reranked": 0.4207
+    },
+    "Hit@5": {
+      "baseline": 0.8,
+      "scoped": 0.8667,
+      "scoped_reranked": 0.9333
+    },
+    "P@10": {
+      "baseline": 0.2533,
+      "scoped": 0.34,
+      "scoped_reranked": 0.3333
+    },
+    "R@10": {
+      "baseline": 0.229,
+      "scoped": 0.3148,
+      "scoped_reranked": 0.3088
+    },
+    "nDCG@10": {
+      "baseline": 0.2659,
+      "scoped": 0.3687,
+      "scoped_reranked": 0.4152
+    },
+    "Hit@10": {
+      "baseline": 0.9333,
+      "scoped": 0.9667,
+      "scoped_reranked": 0.9333
+    },
+    "MRR": {
+      "baseline": 0.4831,
+      "scoped": 0.6381,
+      "scoped_reranked": 0.7733
+    },
+    "mean_latency_ms": {
+      "baseline": 59.98,
+      "scoped": 54.55,
+      "scoped_reranked": 257.97
+    },
+    "median_latency_ms": {
+      "baseline": 43.64,
+      "scoped": 39.22,
+      "scoped_reranked": 221.8
+    }
+  },
+  "category_level": {
+    "NICE 2018": {
+      "count": 8,
+      "nDCG@5": {
+        "baseline": 0.4837,
+        "scoped": 0.6915,
+        "scoped_reranked": 0.8029
+      },
+      "R@5": {
+        "baseline": 0.4726,
+        "scoped": 0.6048,
+        "scoped_reranked": 0.6464
+      },
+      "Hit@5": {
+        "baseline": 1.0,
+        "scoped": 1.0,
+        "scoped_reranked": 1.0
+      },
+      "MRR": {
+        "baseline": 0.6562,
+        "scoped": 0.9375,
+        "scoped_reranked": 1.0
+      },
+      "P@1": {
+        "baseline": 0.5,
+        "scoped": 0.875,
+        "scoped_reranked": 1.0
+      }
+    },
+    "ESC 2021": {
+      "count": 8,
+      "nDCG@5": {
+        "baseline": 0.1364,
+        "scoped": 0.1524,
+        "scoped_reranked": 0.1324
+      },
+      "R@5": {
+        "baseline": 0.0555,
+        "scoped": 0.0581,
+        "scoped_reranked": 0.0459
+      },
+      "Hit@5": {
+        "baseline": 0.875,
+        "scoped": 0.875,
+        "scoped_reranked": 0.875
+      },
+      "MRR": {
+        "baseline": 0.4033,
+        "scoped": 0.4866,
+        "scoped_reranked": 0.5938
+      },
+      "P@1": {
+        "baseline": 0.125,
+        "scoped": 0.25,
+        "scoped_reranked": 0.375
+      }
+    },
+    "ESC 2023": {
+      "count": 6,
+      "nDCG@5": {
+        "baseline": 0.1325,
+        "scoped": 0.3478,
+        "scoped_reranked": 0.344
+      },
+      "R@5": {
+        "baseline": 0.0638,
+        "scoped": 0.1737,
+        "scoped_reranked": 0.1917
+      },
+      "Hit@5": {
+        "baseline": 0.5,
+        "scoped": 0.8333,
+        "scoped_reranked": 0.8333
+      },
+      "MRR": {
+        "baseline": 0.3222,
+        "scoped": 0.6111,
+        "scoped_reranked": 0.75
+      },
+      "P@1": {
+        "baseline": 0.1667,
+        "scoped": 0.5,
+        "scoped_reranked": 0.6667
+      }
+    },
+    "Cross-Document": {
+      "count": 8,
+      "nDCG@5": {
+        "baseline": 0.2203,
+        "scoped": 0.2203,
+        "scoped_reranked": 0.3844
+      },
+      "R@5": {
+        "baseline": 0.0569,
+        "scoped": 0.0569,
+        "scoped_reranked": 0.0893
+      },
+      "Hit@5": {
+        "baseline": 0.75,
+        "scoped": 0.75,
+        "scoped_reranked": 1.0
+      },
+      "MRR": {
+        "baseline": 0.5104,
+        "scoped": 0.5104,
+        "scoped_reranked": 0.7438
+      },
+      "P@1": {
+        "baseline": 0.375,
+        "scoped": 0.375,
+        "scoped_reranked": 0.625
+      }
+    }
+  },
+  "reranking_impact": {
+    "summary": {
+      "total_queries": 30,
+      "improved": 17,
+      "degraded": 10,
+      "unchanged": 3
+    },
+    "improved_queries": [
+      {
+        "query_id": "mdq001",
+        "category": "nice",
+        "query": "What are the recommended first-line pharmacological treatments for heart failure",
+        "scoped_nDCG@5": 0.6716,
+        "reranked_nDCG@5": 0.8348,
+        "nDCG_delta": 0.1632,
+        "scoped_MRR": 1.0,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.0,
+        "impact": "improved"
+      },
+      {
+        "query_id": "mdq003",
+        "category": "nice",
+        "query": "What palliative care approach does NICE recommend for patients with advanced hea",
+        "scoped_nDCG@5": 0.6309,
+        "reranked_nDCG@5": 1.0,
+        "nDCG_delta": 0.3691,
+        "scoped_MRR": 0.5,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.5,
+        "impact": "improved"
+      },
+      {
+        "query_id": "mdq004",
+        "category": "nice",
+        "query": "How should heart failure with preserved ejection fraction be treated according t",
+        "scoped_nDCG@5": 0.4277,
+        "reranked_nDCG@5": 0.792,
+        "nDCG_delta": 0.3643,
+        "scoped_MRR": 1.0,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.0,
+        "impact": "improved"
+      },
+      {
+        "query_id": "mdq007",
+        "category": "nice",
+        "query": "What interventional procedures does NICE recommend for heart failure patients, i",
+        "scoped_nDCG@5": 0.5563,
+        "reranked_nDCG@5": 0.6733,
+        "nDCG_delta": 0.117,
+        "scoped_MRR": 1.0,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.0,
+        "impact": "improved"
+      },
+      {
+        "query_id": "mdq011",
+        "category": "esc_2021",
+        "query": "How should atrial fibrillation be managed in patients with heart failure accordi",
+        "scoped_nDCG@5": 0.0,
+        "reranked_nDCG@5": 0.214,
+        "nDCG_delta": 0.214,
+        "scoped_MRR": 0.1429,
+        "reranked_MRR": 0.5,
+        "MRR_delta": 0.3571,
+        "impact": "improved"
+      },
+      {
+        "query_id": "mdq012",
+        "category": "esc_2021",
+        "query": "What is the recommended management approach for acute heart failure according to",
+        "scoped_nDCG@5": 0.0565,
+        "reranked_nDCG@5": 0.1151,
+        "nDCG_delta": 0.0585,
+        "scoped_MRR": 0.3333,
+        "reranked_MRR": 0.5,
+        "MRR_delta": 0.1667,
+        "impact": "improved"
+      },
+      {
+        "query_id": "mdq015",
+        "category": "esc_2021",
+        "query": "What are the 2021 ESC recommendations for managing iron deficiency in heart fail",
+        "scoped_nDCG@5": 0.1844,
+        "reranked_nDCG@5": 0.2409,
+        "nDCG_delta": 0.0565,
+        "scoped_MRR": 1.0,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.0,
+        "impact": "improved"
+      },
+      {
+        "query_id": "mdq016",
+        "category": "esc_2021",
+        "query": "How does obesity affect heart failure management according to the 2021 ESC guide",
+        "scoped_nDCG@5": 0.0534,
+        "reranked_nDCG@5": 0.1239,
+        "nDCG_delta": 0.0705,
+        "scoped_MRR": 0.25,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.75,
+        "impact": "improved"
+      },
+      {
+        "query_id": "mdq018",
+        "category": "esc_2023",
+        "query": "What are the updated recommendations for heart failure with preserved ejection f",
+        "scoped_nDCG@5": 0.101,
+        "reranked_nDCG@5": 0.2285,
+        "nDCG_delta": 0.1275,
+        "scoped_MRR": 0.3333,
+        "reranked_MRR": 0.5,
+        "MRR_delta": 0.1667,
+        "impact": "improved"
+      },
+      {
+        "query_id": "mdq020",
+        "category": "esc_2023",
+        "query": "What updates does the 2023 ESC focused update provide for the management of acut",
+        "scoped_nDCG@5": 0.1617,
+        "reranked_nDCG@5": 0.2133,
+        "nDCG_delta": 0.0516,
+        "scoped_MRR": 1.0,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.0,
+        "impact": "improved"
+      },
+      {
+        "query_id": "mdq021",
+        "category": "esc_2023",
+        "query": "What are the 2023 ESC recommendations for managing diabetes in heart failure pat",
+        "scoped_nDCG@5": 0.3594,
+        "reranked_nDCG@5": 0.5599,
+        "nDCG_delta": 0.2005,
+        "scoped_MRR": 0.3333,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.6667,
+        "impact": "improved"
+      },
+      {
+        "query_id": "mdq023",
+        "category": "cross_document",
+        "query": "How do the NICE 2018 and ESC 2021 guidelines differ in their first-line treatmen",
+        "scoped_nDCG@5": 0.0,
+        "reranked_nDCG@5": 0.3957,
+        "nDCG_delta": 0.3957,
+        "scoped_MRR": 0.1667,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.8333,
+        "impact": "improved"
+      },
+      {
+        "query_id": "mdq024",
+        "category": "cross_document",
+        "query": "What is the role of ARNI (sacubitril/valsartan) in heart failure treatment acros",
+        "scoped_nDCG@5": 0.0,
+        "reranked_nDCG@5": 0.1898,
+        "nDCG_delta": 0.1898,
+        "scoped_MRR": 0.1667,
+        "reranked_MRR": 0.25,
+        "MRR_delta": 0.0833,
+        "impact": "improved"
+      },
+      {
+        "query_id": "mdq025",
+        "category": "cross_document",
+        "query": "What is the evolving role of SGLT2 inhibitors across the NICE 2018, ESC 2021, an",
+        "scoped_nDCG@5": 0.476,
+        "reranked_nDCG@5": 0.5594,
+        "nDCG_delta": 0.0834,
+        "scoped_MRR": 1.0,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.0,
+        "impact": "improved"
+      },
+      {
+        "query_id": "mdq026",
+        "category": "cross_document",
+        "query": "How do the NICE and ESC guidelines differ in their diagnostic approach to heart ",
+        "scoped_nDCG@5": 0.1461,
+        "reranked_nDCG@5": 0.5531,
+        "nDCG_delta": 0.4071,
+        "scoped_MRR": 0.25,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.75,
+        "impact": "improved"
+      },
+      {
+        "query_id": "mdq029",
+        "category": "cross_document",
+        "query": "How do the guidelines recommend switching from ACE inhibitors to ARNI, and what ",
+        "scoped_nDCG@5": 0.476,
+        "reranked_nDCG@5": 0.6456,
+        "nDCG_delta": 0.1696,
+        "scoped_MRR": 1.0,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.0,
+        "impact": "improved"
+      },
+      {
+        "query_id": "mdq030",
+        "category": "cross_document",
+        "query": "How do the NICE and ESC guidelines classify heart failure by ejection fraction, ",
+        "scoped_nDCG@5": 0.1461,
+        "reranked_nDCG@5": 0.3392,
+        "nDCG_delta": 0.1931,
+        "scoped_MRR": 0.25,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.75,
+        "impact": "improved"
+      }
+    ],
+    "degraded_queries": [
+      {
+        "query_id": "mdq002",
+        "category": "nice",
+        "query": "How does NICE recommend diagnosing chronic heart failure in adults, including th",
+        "scoped_nDCG@5": 0.7499,
+        "reranked_nDCG@5": 0.7013,
+        "nDCG_delta": -0.0487,
+        "scoped_MRR": 1.0,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.0,
+        "impact": "degraded"
+      },
+      {
+        "query_id": "mdq006",
+        "category": "nice",
+        "query": "What is the role of SGLT2 inhibitors in heart failure treatment according to NIC",
+        "scoped_nDCG@5": 0.9395,
+        "reranked_nDCG@5": 0.8653,
+        "nDCG_delta": -0.0743,
+        "scoped_MRR": 1.0,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.0,
+        "impact": "degraded"
+      },
+      {
+        "query_id": "mdq009",
+        "category": "esc_2021",
+        "query": "What are the cornerstone pharmacological therapies recommended by the 2021 ESC g",
+        "scoped_nDCG@5": 0.3957,
+        "reranked_nDCG@5": 0.0565,
+        "nDCG_delta": -0.3392,
+        "scoped_MRR": 1.0,
+        "reranked_MRR": 0.3333,
+        "MRR_delta": -0.6667,
+        "impact": "degraded"
+      },
+      {
+        "query_id": "mdq010",
+        "category": "esc_2021",
+        "query": "How do the 2021 ESC guidelines approach the diagnosis and treatment of heart fai",
+        "scoped_nDCG@5": 0.0565,
+        "reranked_nDCG@5": 0.0,
+        "nDCG_delta": -0.0565,
+        "scoped_MRR": 0.3333,
+        "reranked_MRR": 0.0833,
+        "MRR_delta": -0.25,
+        "impact": "degraded"
+      },
+      {
+        "query_id": "mdq013",
+        "category": "esc_2021",
+        "query": "What are the 2021 ESC recommendations for device therapy including ICDs and card",
+        "scoped_nDCG@5": 0.2702,
+        "reranked_nDCG@5": 0.2521,
+        "nDCG_delta": -0.0182,
+        "scoped_MRR": 0.5,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.5,
+        "impact": "degraded"
+      },
+      {
+        "query_id": "mdq014",
+        "category": "esc_2021",
+        "query": "How should diabetes be managed in heart failure patients according to the 2021 E",
+        "scoped_nDCG@5": 0.2026,
+        "reranked_nDCG@5": 0.0565,
+        "nDCG_delta": -0.1461,
+        "scoped_MRR": 0.3333,
+        "reranked_MRR": 0.3333,
+        "MRR_delta": 0.0,
+        "impact": "degraded"
+      },
+      {
+        "query_id": "mdq019",
+        "category": "esc_2023",
+        "query": "How have SGLT2 inhibitor recommendations changed in the 2023 ESC focused update ",
+        "scoped_nDCG@5": 0.8688,
+        "reranked_nDCG@5": 0.5531,
+        "nDCG_delta": -0.3156,
+        "scoped_MRR": 1.0,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.0,
+        "impact": "degraded"
+      },
+      {
+        "query_id": "mdq022",
+        "category": "esc_2023",
+        "query": "What are the updated 2023 ESC recommendations for iron deficiency management in ",
+        "scoped_nDCG@5": 0.5958,
+        "reranked_nDCG@5": 0.5088,
+        "nDCG_delta": -0.087,
+        "scoped_MRR": 1.0,
+        "reranked_MRR": 1.0,
+        "MRR_delta": 0.0,
+        "impact": "degraded"
+      },
+      {
+        "query_id": "mdq027",
+        "category": "cross_document",
+        "query": "What specific changes in HFmrEF and HFpEF treatment recommendations occurred bet",
+        "scoped_nDCG@5": 0.3721,
+        "reranked_nDCG@5": 0.2611,
+        "nDCG_delta": -0.111,
+        "scoped_MRR": 1.0,
+        "reranked_MRR": 0.5,
+        "MRR_delta": -0.5,
+        "impact": "degraded"
+      },
+      {
+        "query_id": "mdq028",
+        "category": "cross_document",
+        "query": "What evidence supports the use of beta-blockers in heart failure across the NICE",
+        "scoped_nDCG@5": 0.1461,
+        "reranked_nDCG@5": 0.1312,
+        "nDCG_delta": -0.0149,
+        "scoped_MRR": 0.25,
+        "reranked_MRR": 0.2,
+        "MRR_delta": -0.05,
+        "impact": "degraded"
+      }
+    ]
+  },
+  "latency_comparison": {
+    "scoped_only": {
+      "mean_ms": 54.55,
+      "median_ms": 39.22
+    },
+    "scoped_plus_reranked": {
+      "mean_ms": 257.97,
+      "median_ms": 221.8,
+      "dense_mean_ms": 56.21,
+      "rerank_mean_ms": 201.76
+    }
+  }
+}

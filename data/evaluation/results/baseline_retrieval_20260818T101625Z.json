@@ -1,0 +1,2028 @@
+{
+  "dataset_version": "1.0",
+  "evaluation_timestamp": "20260818T101625Z",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "collection_name": "medical_guidelines",
+  "collection_count": 45,
+  "chunk_count": 45,
+  "num_queries": 20,
+  "k_values": [
+    1,
+    3,
+    5,
+    10
+  ],
+  "retrieval_config": {
+    "query_prefix": "Represent this sentence for searching relevant passages: ",
+    "metadata_filter": {
+      "section": {
+        "$ne": "Front matter"
+      }
+    },
+    "distance_metric": "cosine",
+    "device": "cpu"
+  },
+  "metric_definitions": {
+    "precision": "lenient: relevance >= 1",
+    "strict_precision": "strict: relevance == 2",
+    "recall": "lenient: relevance >= 1",
+    "strict_recall": "strict: relevance == 2",
+    "f1": "harmonic mean of precision and recall",
+    "hit_rate": "lenient: any relevance >= 1 in top-K",
+    "strict_hit_rate": "strict: any relevance == 2 in top-K",
+    "mrr": "1/rank of first relevant (relevance >= 1)",
+    "ndcg": "graded relevance (0/1/2), DCG = sum((2^rel-1)/log2(rank+1))"
+  },
+  "aggregate_metrics": {
+    "per_k": {
+      "1": {
+        "precision": 0.95,
+        "strict_precision": 0.9,
+        "recall": 0.301946,
+        "strict_recall": 0.575,
+        "f1": 0.411468,
+        "strict_f1": 0.665,
+        "hit_rate": 0.95,
+        "strict_hit_rate": 0.9,
+        "ndcg": 0.916667
+      },
+      "3": {
+        "precision": 0.616667,
+        "strict_precision": 0.45,
+        "recall": 0.52191,
+        "strict_recall": 0.795833,
+        "f1": 0.493892,
+        "strict_f1": 0.54619,
+        "hit_rate": 1.0,
+        "strict_hit_rate": 1.0,
+        "ndcg": 0.797812
+      },
+      "5": {
+        "precision": 0.5,
+        "strict_precision": 0.32,
+        "recall": 0.622569,
+        "strict_recall": 0.891667,
+        "f1": 0.491912,
+        "strict_f1": 0.450992,
+        "hit_rate": 1.0,
+        "strict_hit_rate": 1.0,
+        "ndcg": 0.806378
+      },
+      "10": {
+        "precision": 0.36,
+        "strict_precision": 0.175,
+        "recall": 0.813999,
+        "strict_recall": 0.933333,
+        "f1": 0.45888,
+        "strict_f1": 0.285456,
+        "hit_rate": 1.0,
+        "strict_hit_rate": 1.0,
+        "ndcg": 0.833819
+      }
+    },
+    "mrr": 0.966667
+  },
+  "latency": {
+    "total": {
+      "mean": 67.54,
+      "median": 42.5,
+      "min": 32.5,
+      "max": 512.32
+    },
+    "embedding": {
+      "mean": 62.97,
+      "median": 39.23,
+      "min": 29.99,
+      "max": 483.96
+    },
+    "search": {
+      "mean": 4.57,
+      "median": 3.1,
+      "min": 2.51,
+      "max": 28.36
+    }
+  },
+  "per_query_results": [
+    {
+      "query_id": "q001",
+      "query": "What are the symptoms and signs of chronic heart failure?",
+      "category": "diagnosis",
+      "difficulty": "easy",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0014",
+        "nice_hf_2018_chunk_0027",
+        "nice_hf_2018_chunk_0028",
+        "nice_hf_2018_chunk_0017",
+        "nice_hf_2018_chunk_0033",
+        "nice_hf_2018_chunk_0013",
+        "nice_hf_2018_chunk_0012",
+        "nice_hf_2018_chunk_0035",
+        "nice_hf_2018_chunk_0016"
+      ],
+      "retrieved_distances": [
+        0.2520937919616699,
+        0.26716071367263794,
+        0.2753857374191284,
+        0.3029017448425293,
+        0.3115983009338379,
+        0.317907452583313,
+        0.3328896760940552,
+        0.3394216299057007,
+        0.3418292999267578,
+        0.3431912064552307
+      ],
+      "retrieved_relevance": [
+        2,
+        2,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 9,
+      "total_relevant_strict": 2,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.1111111111111111,
+          "strict_recall": 0.5,
+          "f1": 0.19999999999999998,
+          "strict_f1": 0.6666666666666666,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 1.0,
+          "strict_precision": 0.6666666666666666,
+          "recall": 0.3333333333333333,
+          "strict_recall": 1.0,
+          "f1": 0.5,
+          "strict_f1": 0.8,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "5": {
+          "precision": 0.8,
+          "strict_precision": 0.4,
+          "recall": 0.4444444444444444,
+          "strict_recall": 1.0,
+          "f1": 0.5714285714285714,
+          "strict_f1": 0.5714285714285715,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.9306514554231109
+        },
+        "10": {
+          "precision": 0.6,
+          "strict_precision": 0.2,
+          "recall": 0.6666666666666666,
+          "strict_recall": 1.0,
+          "f1": 0.631578947368421,
+          "strict_f1": 0.33333333333333337,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.8547913077547755
+        }
+      },
+      "latency": {
+        "embedding_ms": 483.9642000151798,
+        "search_ms": 28.355599992210045,
+        "total_ms": 512.3198000073899
+      }
+    },
+    {
+      "query_id": "q002",
+      "query": "How should NT-proBNP levels be interpreted for diagnosing heart failure and when should patients be referred?",
+      "category": "diagnosis",
+      "difficulty": "medium",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0014",
+        "nice_hf_2018_chunk_0027",
+        "nice_hf_2018_chunk_0035",
+        "nice_hf_2018_chunk_0017",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0013",
+        "nice_hf_2018_chunk_0015",
+        "nice_hf_2018_chunk_0045",
+        "nice_hf_2018_chunk_0012",
+        "nice_hf_2018_chunk_0016"
+      ],
+      "retrieved_distances": [
+        0.11236464977264404,
+        0.26301467418670654,
+        0.2637627124786377,
+        0.2660379409790039,
+        0.29700350761413574,
+        0.29700565338134766,
+        0.29716551303863525,
+        0.2983696460723877,
+        0.31110990047454834,
+        0.3115682601928711
+      ],
+      "retrieved_relevance": [
+        2,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 7,
+      "total_relevant_strict": 1,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.14285714285714285,
+          "strict_recall": 1.0,
+          "f1": 0.25,
+          "strict_f1": 1.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 1.0,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.42857142857142855,
+          "strict_recall": 1.0,
+          "f1": 0.6,
+          "strict_f1": 0.5,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "5": {
+          "precision": 0.8,
+          "strict_precision": 0.2,
+          "recall": 0.5714285714285714,
+          "strict_recall": 1.0,
+          "f1": 0.6666666666666666,
+          "strict_f1": 0.33333333333333337,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.9129675424759451
+        },
+        "10": {
+          "precision": 0.6,
+          "strict_precision": 0.1,
+          "recall": 0.8571428571428571,
+          "strict_recall": 1.0,
+          "f1": 0.7058823529411764,
+          "strict_f1": 0.18181818181818182,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.911702917575301
+        }
+      },
+      "latency": {
+        "embedding_ms": 42.378899990580976,
+        "search_ms": 2.837999985786155,
+        "total_ms": 45.21689997636713
+      }
+    },
+    {
+      "query_id": "q003",
+      "query": "What is the recommended first-line drug combination for treating heart failure with reduced ejection fraction?",
+      "category": "treatment",
+      "difficulty": "easy",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0018",
+        "nice_hf_2018_chunk_0021",
+        "nice_hf_2018_chunk_0020",
+        "nice_hf_2018_chunk_0036",
+        "nice_hf_2018_chunk_0039",
+        "nice_hf_2018_chunk_0022",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0035",
+        "nice_hf_2018_chunk_0045",
+        "nice_hf_2018_chunk_0033"
+      ],
+      "retrieved_distances": [
+        0.1742733120918274,
+        0.20504510402679443,
+        0.20683926343917847,
+        0.2418680191040039,
+        0.24369734525680542,
+        0.2512030601501465,
+        0.27250969409942627,
+        0.2753784656524658,
+        0.2778658866882324,
+        0.27968931198120117
+      ],
+      "retrieved_relevance": [
+        2,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 7,
+      "total_relevant_strict": 2,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.14285714285714285,
+          "strict_recall": 0.5,
+          "f1": 0.25,
+          "strict_f1": 0.6666666666666666,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.14285714285714285,
+          "strict_recall": 0.5,
+          "f1": 0.2,
+          "strict_f1": 0.4,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5562983930884396
+        },
+        "5": {
+          "precision": 0.4,
+          "strict_precision": 0.4,
+          "recall": 0.2857142857142857,
+          "strict_recall": 1.0,
+          "f1": 0.3333333333333333,
+          "strict_f1": 0.5714285714285715,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.6911126357085503
+        },
+        "10": {
+          "precision": 0.4,
+          "strict_precision": 0.2,
+          "recall": 0.5714285714285714,
+          "strict_recall": 1.0,
+          "f1": 0.47058823529411764,
+          "strict_f1": 0.33333333333333337,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.712250457516971
+        }
+      },
+      "latency": {
+        "embedding_ms": 40.94269999768585,
+        "search_ms": 3.1416999991051853,
+        "total_ms": 44.084399996791035
+      }
+    },
+    {
+      "query_id": "q004",
+      "query": "When should ACE inhibitors be switched to an ARNI and what are the considerations?",
+      "category": "medication",
+      "difficulty": "medium",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0037",
+        "nice_hf_2018_chunk_0024",
+        "nice_hf_2018_chunk_0039",
+        "nice_hf_2018_chunk_0036",
+        "nice_hf_2018_chunk_0041",
+        "nice_hf_2018_chunk_0018",
+        "nice_hf_2018_chunk_0045",
+        "nice_hf_2018_chunk_0040",
+        "nice_hf_2018_chunk_0021",
+        "nice_hf_2018_chunk_0020"
+      ],
+      "retrieved_distances": [
+        0.1893932819366455,
+        0.20988261699676514,
+        0.23911738395690918,
+        0.2640920877456665,
+        0.28311729431152344,
+        0.290846586227417,
+        0.3150320053100586,
+        0.3187074661254883,
+        0.3271864652633667,
+        0.3520418405532837
+      ],
+      "retrieved_relevance": [
+        2,
+        1,
+        0,
+        2,
+        1,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 6,
+      "total_relevant_strict": 3,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.16666666666666666,
+          "strict_recall": 0.3333333333333333,
+          "f1": 0.2857142857142857,
+          "strict_f1": 0.5,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.6666666666666666,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.3333333333333333,
+          "strict_recall": 0.3333333333333333,
+          "f1": 0.4444444444444444,
+          "strict_f1": 0.3333333333333333,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5679726963447116
+        },
+        "5": {
+          "precision": 0.8,
+          "strict_precision": 0.4,
+          "recall": 0.6666666666666666,
+          "strict_recall": 0.6666666666666666,
+          "f1": 0.7272727272727272,
+          "strict_f1": 0.5,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.7364185288376675
+        },
+        "10": {
+          "precision": 0.6,
+          "strict_precision": 0.3,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.7499999999999999,
+          "strict_f1": 0.4615384615384615,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.8811836220921764
+        }
+      },
+      "latency": {
+        "embedding_ms": 33.49860000889748,
+        "search_ms": 5.1499999826774,
+        "total_ms": 38.64859999157488
+      }
+    },
+    {
+      "query_id": "q005",
+      "query": "Which calcium channel blockers should be avoided in heart failure with reduced ejection fraction and why?",
+      "category": "medication",
+      "difficulty": "easy",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0021",
+        "nice_hf_2018_chunk_0018",
+        "nice_hf_2018_chunk_0020",
+        "nice_hf_2018_chunk_0039",
+        "nice_hf_2018_chunk_0036",
+        "nice_hf_2018_chunk_0033",
+        "nice_hf_2018_chunk_0022",
+        "nice_hf_2018_chunk_0045",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0037"
+      ],
+      "retrieved_distances": [
+        0.22306907176971436,
+        0.23545312881469727,
+        0.2463841438293457,
+        0.24979513883590698,
+        0.26005423069000244,
+        0.27925825119018555,
+        0.29018664360046387,
+        0.2983521819114685,
+        0.2998439073562622,
+        0.31393182277679443
+      ],
+      "retrieved_relevance": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 0.3333333333333333,
+      "total_relevant_lenient": 1,
+      "total_relevant_strict": 1,
+      "per_k": {
+        "1": {
+          "precision": 0.0,
+          "strict_precision": 0.0,
+          "recall": 0.0,
+          "strict_recall": 0.0,
+          "f1": 0.0,
+          "strict_f1": 0.0,
+          "hit_rate": 0.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.3333333333333333,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.5,
+          "strict_f1": 0.5,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.2,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.33333333333333337,
+          "strict_f1": 0.33333333333333337,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5
+        },
+        "10": {
+          "precision": 0.1,
+          "strict_precision": 0.1,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.18181818181818182,
+          "strict_f1": 0.18181818181818182,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5
+        }
+      },
+      "latency": {
+        "embedding_ms": 34.483600000385195,
+        "search_ms": 2.826699987053871,
+        "total_ms": 37.310299987439066
+      }
+    },
+    {
+      "query_id": "q006",
+      "query": "What is the recommended treatment approach for heart failure with preserved ejection fraction?",
+      "category": "treatment",
+      "difficulty": "medium",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0022",
+        "nice_hf_2018_chunk_0021",
+        "nice_hf_2018_chunk_0035",
+        "nice_hf_2018_chunk_0018",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0033",
+        "nice_hf_2018_chunk_0045",
+        "nice_hf_2018_chunk_0028",
+        "nice_hf_2018_chunk_0020",
+        "nice_hf_2018_chunk_0039"
+      ],
+      "retrieved_distances": [
+        0.17841243743896484,
+        0.2156272530555725,
+        0.2313101887702942,
+        0.23197996616363525,
+        0.26067185401916504,
+        0.264906644821167,
+        0.26680541038513184,
+        0.27626466751098633,
+        0.28550130128860474,
+        0.2966628670692444
+      ],
+      "retrieved_relevance": [
+        2,
+        2,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        2
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 7,
+      "total_relevant_strict": 4,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.14285714285714285,
+          "strict_recall": 0.25,
+          "f1": 0.25,
+          "strict_f1": 0.4,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.6666666666666666,
+          "strict_precision": 0.6666666666666666,
+          "recall": 0.2857142857142857,
+          "strict_recall": 0.5,
+          "f1": 0.4,
+          "strict_f1": 0.5714285714285715,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.7653606369886218
+        },
+        "5": {
+          "precision": 0.6,
+          "strict_precision": 0.4,
+          "recall": 0.42857142857142855,
+          "strict_recall": 0.5,
+          "f1": 0.5,
+          "strict_f1": 0.4444444444444445,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.6540952403163659
+        },
+        "10": {
+          "precision": 0.5,
+          "strict_precision": 0.3,
+          "recall": 0.7142857142857143,
+          "strict_recall": 0.75,
+          "f1": 0.588235294117647,
+          "strict_f1": 0.4285714285714285,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.7422538729900584
+        }
+      },
+      "latency": {
+        "embedding_ms": 32.22200000891462,
+        "search_ms": 3.6308999988250434,
+        "total_ms": 35.85290000773966
+      }
+    },
+    {
+      "query_id": "q007",
+      "query": "What is the difference between heart failure with reduced, mildly reduced, and preserved ejection fraction?",
+      "category": "diagnosis",
+      "difficulty": "medium",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0021",
+        "nice_hf_2018_chunk_0033",
+        "nice_hf_2018_chunk_0018",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0039",
+        "nice_hf_2018_chunk_0045",
+        "nice_hf_2018_chunk_0019",
+        "nice_hf_2018_chunk_0035",
+        "nice_hf_2018_chunk_0022",
+        "nice_hf_2018_chunk_0038"
+      ],
+      "retrieved_distances": [
+        0.23005974292755127,
+        0.23704373836517334,
+        0.2767908573150635,
+        0.277498722076416,
+        0.28217577934265137,
+        0.2892996072769165,
+        0.28948038816452026,
+        0.29049742221832275,
+        0.2921050786972046,
+        0.3026421070098877
+      ],
+      "retrieved_relevance": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 11,
+      "total_relevant_strict": 2,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 0.0,
+          "recall": 0.09090909090909091,
+          "strict_recall": 0.0,
+          "f1": 0.16666666666666669,
+          "strict_f1": 0.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 0.0,
+          "ndcg": 0.3333333333333333
+        },
+        "3": {
+          "precision": 1.0,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.2727272727272727,
+          "strict_recall": 0.5,
+          "f1": 0.42857142857142855,
+          "strict_f1": 0.4,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.6291344046077069
+        },
+        "5": {
+          "precision": 1.0,
+          "strict_precision": 0.4,
+          "recall": 0.45454545454545453,
+          "strict_recall": 1.0,
+          "f1": 0.625,
+          "strict_f1": 0.5714285714285715,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.8166524211685232
+        },
+        "10": {
+          "precision": 0.6,
+          "strict_precision": 0.2,
+          "recall": 0.5454545454545454,
+          "strict_recall": 1.0,
+          "f1": 0.5714285714285713,
+          "strict_f1": 0.33333333333333337,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.6867967850004791
+        }
+      },
+      "latency": {
+        "embedding_ms": 36.360900005092844,
+        "search_ms": 2.706300001591444,
+        "total_ms": 39.06720000668429
+      }
+    },
+    {
+      "query_id": "q008",
+      "query": "How should heart failure medications be adjusted for patients with chronic kidney disease?",
+      "category": "comorbidity",
+      "difficulty": "medium",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0023",
+        "nice_hf_2018_chunk_0027",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0041",
+        "nice_hf_2018_chunk_0028",
+        "nice_hf_2018_chunk_0018",
+        "nice_hf_2018_chunk_0024",
+        "nice_hf_2018_chunk_0035",
+        "nice_hf_2018_chunk_0036",
+        "nice_hf_2018_chunk_0021"
+      ],
+      "retrieved_distances": [
+        0.1948157548904419,
+        0.23754918575286865,
+        0.24239182472229004,
+        0.25409603118896484,
+        0.25770246982574463,
+        0.25830262899398804,
+        0.2749747633934021,
+        0.279646635055542,
+        0.29469501972198486,
+        0.29715389013290405
+      ],
+      "retrieved_relevance": [
+        2,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 6,
+      "total_relevant_strict": 2,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.16666666666666666,
+          "strict_recall": 0.5,
+          "f1": 0.2857142857142857,
+          "strict_f1": 0.6666666666666666,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.6666666666666666,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.3333333333333333,
+          "strict_recall": 0.5,
+          "f1": 0.4444444444444444,
+          "strict_f1": 0.4,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.6732934624429354
+        },
+        "5": {
+          "precision": 0.6,
+          "strict_precision": 0.2,
+          "recall": 0.5,
+          "strict_recall": 0.5,
+          "f1": 0.5454545454545454,
+          "strict_f1": 0.28571428571428575,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.6540093280602414
+        },
+        "10": {
+          "precision": 0.5,
+          "strict_precision": 0.1,
+          "recall": 0.8333333333333334,
+          "strict_recall": 0.5,
+          "f1": 0.625,
+          "strict_f1": 0.16666666666666669,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.7173358722423746
+        }
+      },
+      "latency": {
+        "embedding_ms": 29.990000010002404,
+        "search_ms": 2.507999975932762,
+        "total_ms": 32.49799998593517
+      }
+    },
+    {
+      "query_id": "q009",
+      "query": "What monitoring is required when starting ACE inhibitors or ARBs and at what intervals should renal function and electrolytes be checked?",
+      "category": "medication",
+      "difficulty": "medium",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0041",
+        "nice_hf_2018_chunk_0024",
+        "nice_hf_2018_chunk_0037",
+        "nice_hf_2018_chunk_0027",
+        "nice_hf_2018_chunk_0039",
+        "nice_hf_2018_chunk_0040",
+        "nice_hf_2018_chunk_0045",
+        "nice_hf_2018_chunk_0036",
+        "nice_hf_2018_chunk_0021",
+        "nice_hf_2018_chunk_0023"
+      ],
+      "retrieved_distances": [
+        0.18873977661132812,
+        0.21242600679397583,
+        0.2660648226737976,
+        0.2771567106246948,
+        0.292386531829834,
+        0.3065004348754883,
+        0.3080633282661438,
+        0.3083289861679077,
+        0.3139544725418091,
+        0.31588202714920044
+      ],
+      "retrieved_relevance": [
+        2,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 4,
+      "total_relevant_strict": 3,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.25,
+          "strict_recall": 0.3333333333333333,
+          "f1": 0.4,
+          "strict_f1": 0.5,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.6666666666666666,
+          "strict_precision": 0.6666666666666666,
+          "recall": 0.5,
+          "strict_recall": 0.6666666666666666,
+          "f1": 0.5714285714285715,
+          "strict_f1": 0.6666666666666666,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.7653606369886218
+        },
+        "5": {
+          "precision": 0.6,
+          "strict_precision": 0.4,
+          "recall": 0.75,
+          "strict_recall": 0.6666666666666666,
+          "f1": 0.6666666666666665,
+          "strict_f1": 0.5,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.7801703650555569
+        },
+        "10": {
+          "precision": 0.3,
+          "strict_precision": 0.2,
+          "recall": 0.75,
+          "strict_recall": 0.6666666666666666,
+          "f1": 0.4285714285714285,
+          "strict_f1": 0.30769230769230765,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.7801703650555569
+        }
+      },
+      "latency": {
+        "embedding_ms": 38.96740000345744,
+        "search_ms": 2.9614000231958926,
+        "total_ms": 41.928800026653334
+      }
+    },
+    {
+      "query_id": "q010",
+      "query": "What are the contraindications for beta-blockers in heart failure and what assessments should be done before prescribing them?",
+      "category": "medication",
+      "difficulty": "medium",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0041",
+        "nice_hf_2018_chunk_0026",
+        "nice_hf_2018_chunk_0018",
+        "nice_hf_2018_chunk_0036",
+        "nice_hf_2018_chunk_0045",
+        "nice_hf_2018_chunk_0021",
+        "nice_hf_2018_chunk_0028",
+        "nice_hf_2018_chunk_0040",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0039"
+      ],
+      "retrieved_distances": [
+        0.23193466663360596,
+        0.23853600025177002,
+        0.2708519697189331,
+        0.27315330505371094,
+        0.27851420640945435,
+        0.2790776491165161,
+        0.289050817489624,
+        0.2978234887123108,
+        0.29822075366973877,
+        0.30235207080841064
+      ],
+      "retrieved_relevance": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 2,
+      "total_relevant_strict": 2,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.5,
+          "strict_recall": 0.5,
+          "f1": 0.6666666666666666,
+          "strict_f1": 0.6666666666666666,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.6666666666666666,
+          "strict_precision": 0.6666666666666666,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.8,
+          "strict_f1": 0.8,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "5": {
+          "precision": 0.4,
+          "strict_precision": 0.4,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.5714285714285715,
+          "strict_f1": 0.5714285714285715,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "10": {
+          "precision": 0.2,
+          "strict_precision": 0.2,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.33333333333333337,
+          "strict_f1": 0.33333333333333337,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        }
+      },
+      "latency": {
+        "embedding_ms": 39.36819999944419,
+        "search_ms": 3.0035999952815473,
+        "total_ms": 42.371799994725734
+      }
+    },
+    {
+      "query_id": "q011",
+      "query": "When and how should diuretics be used in the management of heart failure?",
+      "category": "treatment",
+      "difficulty": "easy",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0028",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0013",
+        "nice_hf_2018_chunk_0023",
+        "nice_hf_2018_chunk_0018",
+        "nice_hf_2018_chunk_0012",
+        "nice_hf_2018_chunk_0024",
+        "nice_hf_2018_chunk_0021",
+        "nice_hf_2018_chunk_0035",
+        "nice_hf_2018_chunk_0027"
+      ],
+      "retrieved_distances": [
+        0.18128955364227295,
+        0.21804773807525635,
+        0.24681508541107178,
+        0.2518659830093384,
+        0.25247836112976074,
+        0.2552017569541931,
+        0.2600634694099426,
+        0.2625809907913208,
+        0.26496851444244385,
+        0.26792216300964355
+      ],
+      "retrieved_relevance": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 3,
+      "total_relevant_strict": 1,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.3333333333333333,
+          "strict_recall": 1.0,
+          "f1": 0.5,
+          "strict_f1": 1.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.3333333333333333,
+          "strict_recall": 1.0,
+          "f1": 0.3333333333333333,
+          "strict_f1": 0.5,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.7262287617954056
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.2,
+          "recall": 0.3333333333333333,
+          "strict_recall": 1.0,
+          "f1": 0.25,
+          "strict_f1": 0.33333333333333337,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.7262287617954056
+        },
+        "10": {
+          "precision": 0.2,
+          "strict_precision": 0.1,
+          "recall": 0.6666666666666666,
+          "strict_recall": 1.0,
+          "f1": 0.30769230769230765,
+          "strict_f1": 0.18181818181818182,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.7991009754668488
+        }
+      },
+      "latency": {
+        "embedding_ms": 40.53030000068247,
+        "search_ms": 3.0573999974876642,
+        "total_ms": 43.58769999817014
+      }
+    },
+    {
+      "query_id": "q012",
+      "query": "Should anticoagulants be prescribed for heart failure patients and what about vaccinations?",
+      "category": "management",
+      "difficulty": "medium",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0028",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0018",
+        "nice_hf_2018_chunk_0040",
+        "nice_hf_2018_chunk_0035",
+        "nice_hf_2018_chunk_0022",
+        "nice_hf_2018_chunk_0036",
+        "nice_hf_2018_chunk_0021",
+        "nice_hf_2018_chunk_0023",
+        "nice_hf_2018_chunk_0039"
+      ],
+      "retrieved_distances": [
+        0.26435405015945435,
+        0.26782548427581787,
+        0.27396583557128906,
+        0.28675389289855957,
+        0.2973930239677429,
+        0.3009871244430542,
+        0.30231475830078125,
+        0.3024897575378418,
+        0.30596983432769775,
+        0.30842137336730957
+      ],
+      "retrieved_relevance": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 1,
+      "total_relevant_strict": 1,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 1.0,
+          "strict_f1": 1.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.3333333333333333,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.5,
+          "strict_f1": 0.5,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.2,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.33333333333333337,
+          "strict_f1": 0.33333333333333337,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "10": {
+          "precision": 0.1,
+          "strict_precision": 0.1,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.18181818181818182,
+          "strict_f1": 0.18181818181818182,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        }
+      },
+      "latency": {
+        "embedding_ms": 41.25989999738522,
+        "search_ms": 2.7725000109057873,
+        "total_ms": 44.032400008291006
+      }
+    },
+    {
+      "query_id": "q013",
+      "query": "What are the recommendations for cardiac rehabilitation in heart failure patients?",
+      "category": "management",
+      "difficulty": "easy",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0031",
+        "nice_hf_2018_chunk_0013",
+        "nice_hf_2018_chunk_0035",
+        "nice_hf_2018_chunk_0028",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0018",
+        "nice_hf_2018_chunk_0045",
+        "nice_hf_2018_chunk_0012",
+        "nice_hf_2018_chunk_0027",
+        "nice_hf_2018_chunk_0030"
+      ],
+      "retrieved_distances": [
+        0.1977154016494751,
+        0.2561098337173462,
+        0.2787482738494873,
+        0.2840736508369446,
+        0.29144489765167236,
+        0.29193270206451416,
+        0.29337751865386963,
+        0.29412031173706055,
+        0.2944689989089966,
+        0.29558056592941284
+      ],
+      "retrieved_relevance": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 2,
+      "total_relevant_strict": 1,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.5,
+          "strict_recall": 1.0,
+          "f1": 0.6666666666666666,
+          "strict_f1": 1.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.5,
+          "strict_recall": 1.0,
+          "f1": 0.4,
+          "strict_f1": 0.5,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.8262346571285599
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.2,
+          "recall": 0.5,
+          "strict_recall": 1.0,
+          "f1": 0.28571428571428575,
+          "strict_f1": 0.33333333333333337,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.8262346571285599
+        },
+        "10": {
+          "precision": 0.2,
+          "strict_precision": 0.1,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.33333333333333337,
+          "strict_f1": 0.18181818181818182,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.91311732856428
+        }
+      },
+      "latency": {
+        "embedding_ms": 36.2948999973014,
+        "search_ms": 4.330099996877834,
+        "total_ms": 40.624999994179234
+      }
+    },
+    {
+      "query_id": "q014",
+      "query": "When should palliative care be considered for heart failure patients and how should prognosis be discussed?",
+      "category": "advanced_care",
+      "difficulty": "medium",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0032",
+        "nice_hf_2018_chunk_0017",
+        "nice_hf_2018_chunk_0013",
+        "nice_hf_2018_chunk_0012",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0027",
+        "nice_hf_2018_chunk_0014",
+        "nice_hf_2018_chunk_0028",
+        "nice_hf_2018_chunk_0035",
+        "nice_hf_2018_chunk_0031"
+      ],
+      "retrieved_distances": [
+        0.2089219093322754,
+        0.23355770111083984,
+        0.2478543519973755,
+        0.27628767490386963,
+        0.27823561429977417,
+        0.28588050603866577,
+        0.30769068002700806,
+        0.3130720853805542,
+        0.3174442648887634,
+        0.32935070991516113
+      ],
+      "retrieved_relevance": [
+        2,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 4,
+      "total_relevant_strict": 2,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.25,
+          "strict_recall": 0.5,
+          "f1": 0.4,
+          "strict_f1": 0.6666666666666666,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.6666666666666666,
+          "strict_precision": 0.6666666666666666,
+          "recall": 0.5,
+          "strict_recall": 1.0,
+          "f1": 0.5714285714285715,
+          "strict_f1": 0.8,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.9072836011519267
+        },
+        "5": {
+          "precision": 0.6,
+          "strict_precision": 0.4,
+          "recall": 0.75,
+          "strict_recall": 1.0,
+          "f1": 0.6666666666666665,
+          "strict_f1": 0.5714285714285715,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.9141404765548908
+        },
+        "10": {
+          "precision": 0.3,
+          "strict_precision": 0.2,
+          "recall": 0.75,
+          "strict_recall": 1.0,
+          "f1": 0.4285714285714285,
+          "strict_f1": 0.33333333333333337,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.9141404765548908
+        }
+      },
+      "latency": {
+        "embedding_ms": 39.092699997127056,
+        "search_ms": 3.540300007443875,
+        "total_ms": 42.63300000457093
+      }
+    },
+    {
+      "query_id": "q015",
+      "query": "What interventional procedures are available for advanced heart failure including transplantation and device therapy?",
+      "category": "advanced_care",
+      "difficulty": "medium",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0030",
+        "nice_hf_2018_chunk_0035",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0022",
+        "nice_hf_2018_chunk_0028",
+        "nice_hf_2018_chunk_0018",
+        "nice_hf_2018_chunk_0012",
+        "nice_hf_2018_chunk_0015",
+        "nice_hf_2018_chunk_0031",
+        "nice_hf_2018_chunk_0017"
+      ],
+      "retrieved_distances": [
+        0.27968907356262207,
+        0.3281172513961792,
+        0.3302643895149231,
+        0.33082717657089233,
+        0.33560895919799805,
+        0.3395153284072876,
+        0.341683030128479,
+        0.34255683422088623,
+        0.35315823554992676,
+        0.35680174827575684
+      ],
+      "retrieved_relevance": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 4,
+      "total_relevant_strict": 1,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.25,
+          "strict_recall": 1.0,
+          "f1": 0.4,
+          "strict_f1": 1.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.25,
+          "strict_recall": 1.0,
+          "f1": 0.28571428571428575,
+          "strict_f1": 0.5,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.7262287617954056
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.2,
+          "recall": 0.25,
+          "strict_recall": 1.0,
+          "f1": 0.22222222222222224,
+          "strict_f1": 0.33333333333333337,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.6576630675781056
+        },
+        "10": {
+          "precision": 0.2,
+          "strict_precision": 0.1,
+          "recall": 0.5,
+          "strict_recall": 1.0,
+          "f1": 0.28571428571428575,
+          "strict_f1": 0.18181818181818182,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.7307367417534506
+        }
+      },
+      "latency": {
+        "embedding_ms": 56.252800015499815,
+        "search_ms": 3.1416999991051853,
+        "total_ms": 59.394500014605
+      }
+    },
+    {
+      "query_id": "q016",
+      "query": "What are the roles and responsibilities of the specialist heart failure multidisciplinary team?",
+      "category": "management",
+      "difficulty": "easy",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0012",
+        "nice_hf_2018_chunk_0013",
+        "nice_hf_2018_chunk_0017",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0027",
+        "nice_hf_2018_chunk_0031",
+        "nice_hf_2018_chunk_0032",
+        "nice_hf_2018_chunk_0028",
+        "nice_hf_2018_chunk_0015",
+        "nice_hf_2018_chunk_0016"
+      ],
+      "retrieved_distances": [
+        0.13199639320373535,
+        0.2651404142379761,
+        0.2880339026451111,
+        0.3228936195373535,
+        0.3269122838973999,
+        0.3434920310974121,
+        0.34556710720062256,
+        0.3501572012901306,
+        0.3505725860595703,
+        0.3769276738166809
+      ],
+      "retrieved_relevance": [
+        2,
+        2,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 5,
+      "total_relevant_strict": 2,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.2,
+          "strict_recall": 0.5,
+          "f1": 0.33333333333333337,
+          "strict_f1": 0.6666666666666666,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 1.0,
+          "strict_precision": 0.6666666666666666,
+          "recall": 0.6,
+          "strict_recall": 1.0,
+          "f1": 0.7499999999999999,
+          "strict_f1": 0.8,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "5": {
+          "precision": 0.6,
+          "strict_precision": 0.4,
+          "recall": 0.6,
+          "strict_recall": 1.0,
+          "f1": 0.6,
+          "strict_f1": 0.5714285714285715,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.8683595134906049
+        },
+        "10": {
+          "precision": 0.4,
+          "strict_precision": 0.2,
+          "recall": 0.8,
+          "strict_recall": 1.0,
+          "f1": 0.5333333333333333,
+          "strict_f1": 0.33333333333333337,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.9220336248214808
+        }
+      },
+      "latency": {
+        "embedding_ms": 65.56520002777688,
+        "search_ms": 4.300000000512227,
+        "total_ms": 69.86520002828911
+      }
+    },
+    {
+      "query_id": "q017",
+      "query": "Can people with heart failure drive and travel by air?",
+      "category": "lifestyle",
+      "difficulty": "easy",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0029",
+        "nice_hf_2018_chunk_0032",
+        "nice_hf_2018_chunk_0031",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0028",
+        "nice_hf_2018_chunk_0030",
+        "nice_hf_2018_chunk_0017",
+        "nice_hf_2018_chunk_0013",
+        "nice_hf_2018_chunk_0015",
+        "nice_hf_2018_chunk_0027"
+      ],
+      "retrieved_distances": [
+        0.30168426036834717,
+        0.3484917879104614,
+        0.3514772653579712,
+        0.360345721244812,
+        0.3606206178665161,
+        0.37015628814697266,
+        0.39276522397994995,
+        0.39677536487579346,
+        0.4044092297554016,
+        0.40497446060180664
+      ],
+      "retrieved_relevance": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 1,
+      "total_relevant_strict": 1,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 1.0,
+          "strict_f1": 1.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.3333333333333333,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.5,
+          "strict_f1": 0.5,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "5": {
+          "precision": 0.2,
+          "strict_precision": 0.2,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.33333333333333337,
+          "strict_f1": 0.33333333333333337,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "10": {
+          "precision": 0.1,
+          "strict_precision": 0.1,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.18181818181818182,
+          "strict_f1": 0.18181818181818182,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        }
+      },
+      "latency": {
+        "embedding_ms": 36.8875999993179,
+        "search_ms": 2.6310000102967024,
+        "total_ms": 39.5186000096146
+      }
+    },
+    {
+      "query_id": "q018",
+      "query": "What lifestyle advice should be given to heart failure patients regarding salt, fluid, and smoking?",
+      "category": "lifestyle",
+      "difficulty": "easy",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0029",
+        "nice_hf_2018_chunk_0028",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0018",
+        "nice_hf_2018_chunk_0035",
+        "nice_hf_2018_chunk_0013",
+        "nice_hf_2018_chunk_0045",
+        "nice_hf_2018_chunk_0027",
+        "nice_hf_2018_chunk_0021",
+        "nice_hf_2018_chunk_0031"
+      ],
+      "retrieved_distances": [
+        0.18651974201202393,
+        0.25750988721847534,
+        0.29546844959259033,
+        0.3028287887573242,
+        0.3044778108596802,
+        0.30750352144241333,
+        0.3215849995613098,
+        0.32223451137542725,
+        0.32522690296173096,
+        0.32936978340148926
+      ],
+      "retrieved_relevance": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 2,
+      "total_relevant_strict": 1,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.5,
+          "strict_recall": 1.0,
+          "f1": 0.6666666666666666,
+          "strict_f1": 1.0,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.6666666666666666,
+          "strict_precision": 0.3333333333333333,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.8,
+          "strict_f1": 0.5,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "5": {
+          "precision": 0.4,
+          "strict_precision": 0.2,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.5714285714285715,
+          "strict_f1": 0.33333333333333337,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "10": {
+          "precision": 0.2,
+          "strict_precision": 0.1,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.33333333333333337,
+          "strict_f1": 0.18181818181818182,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        }
+      },
+      "latency": {
+        "embedding_ms": 36.966899991966784,
+        "search_ms": 2.9888000281061977,
+        "total_ms": 39.95570002007298
+      }
+    },
+    {
+      "query_id": "q019",
+      "query": "What are the four pillars of heart failure medication and how should they be prescribed together?",
+      "category": "treatment",
+      "difficulty": "medium",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0018",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0028",
+        "nice_hf_2018_chunk_0036",
+        "nice_hf_2018_chunk_0012",
+        "nice_hf_2018_chunk_0033",
+        "nice_hf_2018_chunk_0045",
+        "nice_hf_2018_chunk_0035",
+        "nice_hf_2018_chunk_0024",
+        "nice_hf_2018_chunk_0021"
+      ],
+      "retrieved_distances": [
+        0.26602375507354736,
+        0.2759373188018799,
+        0.27890539169311523,
+        0.29452311992645264,
+        0.3024834990501404,
+        0.3104647994041443,
+        0.3190685510635376,
+        0.3207389712333679,
+        0.3213198184967041,
+        0.32248371839523315
+      ],
+      "retrieved_relevance": [
+        2,
+        0,
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 8,
+      "total_relevant_strict": 4,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.125,
+          "strict_recall": 0.25,
+          "f1": 0.2222222222222222,
+          "strict_f1": 0.4,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 0.3333333333333333,
+          "strict_precision": 0.3333333333333333,
+          "recall": 0.125,
+          "strict_recall": 0.25,
+          "f1": 0.18181818181818182,
+          "strict_f1": 0.28571428571428575,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.4692787260227565
+        },
+        "5": {
+          "precision": 0.4,
+          "strict_precision": 0.4,
+          "recall": 0.25,
+          "strict_recall": 0.5,
+          "f1": 0.3076923076923077,
+          "strict_f1": 0.4444444444444445,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.5317398689291576
+        },
+        "10": {
+          "precision": 0.5,
+          "strict_precision": 0.3,
+          "recall": 0.625,
+          "strict_recall": 0.75,
+          "f1": 0.5555555555555556,
+          "strict_f1": 0.4285714285714285,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.6434504152724068
+        }
+      },
+      "latency": {
+        "embedding_ms": 39.68019998865202,
+        "search_ms": 3.307100007077679,
+        "total_ms": 42.9872999957297
+      }
+    },
+    {
+      "query_id": "q020",
+      "query": "How should iron deficiency be assessed and treated in heart failure with reduced ejection fraction?",
+      "category": "treatment",
+      "difficulty": "medium",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0038",
+        "nice_hf_2018_chunk_0019",
+        "nice_hf_2018_chunk_0018",
+        "nice_hf_2018_chunk_0035",
+        "nice_hf_2018_chunk_0021",
+        "nice_hf_2018_chunk_0042",
+        "nice_hf_2018_chunk_0027",
+        "nice_hf_2018_chunk_0033",
+        "nice_hf_2018_chunk_0036",
+        "nice_hf_2018_chunk_0022"
+      ],
+      "retrieved_distances": [
+        0.15496456623077393,
+        0.1598185896873474,
+        0.17306137084960938,
+        0.17544841766357422,
+        0.2292003631591797,
+        0.24687409400939941,
+        0.26805710792541504,
+        0.27179914712905884,
+        0.27772605419158936,
+        0.2808958888053894
+      ],
+      "retrieved_relevance": [
+        2,
+        2,
+        1,
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "mrr": 1.0,
+      "total_relevant_lenient": 6,
+      "total_relevant_strict": 3,
+      "per_k": {
+        "1": {
+          "precision": 1.0,
+          "strict_precision": 1.0,
+          "recall": 0.16666666666666666,
+          "strict_recall": 0.3333333333333333,
+          "f1": 0.2857142857142857,
+          "strict_f1": 0.5,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 1.0
+        },
+        "3": {
+          "precision": 1.0,
+          "strict_precision": 0.6666666666666666,
+          "recall": 0.5,
+          "strict_recall": 0.6666666666666666,
+          "f1": 0.6666666666666666,
+          "strict_f1": 0.6666666666666666,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.8435737579924145
+        },
+        "5": {
+          "precision": 0.8,
+          "strict_precision": 0.6,
+          "recall": 0.6666666666666666,
+          "strict_recall": 1.0,
+          "f1": 0.7272727272727272,
+          "strict_f1": 0.7499999999999999,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.9271183815384791
+        },
+        "10": {
+          "precision": 0.6,
+          "strict_precision": 0.3,
+          "recall": 1.0,
+          "strict_recall": 1.0,
+          "f1": 0.7499999999999999,
+          "strict_f1": 0.4615384615384615,
+          "hit_rate": 1.0,
+          "strict_hit_rate": 1.0,
+          "ndcg": 0.9673108167067582
+        }
+      },
+      "latency": {
+        "embedding_ms": 54.72600000211969,
+        "search_ms": 4.1618999966885895,
+        "total_ms": 58.88789999880828
+      }
+    }
+  ],
+  "output_path": "data\\evaluation\\results\\baseline_retrieval_20260818T101625Z.json"
+}
