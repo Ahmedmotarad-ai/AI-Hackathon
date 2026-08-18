@@ -1,5 +1,31 @@
+# Python
 venv/
 __pycache__/
 *.pyc
+*.pyo
 .env
 .ipynb_checkpoints/
+
+# Generated data (regenerable from scripts)
+data/chunks/
+data/embeddings/
+data/vector_db/
+data/parsed/
+data/evaluation/results/
+
+# Raw PDFs (large, use external storage or LFS)
+data/raw/
+
+# Unrelated project folder
+ML/
+
+# Temporary scripts
+analyze_chunks.py
+analyze_chunks2.py
+analyze_temp.py
+extract_chunks.ps1
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
