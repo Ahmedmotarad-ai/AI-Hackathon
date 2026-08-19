@@ -1,0 +1,785 @@
+[
+  {
+    "event_id": "EVT-0001",
+    "event_type": "sustained_elevation",
+    "before": {
+      "safety_class": "normal",
+      "safety_safe": true,
+      "top3_ids": [
+        "esc_hf_2021_chunk_0355",
+        "esc_hf_2021_chunk_0149",
+        "esc_hf_2021_chunk_0697"
+      ],
+      "top3_scores": [
+        -1.1351,
+        -2.1519,
+        -2.9157
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.3653,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 1188.4,
+      "top3_sources": [
+        {
+          "chunk_id": "esc_hf_2021_chunk_0355",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Atrial fibrillation",
+          "page": 63
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0149",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Mitral regurgitation",
+          "page": 26
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0697",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Rate control",
+          "page": 114
+        }
+      ]
+    },
+    "after": {
+      "safety_class": "medical_clinical",
+      "safety_safe": true,
+      "top3_ids": [
+        "esc_hf_2021_chunk_0337",
+        "nice_hf_2018_chunk_0033",
+        "esc_hf_2021_chunk_0233"
+      ],
+      "top3_scores": [
+        0.4131,
+        -0.0904,
+        -0.9195
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.2181,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 257.3,
+      "top3_sources": [
+        {
+          "chunk_id": "esc_hf_2021_chunk_0337",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Rate control",
+          "page": 61
+        },
+        {
+          "chunk_id": "nice_hf_2018_chunk_0033",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "section": "1.8 Clinical review",
+          "page": 21
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0233",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Recommendations",
+          "page": 40
+        }
+      ]
+    },
+    "delta_confidence": -0.1472
+  },
+  {
+    "event_id": "EVT-0002",
+    "event_type": "sustained_reduction",
+    "before": {
+      "safety_class": "normal",
+      "safety_safe": true,
+      "top3_ids": [
+        "esc_hf_2021_chunk_0355",
+        "esc_hf_2021_chunk_0149",
+        "esc_hf_2021_chunk_0697"
+      ],
+      "top3_scores": [
+        -1.548,
+        -2.5554,
+        -3.5878
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.3634,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 249.8,
+      "top3_sources": [
+        {
+          "chunk_id": "esc_hf_2021_chunk_0355",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Atrial fibrillation",
+          "page": 63
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0149",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Mitral regurgitation",
+          "page": 26
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0697",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Rate control",
+          "page": 114
+        }
+      ]
+    },
+    "after": {
+      "safety_class": "medical_clinical",
+      "safety_safe": true,
+      "top3_ids": [
+        "esc_hf_2021_chunk_0532",
+        "nice_hf_2018_chunk_0033",
+        "nice_hf_2018_chunk_0053"
+      ],
+      "top3_scores": [
+        0.6875,
+        0.4612,
+        -0.7546
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.2239,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 240.0,
+      "top3_sources": [
+        {
+          "chunk_id": "esc_hf_2021_chunk_0532",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Diagnosis",
+          "page": 99
+        },
+        {
+          "chunk_id": "nice_hf_2018_chunk_0033",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "section": "1.8 Clinical review",
+          "page": 21
+        },
+        {
+          "chunk_id": "nice_hf_2018_chunk_0053",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "section": "Beta-blockers",
+          "page": 35
+        }
+      ]
+    },
+    "delta_confidence": -0.1395
+  },
+  {
+    "event_id": "EVT-0003",
+    "event_type": "sustained_reduction",
+    "before": {
+      "safety_class": "normal",
+      "safety_safe": true,
+      "top3_ids": [
+        "esc_hf_2021_chunk_0355",
+        "esc_hf_2021_chunk_0149",
+        "esc_hf_2021_chunk_0697"
+      ],
+      "top3_scores": [
+        -1.8482,
+        -2.7934,
+        -3.7329
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.3715,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 292.5,
+      "top3_sources": [
+        {
+          "chunk_id": "esc_hf_2021_chunk_0355",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Atrial fibrillation",
+          "page": 63
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0149",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Mitral regurgitation",
+          "page": 26
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0697",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Rate control",
+          "page": 114
+        }
+      ]
+    },
+    "after": {
+      "safety_class": "medical_clinical",
+      "safety_safe": true,
+      "top3_ids": [
+        "esc_hf_2021_chunk_0532",
+        "nice_hf_2018_chunk_0033",
+        "nice_hf_2018_chunk_0053"
+      ],
+      "top3_scores": [
+        0.6167,
+        0.3554,
+        -0.9248
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.2218,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 248.7,
+      "top3_sources": [
+        {
+          "chunk_id": "esc_hf_2021_chunk_0532",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Diagnosis",
+          "page": 99
+        },
+        {
+          "chunk_id": "nice_hf_2018_chunk_0033",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "section": "1.8 Clinical review",
+          "page": 21
+        },
+        {
+          "chunk_id": "nice_hf_2018_chunk_0053",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "section": "Beta-blockers",
+          "page": 35
+        }
+      ]
+    },
+    "delta_confidence": -0.1497
+  },
+  {
+    "event_id": "EVT-0004",
+    "event_type": "sustained_elevation",
+    "before": {
+      "safety_class": "normal",
+      "safety_safe": true,
+      "top3_ids": [
+        "esc_hf_2021_chunk_0355",
+        "esc_hf_2021_chunk_0149",
+        "esc_hf_2021_chunk_0697"
+      ],
+      "top3_scores": [
+        -1.1802,
+        -2.194,
+        -3.0319
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.3637,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 235.3,
+      "top3_sources": [
+        {
+          "chunk_id": "esc_hf_2021_chunk_0355",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Atrial fibrillation",
+          "page": 63
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0149",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Mitral regurgitation",
+          "page": 26
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0697",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Rate control",
+          "page": 114
+        }
+      ]
+    },
+    "after": {
+      "safety_class": "medical_clinical",
+      "safety_safe": true,
+      "top3_ids": [
+        "esc_hf_2021_chunk_0337",
+        "esc_hf_2021_chunk_0532",
+        "nice_hf_2018_chunk_0033"
+      ],
+      "top3_scores": [
+        0.3953,
+        0.3396,
+        -0.0588
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.2383,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 231.9,
+      "top3_sources": [
+        {
+          "chunk_id": "esc_hf_2021_chunk_0337",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Rate control",
+          "page": 61
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0532",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Diagnosis",
+          "page": 99
+        },
+        {
+          "chunk_id": "nice_hf_2018_chunk_0033",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "section": "1.8 Clinical review",
+          "page": 21
+        }
+      ]
+    },
+    "delta_confidence": -0.1254
+  },
+  {
+    "event_id": "EVT-0810",
+    "event_type": "recurring_elevation",
+    "before": {
+      "safety_class": "normal",
+      "safety_safe": true,
+      "top3_ids": [
+        "esc_hf_2021_chunk_0355",
+        "esc_hf_2021_chunk_0149",
+        "nice_hf_2018_chunk_0033"
+      ],
+      "top3_scores": [
+        -3.9112,
+        -4.8029,
+        -5.5801
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.3058,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 257.1,
+      "top3_sources": [
+        {
+          "chunk_id": "esc_hf_2021_chunk_0355",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Atrial fibrillation",
+          "page": 63
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0149",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Mitral regurgitation",
+          "page": 26
+        },
+        {
+          "chunk_id": "nice_hf_2018_chunk_0033",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "section": "1.8 Clinical review",
+          "page": 21
+        }
+      ]
+    },
+    "after": {
+      "safety_class": "medical_clinical",
+      "safety_safe": true,
+      "top3_ids": [
+        "esc_hf_2021_chunk_0532",
+        "nice_hf_2018_chunk_0033",
+        "esc_hf_2021_chunk_0337"
+      ],
+      "top3_scores": [
+        -0.3602,
+        -2.019,
+        -2.2095
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.2616,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 272.9,
+      "top3_sources": [
+        {
+          "chunk_id": "esc_hf_2021_chunk_0532",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Diagnosis",
+          "page": 99
+        },
+        {
+          "chunk_id": "nice_hf_2018_chunk_0033",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "section": "1.8 Clinical review",
+          "page": 21
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0337",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Rate control",
+          "page": 61
+        }
+      ]
+    },
+    "delta_confidence": -0.0442
+  },
+  {
+    "event_id": "EVT-0811",
+    "event_type": "recurring_reduction",
+    "before": {
+      "safety_class": "normal",
+      "safety_safe": true,
+      "top3_ids": [
+        "esc_hf_2021_chunk_0355",
+        "esc_hf_2021_chunk_0149",
+        "esc_hf_2021_chunk_0697"
+      ],
+      "top3_scores": [
+        -3.4893,
+        -4.2941,
+        -5.6611
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.3641,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 236.5,
+      "top3_sources": [
+        {
+          "chunk_id": "esc_hf_2021_chunk_0355",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Atrial fibrillation",
+          "page": 63
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0149",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Mitral regurgitation",
+          "page": 26
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0697",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Rate control",
+          "page": 114
+        }
+      ]
+    },
+    "after": {
+      "safety_class": "medical_clinical",
+      "safety_safe": true,
+      "top3_ids": [
+        "nice_hf_2018_chunk_0053",
+        "esc_hf_2021_chunk_0532",
+        "esc_hf_2021_chunk_0042"
+      ],
+      "top3_scores": [
+        0.2527,
+        0.0413,
+        -1.4404
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.2148,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 228.0,
+      "top3_sources": [
+        {
+          "chunk_id": "nice_hf_2018_chunk_0053",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "section": "Beta-blockers",
+          "page": 35
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0532",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Diagnosis",
+          "page": 99
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0042",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "List of figures",
+          "page": 5
+        }
+      ]
+    },
+    "delta_confidence": -0.1493
+  },
+  {
+    "event_id": "EVT-1587",
+    "event_type": "unusual_variability",
+    "before": {
+      "safety_class": "normal",
+      "safety_safe": true,
+      "top3_ids": [
+        "esc_hf_2021_chunk_0355",
+        "esc_hf_2021_chunk_0697",
+        "nice_hf_2018_chunk_0033"
+      ],
+      "top3_scores": [
+        -2.4494,
+        -4.5568,
+        -4.6448
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.2891,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 227.7,
+      "top3_sources": [
+        {
+          "chunk_id": "esc_hf_2021_chunk_0355",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Atrial fibrillation",
+          "page": 63
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0697",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Rate control",
+          "page": 114
+        },
+        {
+          "chunk_id": "nice_hf_2018_chunk_0033",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "section": "1.8 Clinical review",
+          "page": 21
+        }
+      ]
+    },
+    "after": {
+      "safety_class": "medical_clinical",
+      "safety_safe": true,
+      "top3_ids": [
+        "nice_hf_2018_chunk_0033",
+        "esc_hf_2021_chunk_0532",
+        "esc_hf_2021_chunk_0695"
+      ],
+      "top3_scores": [
+        1.0244,
+        0.7928,
+        -0.3228
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.2304,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 243.4,
+      "top3_sources": [
+        {
+          "chunk_id": "nice_hf_2018_chunk_0033",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "section": "1.8 Clinical review",
+          "page": 21
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0532",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Diagnosis",
+          "page": 99
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0695",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Rate control",
+          "page": 114
+        }
+      ]
+    },
+    "delta_confidence": -0.0587
+  },
+  {
+    "event_id": "EVT-9133",
+    "event_type": "sudden_change",
+    "before": {
+      "safety_class": "normal",
+      "safety_safe": true,
+      "top3_ids": [
+        "esc_hf_2021_chunk_0355",
+        "esc_hf_2021_chunk_0149",
+        "esc_hf_2021_chunk_0831"
+      ],
+      "top3_scores": [
+        -2.3869,
+        -3.1919,
+        -3.2955
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.4024,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 227.2,
+      "top3_sources": [
+        {
+          "chunk_id": "esc_hf_2021_chunk_0355",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Atrial fibrillation",
+          "page": 63
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0149",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Mitral regurgitation",
+          "page": 26
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0831",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Atrial fibrillation",
+          "page": 126
+        }
+      ]
+    },
+    "after": {
+      "safety_class": "medical_clinical",
+      "safety_safe": true,
+      "top3_ids": [
+        "nice_hf_2018_chunk_0033",
+        "esc_hf_2021_chunk_0532",
+        "esc_hf_2021_chunk_0831"
+      ],
+      "top3_scores": [
+        1.2553,
+        0.6141,
+        -0.4749
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.2298,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 237.2,
+      "top3_sources": [
+        {
+          "chunk_id": "nice_hf_2018_chunk_0033",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "section": "1.8 Clinical review",
+          "page": 21
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0532",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Diagnosis",
+          "page": 99
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0831",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Atrial fibrillation",
+          "page": 126
+        }
+      ]
+    },
+    "delta_confidence": -0.1726
+  },
+  {
+    "event_id": "EVT-9134",
+    "event_type": "sudden_change",
+    "before": {
+      "safety_class": "normal",
+      "safety_safe": true,
+      "top3_ids": [
+        "esc_hf_2021_chunk_0355",
+        "esc_hf_2021_chunk_0149",
+        "esc_hf_2021_chunk_0831"
+      ],
+      "top3_scores": [
+        -2.1558,
+        -2.7797,
+        -3.0372
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.4072,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 225.1,
+      "top3_sources": [
+        {
+          "chunk_id": "esc_hf_2021_chunk_0355",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Atrial fibrillation",
+          "page": 63
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0149",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Mitral regurgitation",
+          "page": 26
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0831",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Atrial fibrillation",
+          "page": 126
+        }
+      ]
+    },
+    "after": {
+      "safety_class": "medical_clinical",
+      "safety_safe": true,
+      "top3_ids": [
+        "nice_hf_2018_chunk_0033",
+        "esc_hf_2021_chunk_0532",
+        "esc_hf_2021_chunk_0831"
+      ],
+      "top3_scores": [
+        1.2452,
+        0.625,
+        -0.4862
+      ],
+      "top3_above_threshold": 0,
+      "confidence_score": 0.2297,
+      "confidence_level": "low",
+      "confidence_decision": "refuse",
+      "refusal_action": "refuse",
+      "proceed_to_llm": false,
+      "retrieval_ms": 234.5,
+      "top3_sources": [
+        {
+          "chunk_id": "nice_hf_2018_chunk_0033",
+          "document": "NICE_HF_2018_Guideline.pdf",
+          "section": "1.8 Clinical review",
+          "page": 21
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0532",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Diagnosis",
+          "page": 99
+        },
+        {
+          "chunk_id": "esc_hf_2021_chunk_0831",
+          "document": "ESC_HF_2021_Guideline.pdf",
+          "section": "Atrial fibrillation",
+          "page": 126
+        }
+      ]
+    },
+    "delta_confidence": -0.1775
+  }
+]

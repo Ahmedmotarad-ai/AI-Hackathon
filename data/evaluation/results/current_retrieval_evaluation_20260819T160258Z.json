@@ -1,0 +1,2823 @@
+{
+  "experiment": "Current Retrieval Evaluation — Behavioral Categories",
+  "timestamp": "20260819T160258Z",
+  "config": {
+    "dense_model": "BAAI/bge-small-en-v1.5",
+    "query_prefix": "query: ",
+    "candidate_k": 20,
+    "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "ce_max_length": 512,
+    "metadata_filter": "section != Front matter"
+  },
+  "num_queries": 30,
+  "category_distribution": {
+    "direct": 6,
+    "ambiguous": 5,
+    "out_of_scope": 5,
+    "insufficient_evidence": 5,
+    "multi_part": 4,
+    "high_risk": 5
+  },
+  "overall": {
+    "mrr": 0.3225,
+    "3": {
+      "precision": 0.14443333333333333,
+      "recall": 0.14999666666666667,
+      "f1": 0.14327333333333334,
+      "hit": 0.4,
+      "ndcg": 0.16026666666666667
+    },
+    "5": {
+      "precision": 0.13333333333333333,
+      "recall": 0.23888666666666666,
+      "f1": 0.16409666666666667,
+      "hit": 0.5,
+      "ndcg": 0.20134
+    },
+    "10": {
+      "precision": 0.09666666666666666,
+      "recall": 0.3333333333333333,
+      "f1": 0.14620333333333332,
+      "hit": 0.5666666666666667,
+      "ndcg": 0.23118666666666668
+    }
+  },
+  "per_category": {
+    "direct": {
+      "n": 6,
+      "metrics": {
+        "mrr": 0.4930555555555556,
+        "3": {
+          "precision": 0.22219999999999998,
+          "recall": 0.16666666666666666,
+          "f1": 0.18781666666666666,
+          "hit": 0.6666666666666666,
+          "ndcg": 0.22846666666666668
+        },
+        "5": {
+          "precision": 0.2,
+          "recall": 0.25,
+          "f1": 0.218,
+          "hit": 0.6666666666666666,
+          "ndcg": 0.26131666666666664
+        },
+        "10": {
+          "precision": 0.18333333333333335,
+          "recall": 0.4722166666666667,
+          "f1": 0.26145,
+          "hit": 0.8333333333333334,
+          "ndcg": 0.3363
+        }
+      }
+    },
+    "ambiguous": {
+      "n": 5,
+      "metrics": {
+        "mrr": 0.36666666666666664,
+        "3": {
+          "precision": 0.19998,
+          "recall": 0.18331999999999998,
+          "f1": 0.19046,
+          "hit": 0.6,
+          "ndcg": 0.13183999999999998
+        },
+        "5": {
+          "precision": 0.16,
+          "recall": 0.25,
+          "f1": 0.19444,
+          "hit": 0.6,
+          "ndcg": 0.18346
+        },
+        "10": {
+          "precision": 0.08,
+          "recall": 0.25,
+          "f1": 0.12087999999999999,
+          "hit": 0.6,
+          "ndcg": 0.18346
+        }
+      }
+    },
+    "out_of_scope": {
+      "n": 5,
+      "metrics": {
+        "mrr": 0.0,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        }
+      }
+    },
+    "insufficient_evidence": {
+      "n": 5,
+      "metrics": {
+        "mrr": 0.2633333333333333,
+        "3": {
+          "precision": 0.13334,
+          "recall": 0.2,
+          "f1": 0.16,
+          "hit": 0.2,
+          "ndcg": 0.2
+        },
+        "5": {
+          "precision": 0.12000000000000001,
+          "recall": 0.4,
+          "f1": 0.18094,
+          "hit": 0.4,
+          "ndcg": 0.28614
+        },
+        "10": {
+          "precision": 0.060000000000000005,
+          "recall": 0.4,
+          "f1": 0.10302,
+          "hit": 0.4,
+          "ndcg": 0.28614
+        }
+      }
+    },
+    "multi_part": {
+      "n": 4,
+      "metrics": {
+        "mrr": 0.35,
+        "3": {
+          "precision": 0.083325,
+          "recall": 0.0625,
+          "f1": 0.071425,
+          "hit": 0.25,
+          "ndcg": 0.04635
+        },
+        "5": {
+          "precision": 0.2,
+          "recall": 0.270825,
+          "f1": 0.22915000000000002,
+          "hit": 0.75,
+          "ndcg": 0.13292500000000002
+        },
+        "10": {
+          "precision": 0.125,
+          "recall": 0.354175,
+          "f1": 0.184075,
+          "hit": 0.75,
+          "ndcg": 0.182475
+        }
+      }
+    },
+    "high_risk": {
+      "n": 5,
+      "metrics": {
+        "mrr": 0.43333333333333335,
+        "3": {
+          "precision": 0.19998,
+          "recall": 0.26666,
+          "f1": 0.22666,
+          "hit": 0.6,
+          "ndcg": 0.31851999999999997
+        },
+        "5": {
+          "precision": 0.12000000000000001,
+          "recall": 0.26666,
+          "f1": 0.16428,
+          "hit": 0.6,
+          "ndcg": 0.31851999999999997
+        },
+        "10": {
+          "precision": 0.12,
+          "recall": 0.5,
+          "f1": 0.19232,
+          "hit": 0.8,
+          "ndcg": 0.36798000000000003
+        }
+      }
+    }
+  },
+  "false_retrieval": {
+    "out_of_scope": {
+      "n": 5,
+      "false_evidence_top3": 0,
+      "false_evidence_top5": 0,
+      "false_evidence_top10": 0,
+      "false_evidence_rate_top3": 0.0,
+      "false_evidence_rate_top5": 0.0
+    },
+    "insufficient_evidence": {
+      "n": 5,
+      "false_evidence_top3": 1,
+      "false_evidence_top5": 2,
+      "false_evidence_top10": 2,
+      "false_evidence_rate_top3": 0.2,
+      "false_evidence_rate_top5": 0.4
+    }
+  },
+  "failures": [
+    {
+      "query_id": "eval005",
+      "query": "What is the recommended approach for rate control in heart failure patients with atrial fibrillation?",
+      "category": "direct",
+      "failure_type": "no_relevant_in_top3",
+      "detail": "0 of 4 ground truth chunks in top-3",
+      "top3_chunks": [
+        "esc_hf_2021_chunk_0059",
+        "esc_hf_2021_chunk_0698",
+        "esc_hf_2021_chunk_0695"
+      ],
+      "expected_chunks": []
+    },
+    {
+      "query_id": "eval006",
+      "query": "How is obesity managed in heart failure patients according to the ESC guidelines?",
+      "category": "direct",
+      "failure_type": "no_relevant_in_top3",
+      "detail": "0 of 3 ground truth chunks in top-3",
+      "top3_chunks": [
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0610",
+        "esc_hf_2021_chunk_0745"
+      ],
+      "expected_chunks": []
+    },
+    {
+      "query_id": "eval009",
+      "query": "Is this patient a candidate for device therapy?",
+      "category": "ambiguous",
+      "failure_type": "no_relevant_in_top3",
+      "detail": "0 of 2 ground truth chunks in top-3",
+      "top3_chunks": [
+        "esc_hf_2021_chunk_0492",
+        "esc_hf_2021_chunk_0491",
+        "esc_hf_2021_chunk_0253"
+      ],
+      "expected_chunks": []
+    },
+    {
+      "query_id": "eval010",
+      "query": "What are the sleep problems in heart failure?",
+      "category": "ambiguous",
+      "failure_type": "no_relevant_in_top3",
+      "detail": "0 of 2 ground truth chunks in top-3",
+      "top3_chunks": [
+        "esc_hf_2021_chunk_0786",
+        "esc_hf_2021_chunk_0062",
+        "nice_hf_2018_chunk_0054"
+      ],
+      "expected_chunks": []
+    },
+    {
+      "query_id": "eval018",
+      "query": "What are the long-term outcomes of heart transplantation in patients over 70 years old?",
+      "category": "insufficient_evidence",
+      "failure_type": "false_evidence_retrieved",
+      "detail": "Retrieved 2 apparently relevant chunks in top-3 for insufficient_evidence query",
+      "top3_chunks": [
+        "esc_hf_2021_chunk_0251",
+        "esc_hf_2021_chunk_0254",
+        "esc_hf_2021_chunk_0240"
+      ]
+    },
+    {
+      "query_id": "eval023",
+      "query": "How should beta-blockers be initiated and what are the monitoring requirements?",
+      "category": "multi_part",
+      "failure_type": "single_part_coverage",
+      "detail": "Top-5 covers 1 sections but query has 4 ground truth chunks across multiple topics",
+      "top3_chunks": [
+        "esc_hf_2021_chunk_0126",
+        "nice_hf_2018_chunk_0053",
+        "esc_hf_2021_chunk_0347"
+      ]
+    },
+    {
+      "query_id": "eval026",
+      "query": "What is the starting dose of carvedilol for a patient with HFrEF?",
+      "category": "high_risk",
+      "failure_type": "no_relevant_in_top3",
+      "detail": "0 of 2 ground truth chunks in top-3",
+      "top3_chunks": [
+        "esc_hf_2021_chunk_0352",
+        "esc_hf_2021_chunk_0502",
+        "esc_hf_2021_chunk_0120"
+      ],
+      "expected_chunks": []
+    },
+    {
+      "query_id": "eval030",
+      "query": "How do I manage acute pulmonary oedema in the emergency department?",
+      "category": "high_risk",
+      "failure_type": "no_relevant_in_top3",
+      "detail": "0 of 2 ground truth chunks in top-3",
+      "top3_chunks": [
+        "esc_hf_2021_chunk_0276",
+        "esc_hf_2021_chunk_0289",
+        "esc_hf_2021_chunk_0020"
+      ],
+      "expected_chunks": []
+    }
+  ],
+  "per_query": [
+    {
+      "query_id": "eval001",
+      "query": "What are the recommended first-line pharmacological treatments for heart failure with reduced ejection fraction?",
+      "category": "direct",
+      "expected_behavior": "answer",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0119",
+        "nice_hf_2018_chunk_0021",
+        "esc_hf_2021_chunk_0030",
+        "nice_hf_2018_chunk_0025",
+        "nice_hf_2018_chunk_0023",
+        "esc_hf_2021_chunk_0042",
+        "nice_hf_2018_chunk_0057",
+        "esc_hf_2021_chunk_0032",
+        "esc_hf_2021_chunk_0155",
+        "esc_hf_2021_chunk_0015",
+        "esc_hf_2021_chunk_0041",
+        "esc_hf_2023_focused_update_chunk_0025",
+        "esc_hf_2021_chunk_0031",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0014",
+        "esc_hf_2021_chunk_0556",
+        "esc_hf_2021_chunk_0592",
+        "esc_hf_2021_chunk_0312",
+        "esc_hf_2021_chunk_0666",
+        "esc_hf_2023_focused_update_chunk_0014"
+      ],
+      "retrieved_ce_scores": [
+        6.15786,
+        6.01266,
+        5.412457,
+        5.26557,
+        5.052754,
+        3.219452,
+        3.007413,
+        2.653485,
+        2.618598,
+        2.545816,
+        2.402677,
+        2.287492,
+        2.234653,
+        1.033296,
+        0.895482,
+        0.034621,
+        -0.091827,
+        -0.755629,
+        -3.121905,
+        -5.069005
+      ],
+      "ground_truth_count": 6,
+      "retrieved_relevant_in_top3": 1,
+      "retrieved_relevant_in_top5": 2,
+      "retrieved_relevant_in_top10": 2,
+      "metrics": {
+        "mrr": 0.5,
+        "3": {
+          "precision": 0.3333,
+          "recall": 0.1667,
+          "f1": 0.2222,
+          "hit": 1.0,
+          "ndcg": 0.351
+        },
+        "5": {
+          "precision": 0.4,
+          "recall": 0.3333,
+          "f1": 0.3636,
+          "hit": 1.0,
+          "ndcg": 0.3671
+        },
+        "10": {
+          "precision": 0.2,
+          "recall": 0.3333,
+          "f1": 0.25,
+          "hit": 1.0,
+          "ndcg": 0.3472
+        }
+      },
+      "latency": {
+        "dense_ms": 384.98,
+        "rerank_ms": 564.48,
+        "total_ms": 949.46
+      }
+    },
+    {
+      "query_id": "eval002",
+      "query": "When should ivabradine be considered for heart failure patients?",
+      "category": "direct",
+      "expected_behavior": "answer",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0138",
+        "esc_hf_2021_chunk_0349",
+        "esc_hf_2021_chunk_0562",
+        "esc_hf_2021_chunk_0186",
+        "nice_hf_2018_chunk_0023",
+        "esc_hf_2021_chunk_0142",
+        "esc_hf_2021_chunk_0352",
+        "esc_hf_2021_chunk_0348",
+        "esc_hf_2021_chunk_0425",
+        "esc_hf_2021_chunk_0557",
+        "esc_hf_2023_focused_update_chunk_0025",
+        "esc_hf_2021_chunk_0030",
+        "nice_hf_2018_chunk_0027",
+        "nice_hf_2018_chunk_0050",
+        "esc_hf_2021_chunk_0354",
+        "esc_hf_2021_chunk_0089",
+        "nice_hf_2018_chunk_0021",
+        "esc_hf_2021_chunk_0131",
+        "nice_hf_2018_chunk_0057",
+        "esc_hf_2021_chunk_0244"
+      ],
+      "retrieved_ce_scores": [
+        4.378546,
+        3.369722,
+        2.962601,
+        2.564223,
+        2.38863,
+        1.10071,
+        0.767454,
+        0.35441,
+        0.076086,
+        -0.423732,
+        -0.82109,
+        -0.863926,
+        -2.202741,
+        -2.690255,
+        -3.515568,
+        -4.155678,
+        -4.38835,
+        -4.773364,
+        -5.663995,
+        -6.811681
+      ],
+      "ground_truth_count": 3,
+      "retrieved_relevant_in_top3": 1,
+      "retrieved_relevant_in_top5": 2,
+      "retrieved_relevant_in_top10": 3,
+      "metrics": {
+        "mrr": 1.0,
+        "3": {
+          "precision": 0.3333,
+          "recall": 0.3333,
+          "f1": 0.3333,
+          "hit": 1.0,
+          "ndcg": 0.5563
+        },
+        "5": {
+          "precision": 0.4,
+          "recall": 0.6667,
+          "f1": 0.5,
+          "hit": 1.0,
+          "ndcg": 0.7715
+        },
+        "10": {
+          "precision": 0.3,
+          "recall": 1.0,
+          "f1": 0.4615,
+          "hit": 1.0,
+          "ndcg": 0.8376
+        }
+      },
+      "latency": {
+        "dense_ms": 41.66,
+        "rerank_ms": 163.6,
+        "total_ms": 205.26
+      }
+    },
+    {
+      "query_id": "eval003",
+      "query": "How should digoxin be used in patients with heart failure and atrial fibrillation?",
+      "category": "direct",
+      "expected_behavior": "answer",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0562",
+        "esc_hf_2021_chunk_0564",
+        "esc_hf_2021_chunk_0348",
+        "esc_hf_2021_chunk_0678",
+        "esc_hf_2021_chunk_0186",
+        "esc_hf_2021_chunk_0694",
+        "esc_hf_2021_chunk_0563",
+        "nice_hf_2018_chunk_0023",
+        "esc_hf_2021_chunk_0314",
+        "esc_hf_2021_chunk_0144",
+        "esc_hf_2021_chunk_0338",
+        "esc_hf_2021_chunk_0516",
+        "nice_hf_2018_chunk_0032",
+        "nice_hf_2018_chunk_0034",
+        "esc_hf_2021_chunk_0560",
+        "esc_hf_2021_chunk_0601",
+        "esc_hf_2021_chunk_0152",
+        "esc_hf_2021_chunk_0317",
+        "esc_hf_2021_chunk_0466",
+        "esc_hf_2021_chunk_0151"
+      ],
+      "retrieved_ce_scores": [
+        4.058632,
+        3.83106,
+        3.525647,
+        3.33587,
+        2.25426,
+        2.156213,
+        2.075858,
+        2.03747,
+        1.348576,
+        0.582656,
+        0.160255,
+        0.008698,
+        -0.067209,
+        -0.093055,
+        -1.321096,
+        -1.745437,
+        -1.802055,
+        -2.81055,
+        -3.453431,
+        -4.893609
+      ],
+      "ground_truth_count": 4,
+      "retrieved_relevant_in_top3": 1,
+      "retrieved_relevant_in_top5": 1,
+      "retrieved_relevant_in_top10": 3,
+      "metrics": {
+        "mrr": 0.3333333333333333,
+        "3": {
+          "precision": 0.3333,
+          "recall": 0.25,
+          "f1": 0.2857,
+          "hit": 1.0,
+          "ndcg": 0.2781
+        },
+        "5": {
+          "precision": 0.2,
+          "recall": 0.25,
+          "f1": 0.2222,
+          "hit": 1.0,
+          "ndcg": 0.2576
+        },
+        "10": {
+          "precision": 0.3,
+          "recall": 0.75,
+          "f1": 0.4286,
+          "hit": 1.0,
+          "ndcg": 0.4582
+        }
+      },
+      "latency": {
+        "dense_ms": 43.78,
+        "rerank_ms": 170.87,
+        "total_ms": 214.64
+      }
+    },
+    {
+      "query_id": "eval004",
+      "query": "What role do SGLT2 inhibitors play in heart failure management according to the latest guidelines?",
+      "category": "direct",
+      "expected_behavior": "answer",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0026",
+        "esc_hf_2021_chunk_0386",
+        "nice_hf_2018_chunk_0045",
+        "nice_hf_2018_chunk_0050",
+        "esc_hf_2023_focused_update_chunk_0036",
+        "esc_hf_2023_focused_update_chunk_0034",
+        "nice_hf_2018_chunk_0021",
+        "esc_hf_2021_chunk_0426",
+        "esc_hf_2021_chunk_0135",
+        "esc_hf_2021_chunk_0735",
+        "esc_hf_2021_chunk_0555",
+        "esc_hf_2021_chunk_0739",
+        "esc_hf_2023_focused_update_chunk_0028",
+        "esc_hf_2021_chunk_0077",
+        "esc_hf_2023_focused_update_chunk_0026",
+        "esc_hf_2023_focused_update_chunk_0051",
+        "esc_hf_2021_chunk_0204",
+        "nice_hf_2018_chunk_0057",
+        "esc_hf_2023_focused_update_chunk_0061",
+        "esc_hf_2021_chunk_0666"
+      ],
+      "retrieved_ce_scores": [
+        4.257298,
+        3.937743,
+        3.198524,
+        2.973593,
+        2.965274,
+        2.934516,
+        2.370195,
+        1.559554,
+        1.502043,
+        0.598277,
+        0.193078,
+        0.192686,
+        0.106954,
+        -0.24637,
+        -1.504369,
+        -2.231875,
+        -2.923301,
+        -3.225173,
+        -5.037535,
+        -5.417878
+      ],
+      "ground_truth_count": 4,
+      "retrieved_relevant_in_top3": 1,
+      "retrieved_relevant_in_top5": 1,
+      "retrieved_relevant_in_top10": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "3": {
+          "precision": 0.3333,
+          "recall": 0.25,
+          "f1": 0.2857,
+          "hit": 1.0,
+          "ndcg": 0.1854
+        },
+        "5": {
+          "precision": 0.2,
+          "recall": 0.25,
+          "f1": 0.2222,
+          "hit": 1.0,
+          "ndcg": 0.1717
+        },
+        "10": {
+          "precision": 0.1,
+          "recall": 0.25,
+          "f1": 0.1429,
+          "hit": 1.0,
+          "ndcg": 0.1717
+        }
+      },
+      "latency": {
+        "dense_ms": 64.49,
+        "rerank_ms": 169.57,
+        "total_ms": 234.06
+      }
+    },
+    {
+      "query_id": "eval005",
+      "query": "What is the recommended approach for rate control in heart failure patients with atrial fibrillation?",
+      "category": "direct",
+      "expected_behavior": "answer",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0059",
+        "esc_hf_2021_chunk_0698",
+        "esc_hf_2021_chunk_0695",
+        "esc_hf_2021_chunk_0692",
+        "esc_hf_2021_chunk_0697",
+        "esc_hf_2021_chunk_0699",
+        "esc_hf_2021_chunk_0031",
+        "esc_hf_2021_chunk_0337",
+        "esc_hf_2021_chunk_0042",
+        "esc_hf_2021_chunk_0089",
+        "esc_hf_2021_chunk_0704",
+        "esc_hf_2021_chunk_0347",
+        "esc_hf_2021_chunk_0339",
+        "esc_hf_2021_chunk_0694",
+        "esc_hf_2021_chunk_0700",
+        "esc_hf_2021_chunk_0338",
+        "esc_hf_2021_chunk_0331",
+        "esc_hf_2021_chunk_0355",
+        "esc_hf_2021_chunk_0151",
+        "esc_hf_2021_chunk_0014"
+      ],
+      "retrieved_ce_scores": [
+        4.251296,
+        3.689479,
+        3.476781,
+        2.940074,
+        2.271209,
+        2.089539,
+        1.770006,
+        1.736428,
+        1.621764,
+        1.027788,
+        -0.037624,
+        -0.15154,
+        -0.532718,
+        -0.860825,
+        -1.03258,
+        -2.436604,
+        -3.413089,
+        -3.715913,
+        -4.285115,
+        -4.549635
+      ],
+      "ground_truth_count": 4,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 0,
+      "retrieved_relevant_in_top10": 2,
+      "metrics": {
+        "mrr": 0.125,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.2,
+          "recall": 0.5,
+          "f1": 0.2857,
+          "hit": 1.0,
+          "ndcg": 0.2031
+        }
+      },
+      "latency": {
+        "dense_ms": 37.26,
+        "rerank_ms": 227.18,
+        "total_ms": 264.44
+      }
+    },
+    {
+      "query_id": "eval006",
+      "query": "How is obesity managed in heart failure patients according to the ESC guidelines?",
+      "category": "direct",
+      "expected_behavior": "answer",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0610",
+        "esc_hf_2021_chunk_0745",
+        "esc_hf_2021_chunk_0513",
+        "esc_hf_2021_chunk_0071",
+        "esc_hf_2021_chunk_0579",
+        "esc_hf_2021_chunk_0066",
+        "esc_hf_2023_focused_update_chunk_0020",
+        "esc_hf_2021_chunk_0748",
+        "esc_hf_2021_chunk_0515",
+        "esc_hf_2021_chunk_0621",
+        "esc_hf_2021_chunk_0256",
+        "esc_hf_2021_chunk_0426",
+        "esc_hf_2021_chunk_0031",
+        "esc_hf_2021_chunk_0372",
+        "esc_hf_2021_chunk_0652",
+        "esc_hf_2021_chunk_0752",
+        "esc_hf_2023_focused_update_chunk_0061",
+        "nice_hf_2018_chunk_0042",
+        "esc_hf_2021_chunk_0633"
+      ],
+      "retrieved_ce_scores": [
+        4.230791,
+        3.194355,
+        1.701747,
+        1.095416,
+        0.952543,
+        0.881622,
+        0.641348,
+        0.386559,
+        -0.817418,
+        -1.088589,
+        -1.090475,
+        -1.14687,
+        -2.833533,
+        -2.885703,
+        -3.169828,
+        -3.253061,
+        -4.756663,
+        -5.890418,
+        -6.555867,
+        -8.922482
+      ],
+      "ground_truth_count": 3,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 0,
+      "retrieved_relevant_in_top10": 0,
+      "metrics": {
+        "mrr": 0.0,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        }
+      },
+      "latency": {
+        "dense_ms": 38.22,
+        "rerank_ms": 176.14,
+        "total_ms": 214.35
+      }
+    },
+    {
+      "query_id": "eval007",
+      "query": "Tell me about heart failure treatment.",
+      "category": "ambiguous",
+      "expected_behavior": "answer_with_clarification",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0024",
+        "esc_hf_2021_chunk_0018",
+        "nice_hf_2018_chunk_0054",
+        "esc_hf_2021_chunk_0033",
+        "esc_hf_2023_focused_update_chunk_0025",
+        "esc_hf_2021_chunk_0042",
+        "nice_hf_2018_chunk_0020",
+        "esc_hf_2023_focused_update_chunk_0013",
+        "nice_hf_2018_chunk_0034",
+        "esc_hf_2023_focused_update_chunk_0061",
+        "esc_hf_2021_chunk_0770",
+        "esc_hf_2021_chunk_0372",
+        "nice_hf_2018_chunk_0057",
+        "esc_hf_2021_chunk_0019",
+        "esc_hf_2021_chunk_0020",
+        "esc_hf_2023_focused_update_chunk_0014",
+        "nice_hf_2018_chunk_0016",
+        "esc_hf_2023_focused_update_chunk_0068",
+        "esc_hf_2021_chunk_0108",
+        "esc_hf_2021_chunk_0652"
+      ],
+      "retrieved_ce_scores": [
+        2.716615,
+        2.226317,
+        2.095336,
+        1.116059,
+        1.068489,
+        0.764666,
+        0.671979,
+        0.037247,
+        -0.093959,
+        -0.881777,
+        -1.313397,
+        -1.621937,
+        -1.622851,
+        -1.64408,
+        -1.972507,
+        -2.177928,
+        -2.542434,
+        -2.556891,
+        -2.797323,
+        -3.003957
+      ],
+      "ground_truth_count": 4,
+      "retrieved_relevant_in_top3": 1,
+      "retrieved_relevant_in_top5": 1,
+      "retrieved_relevant_in_top10": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "3": {
+          "precision": 0.3333,
+          "recall": 0.25,
+          "f1": 0.2857,
+          "hit": 1.0,
+          "ndcg": 0.2421
+        },
+        "5": {
+          "precision": 0.2,
+          "recall": 0.25,
+          "f1": 0.2222,
+          "hit": 1.0,
+          "ndcg": 0.2192
+        },
+        "10": {
+          "precision": 0.1,
+          "recall": 0.25,
+          "f1": 0.1429,
+          "hit": 1.0,
+          "ndcg": 0.2192
+        }
+      },
+      "latency": {
+        "dense_ms": 42.69,
+        "rerank_ms": 165.21,
+        "total_ms": 207.9
+      }
+    },
+    {
+      "query_id": "eval008",
+      "query": "What about the medications?",
+      "category": "ambiguous",
+      "expected_behavior": "answer_with_clarification",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0214",
+        "nice_hf_2018_chunk_0029",
+        "esc_hf_2023_focused_update_chunk_0025",
+        "esc_hf_2021_chunk_0219",
+        "nice_hf_2018_chunk_0034",
+        "nice_hf_2018_chunk_0028",
+        "esc_hf_2021_chunk_0336",
+        "esc_hf_2023_focused_update_chunk_0041",
+        "nice_hf_2018_chunk_0030",
+        "esc_hf_2023_focused_update_chunk_0023",
+        "esc_hf_2021_chunk_0139",
+        "esc_hf_2021_chunk_0770",
+        "esc_hf_2021_chunk_0560",
+        "esc_hf_2021_chunk_0021",
+        "esc_hf_2021_chunk_0025",
+        "esc_hf_2021_chunk_0199",
+        "esc_hf_2021_chunk_0472",
+        "esc_hf_2021_chunk_0292",
+        "esc_hf_2021_chunk_0291",
+        "esc_hf_2023_focused_update_chunk_0014"
+      ],
+      "retrieved_ce_scores": [
+        -6.067816,
+        -6.072458,
+        -6.594962,
+        -6.766847,
+        -6.773492,
+        -7.2072,
+        -7.311001,
+        -7.400049,
+        -7.400984,
+        -7.415386,
+        -7.571986,
+        -7.764684,
+        -7.814819,
+        -7.882566,
+        -8.312571,
+        -8.596762,
+        -8.774397,
+        -9.113941,
+        -9.892866,
+        -10.314974
+      ],
+      "ground_truth_count": 3,
+      "retrieved_relevant_in_top3": 1,
+      "retrieved_relevant_in_top5": 1,
+      "retrieved_relevant_in_top10": 1,
+      "metrics": {
+        "mrr": 0.5,
+        "3": {
+          "precision": 0.3333,
+          "recall": 0.3333,
+          "f1": 0.3333,
+          "hit": 1.0,
+          "ndcg": 0.2961
+        },
+        "5": {
+          "precision": 0.2,
+          "recall": 0.3333,
+          "f1": 0.25,
+          "hit": 1.0,
+          "ndcg": 0.2961
+        },
+        "10": {
+          "precision": 0.1,
+          "recall": 0.3333,
+          "f1": 0.1538,
+          "hit": 1.0,
+          "ndcg": 0.2961
+        }
+      },
+      "latency": {
+        "dense_ms": 29.24,
+        "rerank_ms": 180.52,
+        "total_ms": 209.76
+      }
+    },
+    {
+      "query_id": "eval009",
+      "query": "Is this patient a candidate for device therapy?",
+      "category": "ambiguous",
+      "expected_behavior": "answer_with_clarification",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0492",
+        "esc_hf_2021_chunk_0491",
+        "esc_hf_2021_chunk_0253",
+        "esc_hf_2021_chunk_0645",
+        "esc_hf_2021_chunk_0186",
+        "esc_hf_2021_chunk_0642",
+        "esc_hf_2021_chunk_0229",
+        "esc_hf_2021_chunk_0639",
+        "esc_hf_2021_chunk_0569",
+        "esc_hf_2021_chunk_0245",
+        "esc_hf_2021_chunk_0629",
+        "esc_hf_2021_chunk_0199",
+        "esc_hf_2021_chunk_0292",
+        "esc_hf_2021_chunk_0019",
+        "esc_hf_2021_chunk_0472",
+        "esc_hf_2021_chunk_0282",
+        "esc_hf_2021_chunk_0284",
+        "esc_hf_2021_chunk_0295",
+        "esc_hf_2021_chunk_0465",
+        "esc_hf_2021_chunk_0632"
+      ],
+      "retrieved_ce_scores": [
+        0.191456,
+        -0.970213,
+        -1.934913,
+        -3.030137,
+        -5.291481,
+        -5.671592,
+        -6.344968,
+        -7.191853,
+        -7.536348,
+        -8.279055,
+        -8.627977,
+        -9.035086,
+        -9.601378,
+        -9.687541,
+        -9.711746,
+        -9.811982,
+        -9.811982,
+        -9.811982,
+        -10.266868,
+        -10.945862
+      ],
+      "ground_truth_count": 2,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 0,
+      "retrieved_relevant_in_top10": 0,
+      "metrics": {
+        "mrr": 0.0,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        }
+      },
+      "latency": {
+        "dense_ms": 35.15,
+        "rerank_ms": 169.3,
+        "total_ms": 204.45
+      }
+    },
+    {
+      "query_id": "eval010",
+      "query": "What are the sleep problems in heart failure?",
+      "category": "ambiguous",
+      "expected_behavior": "answer",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0786",
+        "esc_hf_2021_chunk_0062",
+        "nice_hf_2018_chunk_0054",
+        "esc_hf_2023_focused_update_chunk_0013",
+        "esc_hf_2021_chunk_0020",
+        "esc_hf_2021_chunk_0103",
+        "esc_hf_2021_chunk_0019",
+        "esc_hf_2021_chunk_0108",
+        "esc_hf_2021_chunk_0652",
+        "esc_hf_2021_chunk_0233",
+        "esc_hf_2021_chunk_0033",
+        "esc_hf_2021_chunk_0014",
+        "esc_hf_2021_chunk_0732",
+        "esc_hf_2021_chunk_0632",
+        "esc_hf_2021_chunk_0583",
+        "esc_hf_2023_focused_update_chunk_0061",
+        "nice_hf_2018_chunk_0016",
+        "esc_hf_2021_chunk_0633",
+        "esc_hf_2023_focused_update_chunk_0014",
+        "esc_hf_2021_chunk_0022"
+      ],
+      "retrieved_ce_scores": [
+        2.264879,
+        -0.250457,
+        -1.531667,
+        -4.836558,
+        -4.915541,
+        -5.344857,
+        -5.503379,
+        -5.987823,
+        -6.051302,
+        -6.055601,
+        -6.067181,
+        -6.145558,
+        -6.334113,
+        -6.475951,
+        -6.685135,
+        -6.994523,
+        -7.4489,
+        -7.698117,
+        -7.721742,
+        -10.015258
+      ],
+      "ground_truth_count": 2,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 0,
+      "retrieved_relevant_in_top10": 0,
+      "metrics": {
+        "mrr": 0.0,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        }
+      },
+      "latency": {
+        "dense_ms": 29.27,
+        "rerank_ms": 205.28,
+        "total_ms": 234.55
+      }
+    },
+    {
+      "query_id": "eval011",
+      "query": "What palliative care options exist?",
+      "category": "ambiguous",
+      "expected_behavior": "answer",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0483",
+        "esc_hf_2021_chunk_0283",
+        "nice_hf_2018_chunk_0041",
+        "esc_hf_2021_chunk_0285",
+        "nice_hf_2018_chunk_0040",
+        "esc_hf_2021_chunk_0211",
+        "esc_hf_2021_chunk_0236",
+        "esc_hf_2021_chunk_0257",
+        "esc_hf_2021_chunk_0289",
+        "esc_hf_2021_chunk_0209",
+        "esc_hf_2021_chunk_0244",
+        "esc_hf_2021_chunk_0648",
+        "esc_hf_2021_chunk_0037",
+        "esc_hf_2021_chunk_0261",
+        "esc_hf_2021_chunk_0613",
+        "esc_hf_2021_chunk_0199",
+        "esc_hf_2021_chunk_0292",
+        "esc_hf_2021_chunk_0614",
+        "esc_hf_2021_chunk_0652",
+        "esc_hf_2021_chunk_0852"
+      ],
+      "retrieved_ce_scores": [
+        0.788366,
+        0.56879,
+        -0.954888,
+        -1.013094,
+        -1.16722,
+        -1.365071,
+        -1.910708,
+        -2.182868,
+        -2.367928,
+        -2.507037,
+        -3.256453,
+        -3.311415,
+        -3.530697,
+        -4.11413,
+        -6.084432,
+        -8.922035,
+        -10.466401,
+        -10.512818,
+        -11.077911,
+        -11.099272
+      ],
+      "ground_truth_count": 3,
+      "retrieved_relevant_in_top3": 1,
+      "retrieved_relevant_in_top5": 2,
+      "retrieved_relevant_in_top10": 2,
+      "metrics": {
+        "mrr": 0.3333333333333333,
+        "3": {
+          "precision": 0.3333,
+          "recall": 0.3333,
+          "f1": 0.3333,
+          "hit": 1.0,
+          "ndcg": 0.121
+        },
+        "5": {
+          "precision": 0.4,
+          "recall": 0.6667,
+          "f1": 0.5,
+          "hit": 1.0,
+          "ndcg": 0.402
+        },
+        "10": {
+          "precision": 0.2,
+          "recall": 0.6667,
+          "f1": 0.3077,
+          "hit": 1.0,
+          "ndcg": 0.402
+        }
+      },
+      "latency": {
+        "dense_ms": 36.49,
+        "rerank_ms": 167.14,
+        "total_ms": 203.64
+      }
+    },
+    {
+      "query_id": "eval012",
+      "query": "What is the best treatment for type 2 diabetes?",
+      "category": "out_of_scope",
+      "expected_behavior": "refuse",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0383",
+        "esc_hf_2023_focused_update_chunk_0013",
+        "esc_hf_2021_chunk_0384",
+        "esc_hf_2021_chunk_0742",
+        "esc_hf_2023_focused_update_chunk_0061",
+        "esc_hf_2021_chunk_0608",
+        "esc_hf_2021_chunk_0478",
+        "esc_hf_2023_focused_update_chunk_0049",
+        "esc_hf_2021_chunk_0735",
+        "esc_hf_2023_focused_update_chunk_0063",
+        "esc_hf_2021_chunk_0386",
+        "esc_hf_2021_chunk_0496",
+        "esc_hf_2021_chunk_0206",
+        "esc_hf_2021_chunk_0077",
+        "esc_hf_2021_chunk_0380",
+        "esc_hf_2021_chunk_0199",
+        "esc_hf_2023_focused_update_chunk_0051",
+        "esc_hf_2021_chunk_0204",
+        "esc_hf_2021_chunk_0499",
+        "esc_hf_2021_chunk_0426"
+      ],
+      "retrieved_ce_scores": [
+        1.742903,
+        0.81301,
+        -0.187763,
+        -0.678147,
+        -1.752024,
+        -2.143668,
+        -2.636507,
+        -2.70351,
+        -2.787579,
+        -2.854176,
+        -3.285567,
+        -4.694207,
+        -5.124623,
+        -5.358329,
+        -5.766572,
+        -6.811921,
+        -7.395476,
+        -7.809035,
+        -8.024471,
+        -10.380379
+      ],
+      "ground_truth_count": 0,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 0,
+      "retrieved_relevant_in_top10": 0,
+      "metrics": {
+        "mrr": 0.0,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        }
+      },
+      "latency": {
+        "dense_ms": 33.39,
+        "rerank_ms": 166.27,
+        "total_ms": 199.66
+      }
+    },
+    {
+      "query_id": "eval013",
+      "query": "How should I manage a patient with community-acquired pneumonia?",
+      "category": "out_of_scope",
+      "expected_behavior": "refuse",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0075",
+        "esc_hf_2021_chunk_0210",
+        "esc_hf_2021_chunk_0268",
+        "esc_hf_2021_chunk_0478",
+        "esc_hf_2021_chunk_0287",
+        "esc_hf_2021_chunk_0199",
+        "esc_hf_2021_chunk_0473",
+        "esc_hf_2021_chunk_0286",
+        "esc_hf_2021_chunk_0319",
+        "esc_hf_2021_chunk_0033",
+        "esc_hf_2023_focused_update_chunk_0014",
+        "esc_hf_2021_chunk_0434",
+        "esc_hf_2021_chunk_0290",
+        "esc_hf_2021_chunk_0274",
+        "esc_hf_2021_chunk_0218",
+        "esc_hf_2021_chunk_0029",
+        "esc_hf_2021_chunk_0326",
+        "esc_hf_2021_chunk_0285",
+        "esc_hf_2021_chunk_0020",
+        "esc_hf_2021_chunk_0461"
+      ],
+      "retrieved_ce_scores": [
+        -4.141447,
+        -6.821672,
+        -7.630018,
+        -7.979162,
+        -8.327631,
+        -8.476004,
+        -8.712119,
+        -8.956829,
+        -9.381444,
+        -9.459564,
+        -9.750452,
+        -9.797544,
+        -9.840092,
+        -9.871211,
+        -10.123147,
+        -10.153713,
+        -10.168157,
+        -10.196903,
+        -10.58053,
+        -10.747768
+      ],
+      "ground_truth_count": 0,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 0,
+      "retrieved_relevant_in_top10": 0,
+      "metrics": {
+        "mrr": 0.0,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        }
+      },
+      "latency": {
+        "dense_ms": 33.45,
+        "rerank_ms": 184.64,
+        "total_ms": 218.09
+      }
+    },
+    {
+      "query_id": "eval014",
+      "query": "What antibiotics are recommended for urinary tract infection?",
+      "category": "out_of_scope",
+      "expected_behavior": "refuse",
+      "retrieved_chunk_ids": [
+        "esc_hf_2023_focused_update_chunk_0063",
+        "esc_hf_2021_chunk_0152",
+        "esc_hf_2021_chunk_0412",
+        "esc_hf_2021_chunk_0413",
+        "esc_hf_2021_chunk_0304",
+        "esc_hf_2021_chunk_0199",
+        "esc_hf_2021_chunk_0077",
+        "esc_hf_2021_chunk_0125",
+        "esc_hf_2021_chunk_0184",
+        "esc_hf_2023_focused_update_chunk_0013",
+        "esc_hf_2021_chunk_0668",
+        "esc_hf_2021_chunk_0313",
+        "esc_hf_2021_chunk_0274",
+        "esc_hf_2021_chunk_0306",
+        "esc_hf_2021_chunk_0021",
+        "esc_hf_2021_chunk_0301",
+        "esc_hf_2023_focused_update_chunk_0041",
+        "esc_hf_2021_chunk_0560",
+        "esc_hf_2021_chunk_0789",
+        "esc_hf_2021_chunk_0666"
+      ],
+      "retrieved_ce_scores": [
+        -5.088808,
+        -5.710815,
+        -5.92176,
+        -6.371788,
+        -6.552981,
+        -6.74189,
+        -7.127717,
+        -7.798183,
+        -7.97122,
+        -8.568977,
+        -8.667471,
+        -8.897866,
+        -8.983315,
+        -9.085584,
+        -9.69696,
+        -9.799006,
+        -10.014908,
+        -10.246454,
+        -10.384664,
+        -10.427652
+      ],
+      "ground_truth_count": 0,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 0,
+      "retrieved_relevant_in_top10": 0,
+      "metrics": {
+        "mrr": 0.0,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        }
+      },
+      "latency": {
+        "dense_ms": 37.6,
+        "rerank_ms": 168.86,
+        "total_ms": 206.46
+      }
+    },
+    {
+      "query_id": "eval015",
+      "query": "What is the recommended screening protocol for breast cancer?",
+      "category": "out_of_scope",
+      "expected_behavior": "refuse",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0201",
+        "esc_hf_2021_chunk_0029",
+        "esc_hf_2021_chunk_0803",
+        "esc_hf_2021_chunk_0804",
+        "esc_hf_2021_chunk_0417",
+        "esc_hf_2021_chunk_0538",
+        "esc_hf_2021_chunk_0199",
+        "esc_hf_2021_chunk_0420",
+        "esc_hf_2021_chunk_0486",
+        "esc_hf_2021_chunk_0106",
+        "esc_hf_2021_chunk_0083",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2023_focused_update_chunk_0013",
+        "esc_hf_2021_chunk_0109",
+        "esc_hf_2021_chunk_0653",
+        "esc_hf_2023_focused_update_chunk_0061",
+        "esc_hf_2021_chunk_0837",
+        "esc_hf_2021_chunk_0205",
+        "esc_hf_2021_chunk_0536",
+        "esc_hf_2021_chunk_0105"
+      ],
+      "retrieved_ce_scores": [
+        -5.81204,
+        -6.38553,
+        -6.913322,
+        -7.151946,
+        -7.249847,
+        -7.490231,
+        -7.789931,
+        -7.909436,
+        -8.006506,
+        -8.368318,
+        -9.488351,
+        -9.571368,
+        -9.600992,
+        -10.084511,
+        -10.125917,
+        -10.285929,
+        -10.353706,
+        -10.702408,
+        -10.776888,
+        -10.907097
+      ],
+      "ground_truth_count": 0,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 0,
+      "retrieved_relevant_in_top10": 0,
+      "metrics": {
+        "mrr": 0.0,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        }
+      },
+      "latency": {
+        "dense_ms": 33.57,
+        "rerank_ms": 196.15,
+        "total_ms": 229.71
+      }
+    },
+    {
+      "query_id": "eval016",
+      "query": "How do I manage acute asthma exacerbations?",
+      "category": "out_of_scope",
+      "expected_behavior": "refuse",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0478",
+        "esc_hf_2021_chunk_0276",
+        "esc_hf_2021_chunk_0469",
+        "esc_hf_2021_chunk_0312",
+        "esc_hf_2021_chunk_0455",
+        "esc_hf_2021_chunk_0218",
+        "esc_hf_2021_chunk_0319",
+        "esc_hf_2021_chunk_0020",
+        "esc_hf_2021_chunk_0668",
+        "esc_hf_2021_chunk_0408",
+        "esc_hf_2021_chunk_0299",
+        "esc_hf_2021_chunk_0324",
+        "esc_hf_2021_chunk_0326",
+        "esc_hf_2021_chunk_0494",
+        "esc_hf_2021_chunk_0025",
+        "esc_hf_2021_chunk_0199",
+        "esc_hf_2021_chunk_0117",
+        "esc_hf_2021_chunk_0046",
+        "esc_hf_2021_chunk_0377",
+        "esc_hf_2021_chunk_0113"
+      ],
+      "retrieved_ce_scores": [
+        -7.589809,
+        -7.923055,
+        -8.689848,
+        -8.885977,
+        -9.436365,
+        -9.476315,
+        -9.51293,
+        -9.563905,
+        -9.596478,
+        -10.066308,
+        -10.108387,
+        -10.146807,
+        -10.234719,
+        -10.729177,
+        -10.768538,
+        -10.963608,
+        -11.026218,
+        -11.338812,
+        -11.363838,
+        -11.40062
+      ],
+      "ground_truth_count": 0,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 0,
+      "retrieved_relevant_in_top10": 0,
+      "metrics": {
+        "mrr": 0.0,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        }
+      },
+      "latency": {
+        "dense_ms": 29.75,
+        "rerank_ms": 171.56,
+        "total_ms": 201.31
+      }
+    },
+    {
+      "query_id": "eval017",
+      "query": "What is the recommended dose of warfarin for mechanical heart valve patients?",
+      "category": "insufficient_evidence",
+      "expected_behavior": "refuse_with_explanation",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0496",
+        "esc_hf_2021_chunk_0379",
+        "esc_hf_2021_chunk_0345",
+        "nice_hf_2018_chunk_0027",
+        "esc_hf_2021_chunk_0132",
+        "esc_hf_2023_focused_update_chunk_0026",
+        "esc_hf_2023_focused_update_chunk_0063",
+        "esc_hf_2021_chunk_0075",
+        "esc_hf_2021_chunk_0667",
+        "esc_hf_2021_chunk_0478",
+        "esc_hf_2021_chunk_0184",
+        "esc_hf_2023_focused_update_chunk_0061",
+        "esc_hf_2021_chunk_0670",
+        "esc_hf_2021_chunk_0372",
+        "nice_hf_2018_chunk_0057",
+        "esc_hf_2021_chunk_0466",
+        "esc_hf_2021_chunk_0146",
+        "esc_hf_2021_chunk_0772",
+        "esc_hf_2021_chunk_0336",
+        "esc_hf_2021_chunk_0593"
+      ],
+      "retrieved_ce_scores": [
+        -2.355307,
+        -2.359971,
+        -2.701527,
+        -2.735691,
+        -3.980109,
+        -4.318067,
+        -4.399389,
+        -4.606259,
+        -4.906957,
+        -5.059427,
+        -5.502248,
+        -6.586267,
+        -6.702103,
+        -6.887101,
+        -6.909407,
+        -8.057851,
+        -8.755563,
+        -9.092728,
+        -9.863548,
+        -10.149826
+      ],
+      "ground_truth_count": 0,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 0,
+      "retrieved_relevant_in_top10": 0,
+      "metrics": {
+        "mrr": 0.0,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        }
+      },
+      "latency": {
+        "dense_ms": 35.15,
+        "rerank_ms": 167.52,
+        "total_ms": 202.67
+      }
+    },
+    {
+      "query_id": "eval018",
+      "query": "What are the long-term outcomes of heart transplantation in patients over 70 years old?",
+      "category": "insufficient_evidence",
+      "expected_behavior": "refuse_with_explanation",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0251",
+        "esc_hf_2021_chunk_0254",
+        "esc_hf_2021_chunk_0240",
+        "esc_hf_2021_chunk_0492",
+        "esc_hf_2021_chunk_0245",
+        "esc_hf_2021_chunk_0074",
+        "esc_hf_2021_chunk_0261",
+        "esc_hf_2021_chunk_0638",
+        "esc_hf_2021_chunk_0643",
+        "esc_hf_2021_chunk_0639",
+        "esc_hf_2021_chunk_0457",
+        "esc_hf_2021_chunk_0783",
+        "esc_hf_2021_chunk_0732",
+        "esc_hf_2021_chunk_0646",
+        "esc_hf_2021_chunk_0671",
+        "esc_hf_2021_chunk_0019",
+        "esc_hf_2021_chunk_0650",
+        "esc_hf_2021_chunk_0594",
+        "esc_hf_2021_chunk_0645",
+        "esc_hf_2021_chunk_0542"
+      ],
+      "retrieved_ce_scores": [
+        4.213521,
+        0.117056,
+        -0.016542,
+        -2.079728,
+        -2.153189,
+        -2.159362,
+        -2.995054,
+        -3.607221,
+        -3.624283,
+        -5.440402,
+        -5.900253,
+        -6.226358,
+        -6.250752,
+        -6.25888,
+        -6.282849,
+        -6.45478,
+        -6.609879,
+        -6.968693,
+        -7.881197,
+        -10.510981
+      ],
+      "ground_truth_count": 2,
+      "retrieved_relevant_in_top3": 2,
+      "retrieved_relevant_in_top5": 2,
+      "retrieved_relevant_in_top10": 2,
+      "metrics": {
+        "mrr": 1.0,
+        "3": {
+          "precision": 0.6667,
+          "recall": 1.0,
+          "f1": 0.8,
+          "hit": 1.0,
+          "ndcg": 1.0
+        },
+        "5": {
+          "precision": 0.4,
+          "recall": 1.0,
+          "f1": 0.5714,
+          "hit": 1.0,
+          "ndcg": 1.0
+        },
+        "10": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "hit": 1.0,
+          "ndcg": 1.0
+        }
+      },
+      "latency": {
+        "dense_ms": 42.94,
+        "rerank_ms": 180.74,
+        "total_ms": 223.68
+      }
+    },
+    {
+      "query_id": "eval019",
+      "query": "What is the role of cardiac rehabilitation in heart failure with preserved ejection fraction specifically?",
+      "category": "insufficient_evidence",
+      "expected_behavior": "refuse_with_explanation",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0603",
+        "esc_hf_2021_chunk_0017",
+        "esc_hf_2021_chunk_0620",
+        "esc_hf_2021_chunk_0031",
+        "esc_hf_2021_chunk_0200",
+        "esc_hf_2021_chunk_0053",
+        "esc_hf_2023_focused_update_chunk_0018",
+        "nice_hf_2018_chunk_0031",
+        "nice_hf_2018_chunk_0042",
+        "esc_hf_2021_chunk_0032",
+        "esc_hf_2021_chunk_0042",
+        "esc_hf_2021_chunk_0592",
+        "esc_hf_2021_chunk_0619",
+        "esc_hf_2021_chunk_0070",
+        "nice_hf_2018_chunk_0039",
+        "esc_hf_2021_chunk_0617",
+        "esc_hf_2021_chunk_0541",
+        "esc_hf_2021_chunk_0227",
+        "esc_hf_2021_chunk_0616",
+        "esc_hf_2021_chunk_0221"
+      ],
+      "retrieved_ce_scores": [
+        4.72891,
+        4.365606,
+        3.983394,
+        3.591275,
+        3.501466,
+        3.303292,
+        3.303292,
+        1.99226,
+        1.522786,
+        1.381266,
+        1.358864,
+        -0.377116,
+        -1.512003,
+        -1.856878,
+        -2.217128,
+        -3.136368,
+        -3.245011,
+        -3.700918,
+        -7.349037,
+        -8.86664
+      ],
+      "ground_truth_count": 1,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 0,
+      "retrieved_relevant_in_top10": 0,
+      "metrics": {
+        "mrr": 0.06666666666666667,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        }
+      },
+      "latency": {
+        "dense_ms": 41.71,
+        "rerank_ms": 179.61,
+        "total_ms": 221.32
+      }
+    },
+    {
+      "query_id": "eval020",
+      "query": "How should I adjust diuretic doses in heart failure patients with severe hyponatremia?",
+      "category": "insufficient_evidence",
+      "expected_behavior": "refuse_with_explanation",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0777",
+        "esc_hf_2021_chunk_0285",
+        "esc_hf_2021_chunk_0306",
+        "nice_hf_2018_chunk_0034",
+        "esc_hf_2021_chunk_0667",
+        "esc_hf_2021_chunk_0302",
+        "nice_hf_2018_chunk_0027",
+        "esc_hf_2021_chunk_0137",
+        "esc_hf_2021_chunk_0405",
+        "esc_hf_2021_chunk_0465",
+        "esc_hf_2021_chunk_0301",
+        "esc_hf_2021_chunk_0400",
+        "esc_hf_2021_chunk_0782",
+        "nice_hf_2018_chunk_0030",
+        "esc_hf_2021_chunk_0666",
+        "esc_hf_2021_chunk_0397",
+        "esc_hf_2021_chunk_0404",
+        "esc_hf_2023_focused_update_chunk_0037",
+        "esc_hf_2021_chunk_0781",
+        "esc_hf_2021_chunk_0668"
+      ],
+      "retrieved_ce_scores": [
+        0.985757,
+        0.844243,
+        0.351498,
+        0.074481,
+        -0.854771,
+        -0.86302,
+        -0.989154,
+        -1.322734,
+        -1.535764,
+        -1.639275,
+        -1.808567,
+        -2.621339,
+        -2.878975,
+        -3.162794,
+        -3.412503,
+        -3.852372,
+        -5.213391,
+        -5.421735,
+        -6.253991,
+        -8.256489
+      ],
+      "ground_truth_count": 1,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 1,
+      "retrieved_relevant_in_top10": 1,
+      "metrics": {
+        "mrr": 0.25,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333,
+          "hit": 1.0,
+          "ndcg": 0.4307
+        },
+        "10": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f1": 0.1818,
+          "hit": 1.0,
+          "ndcg": 0.4307
+        }
+      },
+      "latency": {
+        "dense_ms": 41.43,
+        "rerank_ms": 183.28,
+        "total_ms": 224.71
+      }
+    },
+    {
+      "query_id": "eval021",
+      "query": "What is the evidence for omega-3 fatty acid supplementation in heart failure?",
+      "category": "insufficient_evidence",
+      "expected_behavior": "refuse_with_explanation",
+      "retrieved_chunk_ids": [
+        "esc_hf_2023_focused_update_chunk_0025",
+        "esc_hf_2021_chunk_0789",
+        "nice_hf_2018_chunk_0054",
+        "esc_hf_2021_chunk_0792",
+        "esc_hf_2021_chunk_0791",
+        "esc_hf_2021_chunk_0771",
+        "esc_hf_2021_chunk_0562",
+        "esc_hf_2021_chunk_0666",
+        "esc_hf_2021_chunk_0516",
+        "esc_hf_2021_chunk_0601",
+        "esc_hf_2021_chunk_0610",
+        "esc_hf_2021_chunk_0607",
+        "esc_hf_2021_chunk_0620",
+        "esc_hf_2021_chunk_0732",
+        "esc_hf_2021_chunk_0736",
+        "esc_hf_2021_chunk_0541",
+        "esc_hf_2021_chunk_0652",
+        "esc_hf_2021_chunk_0602",
+        "esc_hf_2021_chunk_0593",
+        "esc_hf_2023_focused_update_chunk_0068"
+      ],
+      "retrieved_ce_scores": [
+        -3.646545,
+        -4.356753,
+        -4.357263,
+        -5.842402,
+        -6.129996,
+        -6.213381,
+        -6.272586,
+        -6.383359,
+        -6.444113,
+        -6.597067,
+        -6.96293,
+        -7.041041,
+        -7.552932,
+        -7.660532,
+        -7.891659,
+        -7.956063,
+        -7.987149,
+        -8.103862,
+        -8.108112,
+        -8.113918
+      ],
+      "ground_truth_count": 0,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 0,
+      "retrieved_relevant_in_top10": 0,
+      "metrics": {
+        "mrr": 0.0,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        }
+      },
+      "latency": {
+        "dense_ms": 39.08,
+        "rerank_ms": 171.87,
+        "total_ms": 210.96
+      }
+    },
+    {
+      "query_id": "eval022",
+      "query": "What are the pharmacological treatments for HFrEF and how should device therapy be considered?",
+      "category": "multi_part",
+      "expected_behavior": "answer_both_parts",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0119",
+        "esc_hf_2021_chunk_0085",
+        "esc_hf_2021_chunk_0477",
+        "esc_hf_2021_chunk_0254",
+        "esc_hf_2021_chunk_0120",
+        "esc_hf_2021_chunk_0378",
+        "esc_hf_2021_chunk_0376",
+        "esc_hf_2021_chunk_0455",
+        "esc_hf_2021_chunk_0491",
+        "esc_hf_2021_chunk_0495",
+        "esc_hf_2021_chunk_0176",
+        "esc_hf_2021_chunk_0350",
+        "esc_hf_2021_chunk_0482",
+        "esc_hf_2021_chunk_0487",
+        "esc_hf_2021_chunk_0118",
+        "esc_hf_2021_chunk_0191",
+        "esc_hf_2023_focused_update_chunk_0028",
+        "esc_hf_2023_focused_update_chunk_0054",
+        "esc_hf_2023_focused_update_chunk_0037",
+        "esc_hf_2021_chunk_0125"
+      ],
+      "retrieved_ce_scores": [
+        6.483202,
+        4.224334,
+        3.81812,
+        2.840044,
+        2.726989,
+        2.35079,
+        2.207677,
+        0.544151,
+        0.136821,
+        -0.169084,
+        -0.447803,
+        -0.535245,
+        -0.955716,
+        -0.991479,
+        -1.622958,
+        -2.66802,
+        -3.749743,
+        -4.143847,
+        -6.211226,
+        -9.494308
+      ],
+      "ground_truth_count": 5,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 0,
+      "retrieved_relevant_in_top10": 0,
+      "metrics": {
+        "mrr": 0.0,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        }
+      },
+      "latency": {
+        "dense_ms": 45.73,
+        "rerank_ms": 175.49,
+        "total_ms": 221.23
+      }
+    },
+    {
+      "query_id": "eval023",
+      "query": "How should beta-blockers be initiated and what are the monitoring requirements?",
+      "category": "multi_part",
+      "expected_behavior": "answer_both_parts",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0126",
+        "nice_hf_2018_chunk_0053",
+        "esc_hf_2021_chunk_0347",
+        "nice_hf_2018_chunk_0032",
+        "esc_hf_2021_chunk_0089",
+        "esc_hf_2021_chunk_0329",
+        "esc_hf_2021_chunk_0320",
+        "esc_hf_2021_chunk_0349",
+        "esc_hf_2023_focused_update_chunk_0046",
+        "esc_hf_2021_chunk_0425",
+        "esc_hf_2021_chunk_0081",
+        "esc_hf_2021_chunk_0180",
+        "nice_hf_2018_chunk_0057",
+        "esc_hf_2021_chunk_0690",
+        "esc_hf_2021_chunk_0693",
+        "esc_hf_2021_chunk_0351",
+        "esc_hf_2021_chunk_0130",
+        "nice_hf_2018_chunk_0028",
+        "esc_hf_2023_focused_update_chunk_0045",
+        "nice_hf_2018_chunk_0029"
+      ],
+      "retrieved_ce_scores": [
+        3.989365,
+        3.157121,
+        0.476873,
+        -1.876129,
+        -1.910342,
+        -3.048798,
+        -3.101492,
+        -3.477734,
+        -3.712104,
+        -3.762121,
+        -4.408064,
+        -4.677019,
+        -4.688562,
+        -5.01953,
+        -5.067487,
+        -5.834112,
+        -7.755768,
+        -8.783209,
+        -9.919447,
+        -10.25679
+      ],
+      "ground_truth_count": 4,
+      "retrieved_relevant_in_top3": 1,
+      "retrieved_relevant_in_top5": 2,
+      "retrieved_relevant_in_top10": 2,
+      "metrics": {
+        "mrr": 1.0,
+        "3": {
+          "precision": 0.3333,
+          "recall": 0.25,
+          "f1": 0.2857,
+          "hit": 1.0,
+          "ndcg": 0.1854
+        },
+        "5": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1": 0.4444,
+          "hit": 1.0,
+          "ndcg": 0.3936
+        },
+        "10": {
+          "precision": 0.2,
+          "recall": 0.5,
+          "f1": 0.2857,
+          "hit": 1.0,
+          "ndcg": 0.3936
+        }
+      },
+      "latency": {
+        "dense_ms": 40.43,
+        "rerank_ms": 172.94,
+        "total_ms": 213.37
+      }
+    },
+    {
+      "query_id": "eval024",
+      "query": "What is the management approach for atrial fibrillation in heart failure and what rate control targets should be achieved?",
+      "category": "multi_part",
+      "expected_behavior": "answer_both_parts",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0327",
+        "esc_hf_2021_chunk_0042",
+        "esc_hf_2021_chunk_0059",
+        "esc_hf_2021_chunk_0699",
+        "esc_hf_2021_chunk_0335",
+        "esc_hf_2021_chunk_0695",
+        "esc_hf_2021_chunk_0692",
+        "esc_hf_2021_chunk_0697",
+        "esc_hf_2021_chunk_0678",
+        "esc_hf_2021_chunk_0698",
+        "esc_hf_2021_chunk_0031",
+        "esc_hf_2021_chunk_0044",
+        "esc_hf_2021_chunk_0071",
+        "esc_hf_2021_chunk_0694",
+        "esc_hf_2021_chunk_0151",
+        "esc_hf_2021_chunk_0339",
+        "esc_hf_2021_chunk_0704",
+        "esc_hf_2021_chunk_0689",
+        "esc_hf_2021_chunk_0014",
+        "esc_hf_2021_chunk_0089"
+      ],
+      "retrieved_ce_scores": [
+        1.338112,
+        0.843824,
+        0.839546,
+        0.013076,
+        -0.101448,
+        -0.778005,
+        -0.986387,
+        -1.376484,
+        -1.415927,
+        -1.475705,
+        -1.827894,
+        -1.985444,
+        -2.852649,
+        -3.228475,
+        -3.623111,
+        -3.953396,
+        -4.018168,
+        -4.187785,
+        -4.460308,
+        -4.85575
+      ],
+      "ground_truth_count": 4,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 1,
+      "retrieved_relevant_in_top10": 1,
+      "metrics": {
+        "mrr": 0.2,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.2,
+          "recall": 0.25,
+          "f1": 0.2222,
+          "hit": 1.0,
+          "ndcg": 0.0664
+        },
+        "10": {
+          "precision": 0.1,
+          "recall": 0.25,
+          "f1": 0.1429,
+          "hit": 1.0,
+          "ndcg": 0.0664
+        }
+      },
+      "latency": {
+        "dense_ms": 35.06,
+        "rerank_ms": 201.67,
+        "total_ms": 236.73
+      }
+    },
+    {
+      "query_id": "eval025",
+      "query": "What are the diagnostic criteria for heart failure and what imaging investigations are recommended?",
+      "category": "multi_part",
+      "expected_behavior": "answer_both_parts",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0263",
+        "esc_hf_2021_chunk_0030",
+        "esc_hf_2021_chunk_0103",
+        "esc_hf_2021_chunk_0233",
+        "nice_hf_2018_chunk_0019",
+        "nice_hf_2018_chunk_0016",
+        "esc_hf_2021_chunk_0118",
+        "esc_hf_2021_chunk_0461",
+        "esc_hf_2021_chunk_0102",
+        "esc_hf_2021_chunk_0532",
+        "esc_hf_2021_chunk_0070",
+        "esc_hf_2021_chunk_0265",
+        "esc_hf_2021_chunk_0106",
+        "esc_hf_2021_chunk_0108",
+        "esc_hf_2021_chunk_0177",
+        "nice_hf_2018_chunk_0033",
+        "esc_hf_2021_chunk_0659",
+        "esc_hf_2021_chunk_0486",
+        "esc_hf_2021_chunk_0465",
+        "esc_hf_2021_chunk_0476"
+      ],
+      "retrieved_ce_scores": [
+        3.42516,
+        1.466226,
+        1.157121,
+        -0.493425,
+        -0.582755,
+        -0.72161,
+        -0.845814,
+        -1.607957,
+        -2.030466,
+        -2.34667,
+        -2.398515,
+        -2.462753,
+        -4.086801,
+        -4.224587,
+        -4.257085,
+        -4.889455,
+        -5.286551,
+        -5.409696,
+        -5.913248,
+        -10.075062
+      ],
+      "ground_truth_count": 3,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 1,
+      "retrieved_relevant_in_top10": 2,
+      "metrics": {
+        "mrr": 0.2,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.2,
+          "recall": 0.3333,
+          "f1": 0.25,
+          "hit": 1.0,
+          "ndcg": 0.0717
+        },
+        "10": {
+          "precision": 0.2,
+          "recall": 0.6667,
+          "f1": 0.3077,
+          "hit": 1.0,
+          "ndcg": 0.2699
+        }
+      },
+      "latency": {
+        "dense_ms": 48.5,
+        "rerank_ms": 169.84,
+        "total_ms": 218.34
+      }
+    },
+    {
+      "query_id": "eval026",
+      "query": "What is the starting dose of carvedilol for a patient with HFrEF?",
+      "category": "high_risk",
+      "expected_behavior": "cautious_answer_with_source",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0352",
+        "esc_hf_2021_chunk_0502",
+        "esc_hf_2021_chunk_0120",
+        "esc_hf_2021_chunk_0376",
+        "esc_hf_2021_chunk_0320",
+        "esc_hf_2021_chunk_0126",
+        "esc_hf_2021_chunk_0133",
+        "esc_hf_2021_chunk_0349",
+        "esc_hf_2021_chunk_0378",
+        "esc_hf_2021_chunk_0350",
+        "esc_hf_2021_chunk_0477",
+        "esc_hf_2021_chunk_0124",
+        "esc_hf_2021_chunk_0338",
+        "esc_hf_2021_chunk_0191",
+        "esc_hf_2023_focused_update_chunk_0028",
+        "esc_hf_2021_chunk_0503",
+        "esc_hf_2021_chunk_0053",
+        "esc_hf_2023_focused_update_chunk_0018",
+        "esc_hf_2021_chunk_0347",
+        "esc_hf_2021_chunk_0125"
+      ],
+      "retrieved_ce_scores": [
+        1.548034,
+        0.575252,
+        -0.24253,
+        -0.736865,
+        -1.143858,
+        -1.458983,
+        -1.499159,
+        -1.553087,
+        -1.625615,
+        -1.70815,
+        -1.717827,
+        -1.852268,
+        -2.319597,
+        -2.607522,
+        -2.851001,
+        -3.2819,
+        -6.551863,
+        -6.551863,
+        -7.350113,
+        -9.178168
+      ],
+      "ground_truth_count": 2,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 0,
+      "retrieved_relevant_in_top10": 1,
+      "metrics": {
+        "mrr": 0.16666666666666666,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.1,
+          "recall": 0.5,
+          "f1": 0.1667,
+          "hit": 1.0,
+          "ndcg": 0.0981
+        }
+      },
+      "latency": {
+        "dense_ms": 36.78,
+        "rerank_ms": 180.21,
+        "total_ms": 216.98
+      }
+    },
+    {
+      "query_id": "eval027",
+      "query": "How much sacubitril/valsartan should I give to a patient transitioning from enalapril?",
+      "category": "high_risk",
+      "expected_behavior": "cautious_answer_with_source",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0128",
+        "esc_hf_2021_chunk_0133",
+        "esc_hf_2021_chunk_0553",
+        "esc_hf_2021_chunk_0399",
+        "esc_hf_2021_chunk_0545",
+        "esc_hf_2021_chunk_0183",
+        "esc_hf_2021_chunk_0552",
+        "esc_hf_2021_chunk_0197",
+        "esc_hf_2021_chunk_0853",
+        "esc_hf_2021_chunk_0132",
+        "esc_hf_2021_chunk_0561",
+        "esc_hf_2021_chunk_0306",
+        "nice_hf_2018_chunk_0046",
+        "nice_hf_2018_chunk_0027",
+        "nice_hf_2018_chunk_0030",
+        "nice_hf_2018_chunk_0029",
+        "nice_hf_2018_chunk_0021",
+        "esc_hf_2021_chunk_0320",
+        "esc_hf_2021_chunk_0667",
+        "esc_hf_2021_chunk_0772"
+      ],
+      "retrieved_ce_scores": [
+        3.076354,
+        2.355923,
+        -0.172933,
+        -0.330416,
+        -1.627912,
+        -2.006546,
+        -2.254004,
+        -2.459308,
+        -3.2443,
+        -5.250432,
+        -9.055923,
+        -9.468209,
+        -9.511883,
+        -9.997818,
+        -10.141089,
+        -10.248985,
+        -10.532797,
+        -10.669962,
+        -10.831167,
+        -11.264843
+      ],
+      "ground_truth_count": 2,
+      "retrieved_relevant_in_top3": 1,
+      "retrieved_relevant_in_top5": 1,
+      "retrieved_relevant_in_top10": 1,
+      "metrics": {
+        "mrr": 0.5,
+        "3": {
+          "precision": 0.3333,
+          "recall": 0.5,
+          "f1": 0.4,
+          "hit": 1.0,
+          "ndcg": 0.5213
+        },
+        "5": {
+          "precision": 0.2,
+          "recall": 0.5,
+          "f1": 0.2857,
+          "hit": 1.0,
+          "ndcg": 0.5213
+        },
+        "10": {
+          "precision": 0.1,
+          "recall": 0.5,
+          "f1": 0.1667,
+          "hit": 1.0,
+          "ndcg": 0.5213
+        }
+      },
+      "latency": {
+        "dense_ms": 39.23,
+        "rerank_ms": 165.38,
+        "total_ms": 204.61
+      }
+    },
+    {
+      "query_id": "eval028",
+      "query": "What IV iron dose should be given for iron deficiency in heart failure?",
+      "category": "high_risk",
+      "expected_behavior": "cautious_answer_with_source",
+      "retrieved_chunk_ids": [
+        "nice_hf_2018_chunk_0048",
+        "esc_hf_2023_focused_update_chunk_0069",
+        "esc_hf_2021_chunk_0398",
+        "nice_hf_2018_chunk_0044",
+        "nice_hf_2018_chunk_0022",
+        "esc_hf_2023_focused_update_chunk_0058",
+        "esc_hf_2023_focused_update_chunk_0019",
+        "esc_hf_2023_focused_update_chunk_0065",
+        "esc_hf_2023_focused_update_chunk_0014",
+        "esc_hf_2023_focused_update_chunk_0068",
+        "esc_hf_2023_focused_update_chunk_0087",
+        "esc_hf_2021_chunk_0760",
+        "esc_hf_2023_focused_update_chunk_0086",
+        "esc_hf_2021_chunk_0754",
+        "esc_hf_2021_chunk_0756",
+        "esc_hf_2023_focused_update_chunk_0088",
+        "esc_hf_2021_chunk_0761",
+        "esc_hf_2023_focused_update_chunk_0076",
+        "esc_hf_2023_focused_update_chunk_0064",
+        "nice_hf_2018_chunk_0027"
+      ],
+      "retrieved_ce_scores": [
+        3.949259,
+        3.126912,
+        2.652997,
+        2.277951,
+        2.144313,
+        2.01586,
+        1.428242,
+        1.01215,
+        0.434545,
+        0.307423,
+        0.097974,
+        -0.341338,
+        -0.641173,
+        -1.148687,
+        -1.229512,
+        -1.662302,
+        -1.959648,
+        -2.106503,
+        -2.642377,
+        -3.012274
+      ],
+      "ground_truth_count": 3,
+      "retrieved_relevant_in_top3": 1,
+      "retrieved_relevant_in_top5": 1,
+      "retrieved_relevant_in_top10": 3,
+      "metrics": {
+        "mrr": 0.5,
+        "3": {
+          "precision": 0.3333,
+          "recall": 0.3333,
+          "f1": 0.3333,
+          "hit": 1.0,
+          "ndcg": 0.4582
+        },
+        "5": {
+          "precision": 0.2,
+          "recall": 0.3333,
+          "f1": 0.25,
+          "hit": 1.0,
+          "ndcg": 0.4582
+        },
+        "10": {
+          "precision": 0.3,
+          "recall": 1.0,
+          "f1": 0.4615,
+          "hit": 1.0,
+          "ndcg": 0.6074
+        }
+      },
+      "latency": {
+        "dense_ms": 38.0,
+        "rerank_ms": 172.63,
+        "total_ms": 210.63
+      }
+    },
+    {
+      "query_id": "eval029",
+      "query": "A patient with HFrEF has taken a double dose of their beta-blocker. What should I do?",
+      "category": "high_risk",
+      "expected_behavior": "refuse_escalate",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0126",
+        "esc_hf_2021_chunk_0120",
+        "esc_hf_2021_chunk_0349",
+        "esc_hf_2021_chunk_0320",
+        "esc_hf_2021_chunk_0477",
+        "esc_hf_2021_chunk_0137",
+        "esc_hf_2021_chunk_0338",
+        "esc_hf_2021_chunk_0089",
+        "esc_hf_2021_chunk_0347",
+        "esc_hf_2021_chunk_0350",
+        "esc_hf_2021_chunk_0197",
+        "esc_hf_2021_chunk_0123",
+        "esc_hf_2021_chunk_0133",
+        "esc_hf_2023_focused_update_chunk_0046",
+        "esc_hf_2021_chunk_0495",
+        "esc_hf_2021_chunk_0503",
+        "esc_hf_2023_focused_update_chunk_0028",
+        "esc_hf_2021_chunk_0329",
+        "esc_hf_2021_chunk_0125",
+        "esc_hf_2021_chunk_0499"
+      ],
+      "retrieved_ce_scores": [
+        4.304814,
+        4.069301,
+        2.866481,
+        2.165917,
+        1.902096,
+        1.739436,
+        1.407045,
+        0.523329,
+        -0.037752,
+        -0.714614,
+        -1.183403,
+        -1.297172,
+        -1.7751,
+        -2.2118,
+        -2.241961,
+        -2.579279,
+        -3.250495,
+        -4.666106,
+        -7.441325,
+        -9.164085
+      ],
+      "ground_truth_count": 2,
+      "retrieved_relevant_in_top3": 1,
+      "retrieved_relevant_in_top5": 1,
+      "retrieved_relevant_in_top10": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "3": {
+          "precision": 0.3333,
+          "recall": 0.5,
+          "f1": 0.4,
+          "hit": 1.0,
+          "ndcg": 0.6131
+        },
+        "5": {
+          "precision": 0.2,
+          "recall": 0.5,
+          "f1": 0.2857,
+          "hit": 1.0,
+          "ndcg": 0.6131
+        },
+        "10": {
+          "precision": 0.1,
+          "recall": 0.5,
+          "f1": 0.1667,
+          "hit": 1.0,
+          "ndcg": 0.6131
+        }
+      },
+      "latency": {
+        "dense_ms": 41.09,
+        "rerank_ms": 197.72,
+        "total_ms": 238.81
+      }
+    },
+    {
+      "query_id": "eval030",
+      "query": "How do I manage acute pulmonary oedema in the emergency department?",
+      "category": "high_risk",
+      "expected_behavior": "cautious_answer_with_source",
+      "retrieved_chunk_ids": [
+        "esc_hf_2021_chunk_0276",
+        "esc_hf_2021_chunk_0289",
+        "esc_hf_2021_chunk_0020",
+        "esc_hf_2021_chunk_0287",
+        "esc_hf_2021_chunk_0305",
+        "esc_hf_2021_chunk_0658",
+        "esc_hf_2021_chunk_0290",
+        "esc_hf_2021_chunk_0086",
+        "esc_hf_2021_chunk_0275",
+        "esc_hf_2023_focused_update_chunk_0040",
+        "esc_hf_2021_chunk_0676",
+        "esc_hf_2021_chunk_0285",
+        "esc_hf_2021_chunk_0493",
+        "esc_hf_2021_chunk_0319",
+        "esc_hf_2021_chunk_0117",
+        "esc_hf_2021_chunk_0312",
+        "esc_hf_2021_chunk_0494",
+        "esc_hf_2021_chunk_0299",
+        "esc_hf_2021_chunk_0274",
+        "esc_hf_2021_chunk_0263"
+      ],
+      "retrieved_ce_scores": [
+        0.338113,
+        0.058839,
+        -2.414073,
+        -3.259733,
+        -3.843484,
+        -4.010974,
+        -4.511816,
+        -5.138892,
+        -5.346978,
+        -5.854262,
+        -6.069489,
+        -6.446076,
+        -7.855376,
+        -7.892809,
+        -7.983924,
+        -8.623039,
+        -9.649844,
+        -9.771991,
+        -10.263261,
+        -11.233417
+      ],
+      "ground_truth_count": 2,
+      "retrieved_relevant_in_top3": 0,
+      "retrieved_relevant_in_top5": 0,
+      "retrieved_relevant_in_top10": 0,
+      "metrics": {
+        "mrr": 0.0,
+        "3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "5": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        },
+        "10": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "hit": 0.0,
+          "ndcg": 0.0
+        }
+      },
+      "latency": {
+        "dense_ms": 34.38,
+        "rerank_ms": 173.52,
+        "total_ms": 207.9
+      }
+    }
+  ]
+}

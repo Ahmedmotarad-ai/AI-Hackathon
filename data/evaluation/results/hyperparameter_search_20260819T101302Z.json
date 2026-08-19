@@ -1,0 +1,1594 @@
+{
+  "experiment": "Hyperparameter Search: Retrieval Pipeline",
+  "description": "Grid search over candidate_k, query_prefix, ce_max_length",
+  "search_space": {
+    "candidate_k": [
+      20,
+      50,
+      75
+    ],
+    "query_prefix": [
+      "",
+      "Represent this sentence for searching relevant passages: ",
+      "query: "
+    ],
+    "ce_max_length": [
+      128,
+      512
+    ]
+  },
+  "primary_metric": "nDCG@5",
+  "evaluation_timestamp": "20260819T101302Z",
+  "total_configs": 18,
+  "total_queries": 30,
+  "total_evaluations": 540,
+  "wall_time_s": 247.58,
+  "ranked_results": [
+    {
+      "rank": 1,
+      "config": {
+        "candidate_k": 20,
+        "query_prefix": "query: ",
+        "ce_max_length": 512
+      },
+      "nDCG@5": 0.4382,
+      "MRR": 0.7864,
+      "P@1": 0.6667,
+      "latency_mean_ms": 227.32,
+      "wall_time_s": 12.39
+    },
+    {
+      "rank": 2,
+      "config": {
+        "candidate_k": 50,
+        "query_prefix": "Represent this sentence for searching relevant passages: ",
+        "ce_max_length": 512
+      },
+      "nDCG@5": 0.4282,
+      "MRR": 0.8017,
+      "P@1": 0.7,
+      "latency_mean_ms": 446.97,
+      "wall_time_s": 18.52
+    },
+    {
+      "rank": 3,
+      "config": {
+        "candidate_k": 20,
+        "query_prefix": "",
+        "ce_max_length": 512
+      },
+      "nDCG@5": 0.425,
+      "MRR": 0.7806,
+      "P@1": 0.6667,
+      "latency_mean_ms": 229.95,
+      "wall_time_s": 12.24
+    },
+    {
+      "rank": 4,
+      "config": {
+        "candidate_k": 50,
+        "query_prefix": "",
+        "ce_max_length": 512
+      },
+      "nDCG@5": 0.4247,
+      "MRR": 0.7917,
+      "P@1": 0.6667,
+      "latency_mean_ms": 450.21,
+      "wall_time_s": 18.72
+    },
+    {
+      "rank": 5,
+      "config": {
+        "candidate_k": 50,
+        "query_prefix": "query: ",
+        "ce_max_length": 512
+      },
+      "nDCG@5": 0.4247,
+      "MRR": 0.7918,
+      "P@1": 0.6667,
+      "latency_mean_ms": 458.47,
+      "wall_time_s": 18.91
+    },
+    {
+      "rank": 6,
+      "config": {
+        "candidate_k": 20,
+        "query_prefix": "Represent this sentence for searching relevant passages: ",
+        "ce_max_length": 512
+      },
+      "nDCG@5": 0.4207,
+      "MRR": 0.7733,
+      "P@1": 0.6667,
+      "latency_mean_ms": 226.36,
+      "wall_time_s": 11.94
+    },
+    {
+      "rank": 7,
+      "config": {
+        "candidate_k": 75,
+        "query_prefix": "",
+        "ce_max_length": 512
+      },
+      "nDCG@5": 0.4184,
+      "MRR": 0.785,
+      "P@1": 0.6667,
+      "latency_mean_ms": 592.72,
+      "wall_time_s": 23.09
+    },
+    {
+      "rank": 8,
+      "config": {
+        "candidate_k": 75,
+        "query_prefix": "query: ",
+        "ce_max_length": 512
+      },
+      "nDCG@5": 0.4184,
+      "MRR": 0.785,
+      "P@1": 0.6667,
+      "latency_mean_ms": 593.17,
+      "wall_time_s": 23.09
+    },
+    {
+      "rank": 9,
+      "config": {
+        "candidate_k": 75,
+        "query_prefix": "Represent this sentence for searching relevant passages: ",
+        "ce_max_length": 512
+      },
+      "nDCG@5": 0.418,
+      "MRR": 0.785,
+      "P@1": 0.6667,
+      "latency_mean_ms": 589.41,
+      "wall_time_s": 23.02
+    },
+    {
+      "rank": 10,
+      "config": {
+        "candidate_k": 50,
+        "query_prefix": "",
+        "ce_max_length": 128
+      },
+      "nDCG@5": 0.3628,
+      "MRR": 0.6547,
+      "P@1": 0.5,
+      "latency_mean_ms": 142.28,
+      "wall_time_s": 9.52
+    },
+    {
+      "rank": 11,
+      "config": {
+        "candidate_k": 20,
+        "query_prefix": "",
+        "ce_max_length": 128
+      },
+      "nDCG@5": 0.3614,
+      "MRR": 0.6728,
+      "P@1": 0.5333,
+      "latency_mean_ms": 110.79,
+      "wall_time_s": 8.99
+    },
+    {
+      "rank": 12,
+      "config": {
+        "candidate_k": 50,
+        "query_prefix": "Represent this sentence for searching relevant passages: ",
+        "ce_max_length": 128
+      },
+      "nDCG@5": 0.3602,
+      "MRR": 0.6412,
+      "P@1": 0.4667,
+      "latency_mean_ms": 130.76,
+      "wall_time_s": 10.09
+    },
+    {
+      "rank": 13,
+      "config": {
+        "candidate_k": 50,
+        "query_prefix": "query: ",
+        "ce_max_length": 128
+      },
+      "nDCG@5": 0.3581,
+      "MRR": 0.6536,
+      "P@1": 0.5,
+      "latency_mean_ms": 137.59,
+      "wall_time_s": 10.02
+    },
+    {
+      "rank": 14,
+      "config": {
+        "candidate_k": 20,
+        "query_prefix": "query: ",
+        "ce_max_length": 128
+      },
+      "nDCG@5": 0.3538,
+      "MRR": 0.6573,
+      "P@1": 0.5,
+      "latency_mean_ms": 89.65,
+      "wall_time_s": 7.79
+    },
+    {
+      "rank": 15,
+      "config": {
+        "candidate_k": 75,
+        "query_prefix": "",
+        "ce_max_length": 128
+      },
+      "nDCG@5": 0.3528,
+      "MRR": 0.6378,
+      "P@1": 0.4667,
+      "latency_mean_ms": 168.09,
+      "wall_time_s": 10.95
+    },
+    {
+      "rank": 16,
+      "config": {
+        "candidate_k": 75,
+        "query_prefix": "query: ",
+        "ce_max_length": 128
+      },
+      "nDCG@5": 0.3507,
+      "MRR": 0.635,
+      "P@1": 0.4667,
+      "latency_mean_ms": 176.53,
+      "wall_time_s": 10.41
+    },
+    {
+      "rank": 17,
+      "config": {
+        "candidate_k": 20,
+        "query_prefix": "Represent this sentence for searching relevant passages: ",
+        "ce_max_length": 128
+      },
+      "nDCG@5": 0.3497,
+      "MRR": 0.6537,
+      "P@1": 0.5,
+      "latency_mean_ms": 80.43,
+      "wall_time_s": 7.62
+    },
+    {
+      "rank": 18,
+      "config": {
+        "candidate_k": 75,
+        "query_prefix": "Represent this sentence for searching relevant passages: ",
+        "ce_max_length": 128
+      },
+      "nDCG@5": 0.3442,
+      "MRR": 0.6365,
+      "P@1": 0.4667,
+      "latency_mean_ms": 168.62,
+      "wall_time_s": 10.27
+    }
+  ],
+  "best_config": {
+    "candidate_k": 20,
+    "query_prefix": "query: ",
+    "ce_max_length": 512
+  },
+  "best_metrics": {
+    "nDCG@5": 0.4382,
+    "MRR": 0.7864,
+    "P@1": 0.6667
+  },
+  "best_latency": {
+    "mean": 227.32,
+    "median": 215.5,
+    "min": 203.46,
+    "max": 470.94
+  },
+  "full_results": [
+    {
+      "config": {
+        "candidate_k": 20,
+        "query_prefix": "query: ",
+        "ce_max_length": 512
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.6666666666666666,
+          "recall": 0.12693265703769904,
+          "hit_rate": 0.6666666666666666,
+          "ndcg": 0.5333333333333333
+        },
+        "3": {
+          "precision": 0.5222222222222223,
+          "recall": 0.2056200654012158,
+          "hit_rate": 0.8666666666666667,
+          "ndcg": 0.4554511031965029
+        },
+        "5": {
+          "precision": 0.46,
+          "recall": 0.2521521811356642,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.43816682531402645
+        },
+        "10": {
+          "precision": 0.34,
+          "recall": 0.3122916588675064,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.42209453235794275
+        },
+        "mrr": 0.7863636363636364
+      },
+      "latency": {
+        "mean": 227.32,
+        "median": 215.5,
+        "min": 203.46,
+        "max": 470.94
+      },
+      "wall_time_s": 12.39,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 50,
+        "query_prefix": "Represent this sentence for searching relevant passages: ",
+        "ce_max_length": 512
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.7,
+          "recall": 0.12774566516778035,
+          "hit_rate": 0.7,
+          "ndcg": 0.5666666666666667
+        },
+        "3": {
+          "precision": 0.5111111111111111,
+          "recall": 0.2063867772350008,
+          "hit_rate": 0.8666666666666667,
+          "ndcg": 0.45867933657579896
+        },
+        "5": {
+          "precision": 0.42,
+          "recall": 0.24142246436173082,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.42819105160892856
+        },
+        "10": {
+          "precision": 0.35,
+          "recall": 0.3122259527516982,
+          "hit_rate": 0.9666666666666667,
+          "ndcg": 0.43266434824984595
+        },
+        "mrr": 0.8016666666666666
+      },
+      "latency": {
+        "mean": 446.97,
+        "median": 460.92,
+        "min": 368.05,
+        "max": 562.34
+      },
+      "wall_time_s": 18.52,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 20,
+        "query_prefix": "",
+        "ce_max_length": 512
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.6666666666666666,
+          "recall": 0.12693265703769904,
+          "hit_rate": 0.6666666666666666,
+          "ndcg": 0.5333333333333333
+        },
+        "3": {
+          "precision": 0.5333333333333333,
+          "recall": 0.21228673206788246,
+          "hit_rate": 0.8666666666666667,
+          "ndcg": 0.4588030124514275
+        },
+        "5": {
+          "precision": 0.43333333333333335,
+          "recall": 0.24490891514239818,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.42503447212080253
+        },
+        "10": {
+          "precision": 0.33666666666666667,
+          "recall": 0.31280484076861936,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.4194572568512174
+        },
+        "mrr": 0.7805555555555556
+      },
+      "latency": {
+        "mean": 229.95,
+        "median": 213.97,
+        "min": 200.03,
+        "max": 521.39
+      },
+      "wall_time_s": 12.24,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 50,
+        "query_prefix": "",
+        "ce_max_length": 512
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.6666666666666666,
+          "recall": 0.12693265703769904,
+          "hit_rate": 0.6666666666666666,
+          "ndcg": 0.5333333333333333
+        },
+        "3": {
+          "precision": 0.5333333333333333,
+          "recall": 0.20961953585569046,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.46333452554107496
+        },
+        "5": {
+          "precision": 0.42,
+          "recall": 0.24246130808350136,
+          "hit_rate": 0.9666666666666667,
+          "ndcg": 0.4247332587744665
+        },
+        "10": {
+          "precision": 0.3566666666666667,
+          "recall": 0.31387046496271287,
+          "hit_rate": 0.9666666666666667,
+          "ndcg": 0.4338226077636351
+        },
+        "mrr": 0.7916666666666666
+      },
+      "latency": {
+        "mean": 450.21,
+        "median": 462.82,
+        "min": 367.5,
+        "max": 667.76
+      },
+      "wall_time_s": 18.72,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 50,
+        "query_prefix": "query: ",
+        "ce_max_length": 512
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.6666666666666666,
+          "recall": 0.12693265703769904,
+          "hit_rate": 0.6666666666666666,
+          "ndcg": 0.5333333333333333
+        },
+        "3": {
+          "precision": 0.5333333333333333,
+          "recall": 0.20961953585569046,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.46333452554107496
+        },
+        "5": {
+          "precision": 0.42,
+          "recall": 0.24246130808350136,
+          "hit_rate": 0.9666666666666667,
+          "ndcg": 0.4247332587744665
+        },
+        "10": {
+          "precision": 0.3566666666666667,
+          "recall": 0.31210258501379845,
+          "hit_rate": 0.9666666666666667,
+          "ndcg": 0.43160691036954985
+        },
+        "mrr": 0.7917543859649123
+      },
+      "latency": {
+        "mean": 458.47,
+        "median": 463.83,
+        "min": 376.9,
+        "max": 570.54
+      },
+      "wall_time_s": 18.91,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 20,
+        "query_prefix": "Represent this sentence for searching relevant passages: ",
+        "ce_max_length": 512
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.6666666666666666,
+          "recall": 0.12693265703769904,
+          "hit_rate": 0.6666666666666666,
+          "ndcg": 0.5333333333333333
+        },
+        "3": {
+          "precision": 0.5222222222222223,
+          "recall": 0.2104348802160306,
+          "hit_rate": 0.8666666666666667,
+          "ndcg": 0.4482509204419599
+        },
+        "5": {
+          "precision": 0.44,
+          "recall": 0.2467803748373873,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.42069190109212723
+        },
+        "10": {
+          "precision": 0.3333333333333333,
+          "recall": 0.3088194366452842,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.415177693057646
+        },
+        "mrr": 0.7733333333333333
+      },
+      "latency": {
+        "mean": 226.36,
+        "median": 215.32,
+        "min": 198.59,
+        "max": 442.72
+      },
+      "wall_time_s": 11.94,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 75,
+        "query_prefix": "",
+        "ce_max_length": 512
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.6666666666666666,
+          "recall": 0.12693265703769904,
+          "hit_rate": 0.6666666666666666,
+          "ndcg": 0.5333333333333333
+        },
+        "3": {
+          "precision": 0.5,
+          "recall": 0.20570650512615726,
+          "hit_rate": 0.8666666666666667,
+          "ndcg": 0.44961631039650407
+        },
+        "5": {
+          "precision": 0.41333333333333333,
+          "recall": 0.2406094562316495,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.4183949984307374
+        },
+        "10": {
+          "precision": 0.3566666666666667,
+          "recall": 0.3161531558168323,
+          "hit_rate": 0.9666666666666667,
+          "ndcg": 0.4314510254961929
+        },
+        "mrr": 0.785
+      },
+      "latency": {
+        "mean": 592.72,
+        "median": 648.15,
+        "min": 370.78,
+        "max": 713.61
+      },
+      "wall_time_s": 23.09,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 75,
+        "query_prefix": "query: ",
+        "ce_max_length": 512
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.6666666666666666,
+          "recall": 0.12693265703769904,
+          "hit_rate": 0.6666666666666666,
+          "ndcg": 0.5333333333333333
+        },
+        "3": {
+          "precision": 0.5,
+          "recall": 0.20570650512615726,
+          "hit_rate": 0.8666666666666667,
+          "ndcg": 0.44961631039650407
+        },
+        "5": {
+          "precision": 0.41333333333333333,
+          "recall": 0.2406094562316495,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.4183949984307374
+        },
+        "10": {
+          "precision": 0.3566666666666667,
+          "recall": 0.31589389655757305,
+          "hit_rate": 0.9666666666666667,
+          "ndcg": 0.43251993619417894
+        },
+        "mrr": 0.785
+      },
+      "latency": {
+        "mean": 593.17,
+        "median": 654.14,
+        "min": 367.73,
+        "max": 689.79
+      },
+      "wall_time_s": 23.09,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 75,
+        "query_prefix": "Represent this sentence for searching relevant passages: ",
+        "ce_max_length": 512
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.6666666666666666,
+          "recall": 0.12693265703769904,
+          "hit_rate": 0.6666666666666666,
+          "ndcg": 0.5333333333333333
+        },
+        "3": {
+          "precision": 0.4888888888888889,
+          "recall": 0.2050262330173137,
+          "hit_rate": 0.8666666666666667,
+          "ndcg": 0.4470092063630443
+        },
+        "5": {
+          "precision": 0.41333333333333333,
+          "recall": 0.2406094562316495,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.4179686092626878
+        },
+        "10": {
+          "precision": 0.35,
+          "recall": 0.31402333837261326,
+          "hit_rate": 0.9666666666666667,
+          "ndcg": 0.42624400504113813
+        },
+        "mrr": 0.785
+      },
+      "latency": {
+        "mean": 589.41,
+        "median": 649.81,
+        "min": 359.64,
+        "max": 689.65
+      },
+      "wall_time_s": 23.02,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 50,
+        "query_prefix": "",
+        "ce_max_length": 128
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.5,
+          "recall": 0.10835986010283315,
+          "hit_rate": 0.5,
+          "ndcg": 0.3888888888888889
+        },
+        "3": {
+          "precision": 0.4222222222222222,
+          "recall": 0.16028460909219225,
+          "hit_rate": 0.8333333333333334,
+          "ndcg": 0.3637624507709759
+        },
+        "5": {
+          "precision": 0.37333333333333335,
+          "recall": 0.18854169565476114,
+          "hit_rate": 0.8666666666666667,
+          "ndcg": 0.36283101921815286
+        },
+        "10": {
+          "precision": 0.3066666666666667,
+          "recall": 0.2545542160727261,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.3650909938042069
+        },
+        "mrr": 0.6547366522366522
+      },
+      "latency": {
+        "mean": 142.28,
+        "median": 129.26,
+        "min": 112.69,
+        "max": 311.18
+      },
+      "wall_time_s": 9.52,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 20,
+        "query_prefix": "",
+        "ce_max_length": 128
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.5333333333333333,
+          "recall": 0.110211711954685,
+          "hit_rate": 0.5333333333333333,
+          "ndcg": 0.4
+        },
+        "3": {
+          "precision": 0.4222222222222222,
+          "recall": 0.16132345281396282,
+          "hit_rate": 0.8,
+          "ndcg": 0.37363184780317144
+        },
+        "5": {
+          "precision": 0.37333333333333335,
+          "recall": 0.19088970950923123,
+          "hit_rate": 0.8666666666666667,
+          "ndcg": 0.36137434413607744
+        },
+        "10": {
+          "precision": 0.31,
+          "recall": 0.27153516426891944,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.36551635484283235
+        },
+        "mrr": 0.6727922077922078
+      },
+      "latency": {
+        "mean": 110.79,
+        "median": 73.15,
+        "min": 64.53,
+        "max": 1036.09
+      },
+      "wall_time_s": 8.99,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 50,
+        "query_prefix": "Represent this sentence for searching relevant passages: ",
+        "ce_max_length": 128
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.4666666666666667,
+          "recall": 0.10721043481547683,
+          "hit_rate": 0.4666666666666667,
+          "ndcg": 0.35555555555555557
+        },
+        "3": {
+          "precision": 0.4222222222222222,
+          "recall": 0.1583198394444958,
+          "hit_rate": 0.8,
+          "ndcg": 0.3600373085342291
+        },
+        "5": {
+          "precision": 0.37333333333333335,
+          "recall": 0.18878734947184353,
+          "hit_rate": 0.8666666666666667,
+          "ndcg": 0.36017650287049735
+        },
+        "10": {
+          "precision": 0.30333333333333334,
+          "recall": 0.25340479078536976,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.36007930356119733
+        },
+        "mrr": 0.6411904761904762
+      },
+      "latency": {
+        "mean": 130.76,
+        "median": 123.89,
+        "min": 111.42,
+        "max": 342.46
+      },
+      "wall_time_s": 10.09,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 50,
+        "query_prefix": "query: ",
+        "ce_max_length": 128
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.5,
+          "recall": 0.10835986010283315,
+          "hit_rate": 0.5,
+          "ndcg": 0.3888888888888889
+        },
+        "3": {
+          "precision": 0.4111111111111111,
+          "recall": 0.15935868316626634,
+          "hit_rate": 0.8,
+          "ndcg": 0.36115534673751615
+        },
+        "5": {
+          "precision": 0.3666666666666667,
+          "recall": 0.1875613034978984,
+          "hit_rate": 0.8666666666666667,
+          "ndcg": 0.3581370340708202
+        },
+        "10": {
+          "precision": 0.30666666666666664,
+          "recall": 0.25472324920321965,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.3634227682080009
+        },
+        "mrr": 0.6536002886002886
+      },
+      "latency": {
+        "mean": 137.59,
+        "median": 128.78,
+        "min": 108.98,
+        "max": 395.54
+      },
+      "wall_time_s": 10.02,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 20,
+        "query_prefix": "query: ",
+        "ce_max_length": 128
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.5,
+          "recall": 0.10354504528801833,
+          "hit_rate": 0.5,
+          "ndcg": 0.3888888888888889
+        },
+        "3": {
+          "precision": 0.4222222222222222,
+          "recall": 0.16132345281396282,
+          "hit_rate": 0.8,
+          "ndcg": 0.3702799385482468
+        },
+        "5": {
+          "precision": 0.37333333333333335,
+          "recall": 0.18942113746980133,
+          "hit_rate": 0.8666666666666667,
+          "ndcg": 0.3537750964454932
+        },
+        "10": {
+          "precision": 0.33,
+          "recall": 0.27360561487754737,
+          "hit_rate": 0.9666666666666667,
+          "ndcg": 0.36996684509041733
+        },
+        "mrr": 0.6572619047619047
+      },
+      "latency": {
+        "mean": 89.65,
+        "median": 77.28,
+        "min": 71.83,
+        "max": 209.77
+      },
+      "wall_time_s": 7.79,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 75,
+        "query_prefix": "",
+        "ce_max_length": 128
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.4666666666666667,
+          "recall": 0.10721043481547683,
+          "hit_rate": 0.4666666666666667,
+          "ndcg": 0.35555555555555557
+        },
+        "3": {
+          "precision": 0.4222222222222222,
+          "recall": 0.16028460909219225,
+          "hit_rate": 0.8333333333333334,
+          "ndcg": 0.35209232055822126
+        },
+        "5": {
+          "precision": 0.3666666666666667,
+          "recall": 0.18984399435201782,
+          "hit_rate": 0.8666666666666667,
+          "ndcg": 0.3527740173618679
+        },
+        "10": {
+          "precision": 0.3066666666666667,
+          "recall": 0.25583910397424686,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.3582991432316133
+        },
+        "mrr": 0.6378174603174603
+      },
+      "latency": {
+        "mean": 168.09,
+        "median": 170.08,
+        "min": 108.96,
+        "max": 383.54
+      },
+      "wall_time_s": 10.95,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 75,
+        "query_prefix": "query: ",
+        "ce_max_length": 128
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.4666666666666667,
+          "recall": 0.10721043481547683,
+          "hit_rate": 0.4666666666666667,
+          "ndcg": 0.35555555555555557
+        },
+        "3": {
+          "precision": 0.4111111111111111,
+          "recall": 0.15935868316626634,
+          "hit_rate": 0.8,
+          "ndcg": 0.3494852165247615
+        },
+        "5": {
+          "precision": 0.36,
+          "recall": 0.1889180684260919,
+          "hit_rate": 0.8666666666666667,
+          "ndcg": 0.35066511264340516
+        },
+        "10": {
+          "precision": 0.31,
+          "recall": 0.25644355571662963,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.36137432451688706
+        },
+        "mrr": 0.6350396825396826
+      },
+      "latency": {
+        "mean": 176.53,
+        "median": 181.82,
+        "min": 114.23,
+        "max": 283.96
+      },
+      "wall_time_s": 10.41,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 20,
+        "query_prefix": "Represent this sentence for searching relevant passages: ",
+        "ce_max_length": 128
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.5,
+          "recall": 0.10835986010283315,
+          "hit_rate": 0.5,
+          "ndcg": 0.3888888888888889
+        },
+        "3": {
+          "precision": 0.4222222222222222,
+          "recall": 0.16132345281396282,
+          "hit_rate": 0.8,
+          "ndcg": 0.3696593538151675
+        },
+        "5": {
+          "precision": 0.3666666666666667,
+          "recall": 0.1877364362180269,
+          "hit_rate": 0.8333333333333334,
+          "ndcg": 0.34973580486102307
+        },
+        "10": {
+          "precision": 0.3,
+          "recall": 0.26739912228994217,
+          "hit_rate": 0.9666666666666667,
+          "ndcg": 0.3559436248574657
+        },
+        "mrr": 0.6536904761904762
+      },
+      "latency": {
+        "mean": 80.43,
+        "median": 73.69,
+        "min": 66.1,
+        "max": 226.56
+      },
+      "wall_time_s": 7.62,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 75,
+        "query_prefix": "Represent this sentence for searching relevant passages: ",
+        "ce_max_length": 128
+      },
+      "aggregate": {
+        "1": {
+          "precision": 0.4666666666666667,
+          "recall": 0.10721043481547683,
+          "hit_rate": 0.4666666666666667,
+          "ndcg": 0.35555555555555557
+        },
+        "3": {
+          "precision": 0.4222222222222222,
+          "recall": 0.16028460909219225,
+          "hit_rate": 0.8333333333333334,
+          "ndcg": 0.35209232055822126
+        },
+        "5": {
+          "precision": 0.35333333333333333,
+          "recall": 0.18816722667525015,
+          "hit_rate": 0.8333333333333334,
+          "ndcg": 0.34419215966471584
+        },
+        "10": {
+          "precision": 0.3066666666666667,
+          "recall": 0.2576067807419236,
+          "hit_rate": 0.9333333333333333,
+          "ndcg": 0.35661166043218107
+        },
+        "mrr": 0.636492673992674
+      },
+      "latency": {
+        "mean": 168.62,
+        "median": 172.44,
+        "min": 111.24,
+        "max": 298.19
+      },
+      "wall_time_s": 10.27,
+      "per_query_ids": [
+        "mdq001",
+        "mdq002",
+        "mdq003",
+        "mdq004",
+        "mdq005",
+        "mdq006",
+        "mdq007",
+        "mdq008",
+        "mdq009",
+        "mdq010",
+        "mdq011",
+        "mdq012",
+        "mdq013",
+        "mdq014",
+        "mdq015",
+        "mdq016",
+        "mdq017",
+        "mdq018",
+        "mdq019",
+        "mdq020",
+        "mdq021",
+        "mdq022",
+        "mdq023",
+        "mdq024",
+        "mdq025",
+        "mdq026",
+        "mdq027",
+        "mdq028",
+        "mdq029",
+        "mdq030"
+      ]
+    }
+  ]
+}
