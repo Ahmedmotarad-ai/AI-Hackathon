@@ -1,0 +1,20 @@
+{
+  "high_threshold": 0.75,
+  "medium_threshold": 0.5,
+  "weights": {
+    "retrieval_quality": 0.3,
+    "evidence_coverage": 0.3,
+    "score_agreement": 0.2,
+    "source_consistency": 0.2
+  },
+  "evidence": {
+    "min_chunks_for_high": 2,
+    "min_coverage_for_high": 0.8,
+    "min_coverage_for_medium": 0.5
+  },
+  "decision": {
+    "high": "answer",
+    "medium": "caution",
+    "low": "refuse"
+  }
+}
